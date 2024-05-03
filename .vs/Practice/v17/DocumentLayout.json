@@ -1,0 +1,1303 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\source\\Practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\practice\\domain\\entities\\activitytracker\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\activitytracker\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\repository\\products\\handlers\\categories\\createcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\products\\handlers\\categories\\createcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\repository\\products\\generaldbresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\products\\generaldbresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\repository\\products\\handlers\\categories\\getallcategorieshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\products\\handlers\\categories\\getallcategorieshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\queries\\categories\\getallcategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\queries\\categories\\getallcategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\pages\\identity\\loginpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\loginpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\queries\\categories\\getcategorieswithproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\queries\\categories\\getcategorieswithproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\categories\\updatecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\categories\\updatecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\repository\\products\\handlers\\categories\\updatecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\products\\handlers\\categories\\updatecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\layout\\identity\\signoutendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\identity\\signoutendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\pages\\context\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\context\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\repository\\products\\handlers\\categories\\deletecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\products\\handlers\\categories\\deletecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\dataaccess\\idbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\idbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\dataaccess\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\queries\\getorderedproductswithquantity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\queries\\getorderedproductswithquantity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\queries\\getproductsorderedbymonthsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\queries\\getproductsorderedbymonthsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\queries\\getgenericorderscountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\queries\\getgenericorderscountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\orders\\getorderscountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\orders\\getorderscountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\queries\\getordersbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\queries\\getordersbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\commands\\cancelordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\commands\\cancelordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\queries\\getallordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\queries\\getallordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\commands\\updateordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\commands\\updateordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\orders\\commands\\createordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\orders\\commands\\createordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\queries\\products\\getproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\queries\\products\\getproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\queries\\products\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\queries\\products\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\queries\\locations\\getlocationswithproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\queries\\locations\\getlocationswithproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\queries\\locations\\getalllocationsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\queries\\locations\\getalllocationsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\products\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\products\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\products\\deleteproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\products\\deleteproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\products\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\products\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\locations\\deletelocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\locations\\deletelocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\locations\\createlocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\locations\\createlocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\locations\\updatelocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\locations\\updatelocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\categories\\deletecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\categories\\deletecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\products\\commands\\categories\\createcategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\products\\commands\\categories\\createcategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\orders\\updateclientorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\orders\\updateclientorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\orders\\orderbasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\orders\\orderbasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\orders\\createorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\orders\\createorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\orders\\getorderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\orders\\getorderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\orders\\getorderedproductswithquantityresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\orders\\getorderedproductswithquantityresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\orders\\getproductorderedbymonthsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\orders\\getproductorderedbymonthsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\products\\updateproductrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\products\\updateproductrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\products\\updatelocationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\products\\updatelocationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\products\\updatecategoryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\products\\updatecategoryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\products\\addproductrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\products\\addproductrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\products\\addcategoryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\products\\addcategoryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\products\\addlocationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\products\\addlocationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\products\\getlocationresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\products\\getlocationresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\products\\getcategoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\products\\getcategoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\products\\getproductresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\products\\getproductresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\products\\productbasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\products\\productbasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\practice\\domain\\entities\\orders\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\orders\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\practice\\domain\\entities\\product\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\product\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\practice\\domain\\entities\\product\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\product\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\practice\\domain\\entities\\product\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\product\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\practice\\domain\\entities\\product\\productbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\product\\productbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\identity\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\identity\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\service\\identity\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\identity\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\practice\\infrastructure\\repository\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\interface\\identity\\iaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\interface\\identity\\iaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\activitytracker\\baseactivitytracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\activitytracker\\baseactivitytracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\activitytracker\\activitytrackerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\activitytracker\\activitytrackerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\activitytracker\\activitytrackerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\activitytracker\\activitytrackerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\identity\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\identity\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\request\\identity\\changeuserclaimrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\identity\\changeuserclaimrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\layout\\identity\\identityrevalidatingauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\identity\\identityrevalidatingauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\pages\\identity\\accessdenied.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\accessdenied.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\pages\\identity\\authenticationpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\authenticationpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\pages\\identity\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\practice\\webui\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\extensions\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\extensions\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\practice\\application\\dto\\response\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginPage.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEUAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T02:15:25.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetCategoriesWithProductsQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Categories\\GetCategoriesWithProductsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Queries\\Categories\\GetCategoriesWithProductsQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Categories\\GetCategoriesWithProductsQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Queries\\Categories\\GetCategoriesWithProductsQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:58:42.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateCategoryCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Categories\\UpdateCategoryCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Categories\\UpdateCategoryCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Categories\\UpdateCategoryCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Categories\\UpdateCategoryCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:39:51.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GeneralDbResponses.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\GeneralDbResponses.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Products\\GeneralDbResponses.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\GeneralDbResponses.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Products\\GeneralDbResponses.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAUwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:52:24.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateCategoryHandler.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\CreateCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\CreateCategoryHandler.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\CreateCategoryHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\CreateCategoryHandler.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAADwvyQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:41:52.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tracker.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Domain\\Entities\\ActivityTracker\\Tracker.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ActivityTracker\\Tracker.cs",
+              "ToolTip": "D:\\source\\Practice\\Domain\\Entities\\ActivityTracker\\Tracker.cs",
+              "RelativeToolTip": "Domain\\Entities\\ActivityTracker\\Tracker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:13:51.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetAllCategoriesQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Categories\\GetAllCategoriesQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Queries\\Categories\\GetAllCategoriesQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Categories\\GetAllCategoriesQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Queries\\Categories\\GetAllCategoriesQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:58:20.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllCategoriesHandler.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\GetAllCategoriesHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\GetAllCategoriesHandler.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\GetAllCategoriesHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\GetAllCategoriesHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAswBUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:42:20.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateCategoryHandler.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\UpdateCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\UpdateCategoryHandler.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\UpdateCategoryHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\UpdateCategoryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:42:35.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SignOutEndpoint.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Layout\\Identity\\SignOutEndpoint.cs",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\Identity\\SignOutEndpoint.cs",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Layout\\Identity\\SignOutEndpoint.cs",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\Identity\\SignOutEndpoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T10:27:34.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Program.cs",
+              "RelativeDocumentMoniker": "WebUI\\Program.cs",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Program.cs",
+              "RelativeToolTip": "WebUI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T03:58:17.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Context\\Home.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Context\\Home.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Context\\Home.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Context\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T02:15:30.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DeleteCategoryHandler.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\DeleteCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\DeleteCategoryHandler.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Repository\\Products\\Handlers\\Categories\\DeleteCategoryHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Products\\Handlers\\Categories\\DeleteCategoryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:42:03.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IDbContextFactory.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\DataAccess\\IDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\IDbContextFactory.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\DataAccess\\IDbContextFactory.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\IDbContextFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:36:54.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DbContextFactory.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\DataAccess\\DbContextFactory.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\DbContextFactory.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\DataAccess\\DbContextFactory.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\DbContextFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:37:56.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Infrastructure.csproj",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-02T03:19:24.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetOrderedProductsWithQuantity.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetOrderedProductsWithQuantity.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Queries\\GetOrderedProductsWithQuantity.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetOrderedProductsWithQuantity.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Queries\\GetOrderedProductsWithQuantity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAACHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:14:00.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetProductsOrderedByMonthsQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetProductsOrderedByMonthsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Queries\\GetProductsOrderedByMonthsQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetProductsOrderedByMonthsQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Queries\\GetProductsOrderedByMonthsQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAACGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:14:47.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetGenericOrdersCountQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetGenericOrdersCountQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Queries\\GetGenericOrdersCountQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetGenericOrdersCountQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Queries\\GetGenericOrdersCountQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:13:20.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GetOrdersByIdQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetOrdersByIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Queries\\GetOrdersByIdQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetOrdersByIdQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Queries\\GetOrdersByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:14:16.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetOrdersCountResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetOrdersCountResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Orders\\GetOrdersCountResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetOrdersCountResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Orders\\GetOrdersCountResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:20:37.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CancelOrderCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Commands\\CancelOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Commands\\CancelOrderCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Commands\\CancelOrderCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Commands\\CancelOrderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:08:37.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GetAllOrdersQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetAllOrdersQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Queries\\GetAllOrdersQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Queries\\GetAllOrdersQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Queries\\GetAllOrdersQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:12:59.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UpdateOrderCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Commands\\UpdateOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Commands\\UpdateOrderCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Commands\\UpdateOrderCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Commands\\UpdateOrderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:09:05.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateOrderCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Orders\\Commands\\CreateOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Orders\\Commands\\CreateOrderCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Orders\\Commands\\CreateOrderCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Orders\\Commands\\CreateOrderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:08:56.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GetProductsQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Products\\GetProductsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Queries\\Products\\GetProductsQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Products\\GetProductsQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Queries\\Products\\GetProductsQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:06:35.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetProductByIdQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Products\\GetProductByIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Queries\\Products\\GetProductByIdQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Products\\GetProductByIdQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Queries\\Products\\GetProductByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:05:47.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GetLocationsWithProductsQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Locations\\GetLocationsWithProductsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Queries\\Locations\\GetLocationsWithProductsQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Locations\\GetLocationsWithProductsQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Queries\\Locations\\GetLocationsWithProductsQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:02:24.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetAllLocationsQuery.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Locations\\GetAllLocationsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Queries\\Locations\\GetAllLocationsQuery.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Queries\\Locations\\GetAllLocationsQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Queries\\Locations\\GetAllLocationsQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:01:58.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateProductCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Products\\UpdateProductCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Products\\UpdateProductCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Products\\UpdateProductCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Products\\UpdateProductCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:48:41.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DeleteProductCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Products\\DeleteProductCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Products\\DeleteProductCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Products\\DeleteProductCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Products\\DeleteProductCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:51:46.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CreateProductCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Products\\CreateProductCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Products\\CreateProductCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Products\\CreateProductCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Products\\CreateProductCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:47:59.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DeleteLocationCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Locations\\DeleteLocationCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Locations\\DeleteLocationCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Locations\\DeleteLocationCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Locations\\DeleteLocationCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:44:53.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreateLocationCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Locations\\CreateLocationCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Locations\\CreateLocationCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Locations\\CreateLocationCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Locations\\CreateLocationCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:44:31.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UpdateLocationCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Locations\\UpdateLocationCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Locations\\UpdateLocationCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Locations\\UpdateLocationCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Locations\\UpdateLocationCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:44:43.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DeleteCategoryCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Categories\\DeleteCategoryCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Categories\\DeleteCategoryCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Categories\\DeleteCategoryCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Categories\\DeleteCategoryCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:39:36.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CreateCategoryCommand.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Categories\\CreateCategoryCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Products\\Commands\\Categories\\CreateCategoryCommand.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Products\\Commands\\Categories\\CreateCategoryCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Products\\Commands\\Categories\\CreateCategoryCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:39:17.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UpdateClientOrderRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Orders\\UpdateClientOrderRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Orders\\UpdateClientOrderRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Orders\\UpdateClientOrderRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Orders\\UpdateClientOrderRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:31:00.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CreateOrderRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Orders\\CreateOrderRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Orders\\CreateOrderRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Orders\\CreateOrderRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Orders\\CreateOrderRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:30:28.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OrderBaseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Orders\\OrderBaseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Orders\\OrderBaseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Orders\\OrderBaseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Orders\\OrderBaseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:30:38.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "GetOrderedProductsWithQuantityResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetOrderedProductsWithQuantityResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Orders\\GetOrderedProductsWithQuantityResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetOrderedProductsWithQuantityResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Orders\\GetOrderedProductsWithQuantityResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:20:02.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "GetOrderResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetOrderResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Orders\\GetOrderResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetOrderResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Orders\\GetOrderResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:20:22.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "GetProductOrderedByMonthsResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetProductOrderedByMonthsResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Orders\\GetProductOrderedByMonthsResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Orders\\GetProductOrderedByMonthsResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Orders\\GetProductOrderedByMonthsResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:21:06.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UpdateProductRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\UpdateProductRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Products\\UpdateProductRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\UpdateProductRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Products\\UpdateProductRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:14:30.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UpdateLocationRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\UpdateLocationRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Products\\UpdateLocationRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\UpdateLocationRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Products\\UpdateLocationRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:14:13.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UpdateCategoryRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\UpdateCategoryRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Products\\UpdateCategoryRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\UpdateCategoryRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Products\\UpdateCategoryRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:13:58.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AddProductRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\AddProductRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Products\\AddProductRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\AddProductRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Products\\AddProductRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:13:37.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AddCategoryRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\AddCategoryRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Products\\AddCategoryRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\AddCategoryRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Products\\AddCategoryRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:13:01.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "AddLocationRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\AddLocationRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Products\\AddLocationRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Products\\AddLocationRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Products\\AddLocationRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:13:19.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GetLocationResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\GetLocationResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Products\\GetLocationResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\GetLocationResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Products\\GetLocationResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:01:25.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "GetCategoryResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\GetCategoryResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Products\\GetCategoryResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\GetCategoryResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Products\\GetCategoryResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:01:09.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "GetProductResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\GetProductResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Products\\GetProductResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\GetProductResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Products\\GetProductResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:01:39.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ProductBaseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\ProductBaseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Products\\ProductBaseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\Products\\ProductBaseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Products\\ProductBaseDTO.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwCUAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T14:01:56.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Domain\\Entities\\Orders\\Order.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Orders\\Order.cs",
+              "ToolTip": "D:\\source\\Practice\\Domain\\Entities\\Orders\\Order.cs",
+              "RelativeToolTip": "Domain\\Entities\\Orders\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:53:45.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Domain\\Entities\\Product\\Product.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Product\\Product.cs",
+              "ToolTip": "D:\\source\\Practice\\Domain\\Entities\\Product\\Product.cs",
+              "RelativeToolTip": "Domain\\Entities\\Product\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:44:01.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Location.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Domain\\Entities\\Product\\Location.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Product\\Location.cs",
+              "ToolTip": "D:\\source\\Practice\\Domain\\Entities\\Product\\Location.cs",
+              "RelativeToolTip": "Domain\\Entities\\Product\\Location.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:43:55.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Domain\\Entities\\Product\\Category.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Product\\Category.cs",
+              "ToolTip": "D:\\source\\Practice\\Domain\\Entities\\Product\\Category.cs",
+              "RelativeToolTip": "Domain\\Entities\\Product\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:43:42.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ProductBase.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Domain\\Entities\\Product\\ProductBase.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Product\\ProductBase.cs",
+              "ToolTip": "D:\\source\\Practice\\Domain\\Entities\\Product\\ProductBase.cs",
+              "RelativeToolTip": "Domain\\Entities\\Product\\ProductBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:44:16.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Identity\\AccountService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Identity\\AccountService.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Identity\\AccountService.cs",
+              "RelativeToolTip": "Application\\Service\\Identity\\AccountService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAYwDcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:35:00.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Service\\Identity\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Identity\\IAccountService.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Service\\Identity\\IAccountService.cs",
+              "RelativeToolTip": "Application\\Service\\Identity\\IAccountService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T05:50:48.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Infrastructure\\Repository\\Account.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Account.cs",
+              "ToolTip": "D:\\source\\Practice\\Infrastructure\\Repository\\Account.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Account.cs",
+              "ViewState": "AQIAANoAAAAAAAAAAAAcwPwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:25:04.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "IAccount.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Interface\\Identity\\IAccount.cs",
+              "RelativeDocumentMoniker": "Application\\Interface\\Identity\\IAccount.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Interface\\Identity\\IAccount.cs",
+              "RelativeToolTip": "Application\\Interface\\Identity\\IAccount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T03:52:25.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BaseActivityTracker.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:18:46.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ActivityTrackerResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:22:11.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ActivityTrackerRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T13:17:58.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Policy.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Identity\\Policy.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Identity\\Policy.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Identity\\Policy.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Identity\\Policy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T02:34:35.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\App.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\App.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\App.razor",
+              "RelativeToolTip": "WebUI\\Components\\App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T10:15:37.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "IdentityRevalidatingAuthStateProvider.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Layout\\Identity\\IdentityRevalidatingAuthStateProvider.cs",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\Identity\\IdentityRevalidatingAuthStateProvider.cs",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Layout\\Identity\\IdentityRevalidatingAuthStateProvider.cs",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\Identity\\IdentityRevalidatingAuthStateProvider.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAmwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T09:04:22.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Routes.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Routes.razor",
+              "RelativeToolTip": "WebUI\\Components\\Routes.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T10:07:37.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ChangeUserClaimRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Request\\Identity\\ChangeUserClaimRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Identity\\ChangeUserClaimRequestDTO.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Request\\Identity\\ChangeUserClaimRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Identity\\ChangeUserClaimRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T02:33:53.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "AccessDenied.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T09:12:56.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T06:01:32.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "AuthenticationPage.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\AuthenticationPage.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\AuthenticationPage.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\AuthenticationPage.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\AuthenticationPage.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T09:16:24.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T09:06:02.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "Application\\DependencyInjection\\ServiceContainer.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeToolTip": "Application\\DependencyInjection\\ServiceContainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T05:55:49.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Application.csproj",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "D:\\source\\Practice\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-02T02:14:27.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "Error.razor",
+              "DocumentMoniker": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Error.razor",
+              "ToolTip": "D:\\source\\Practice\\WebUI\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Error.razor",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAqwBwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T09:53:38.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "ViewState": "AQIAAB4AAAAAAAAAAABBwDUAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-05-02T03:53:56.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\DTO\\Response\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\ServiceResponse.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\DTO\\Response\\ServiceResponse.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\ServiceResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T03:49:10.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\source\\Practice\\Application\\Extensions\\Identity\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Application\\Extensions\\Identity\\ApplicationUser.cs",
+              "ToolTip": "D:\\source\\Practice\\Application\\Extensions\\Identity\\ApplicationUser.cs",
+              "RelativeToolTip": "Application\\Extensions\\Identity\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T02:26:01.661Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

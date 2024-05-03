@@ -1,0 +1,99 @@
+﻿@page "/Account/Register"
+
+
+<EditForm Model="RegisterModel" method="post" OnValidSubmit="RegisterAsync" FormName="register" Enhance>
+    <div class="card border-primary shadow-lg text-dark p-5" style="border-radius:24px; min-width:300px;">
+        <div class="card-header text-dark fs-4 border-primary">Register</div>
+        <div class="card-body">
+            <DataAnnotationsValidator />
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <InputText id="name" @bind-Value="RegisterModel.Name" class="form-control" autocomplete="name" aria-labelledby="name-label" />
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <InputText id="email" @bind-Value="RegisterModel.Email" class="form-control" autocomplete="username" aria-labelledby="email-label" />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <InputText id="password" type="password" @bind-Value="RegisterModel.Password" class="form-control" autocomplete="password" aria-labelledby="password-label" />
+            </div>
+
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <InputText id="confirmPassword" type="password" @bind-Value="RegisterModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-labelledby="confirmPassword-label" />
+            </div>
+            <div class="mb-3">
+                <InputText id="policy" type="text" @bind-Value="RegisterModel.Policy" class="form-control" readonly autocomplete="policy" aria-labelledby="policy-label" hidden />
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-success w-100" aria-label="Register">Register</button>
+            </div>
+
+            <hr class="text-primary" />
+        </div>
+
+        <div class="card-footer mt-5">
+            @if (@ErrorMessage != "")
+            {
+                <div class="alert alert-danger">
+                    @ErrorMessage
+                </div>
+            }
+            else
+            {
+                <ValidationSummary class="form-control text-danger text-decoration-none"/>
+            }
+        </div>
+    </div>
+</EditForm>
+
+@code{
+    string ErrorMessage = "";
+    public bool IsBusy { get; set; } =false;
+    [SupplyParameterFromForm]
+    private CreateUserRequestDTO RegisterModel { get; set; } = new();
+    private async Task RegisterAsync()
+    {
+        if (IsBusy) return;
+        ErrorMessage = "";
+        IsBusy = true;
+        var response = await accountService.CreateUserAsync(RegisterModel);
+        if (!response.Flag)
+        {
+            IsBusy = false;
+            ErrorMessage = response.Message;
+            return;
+        }
+        IsBusy = false;
+        NavManager.NavigateTo(uri: "Account/Login", true);
+    }
+
+    [CascadingParameter]
+    public Task<AuthenticationState>? ClientAuthState { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            RegisterModel.Policy = "Manager";
+
+            await accountService.SetUpAsync();
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                NavManager.NavigateTo("/app/home", false, true);
+            }
+           
+        }
+        catch
+        {
+            
+        }
+    }
+
+
+
+}
