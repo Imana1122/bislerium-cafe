@@ -25,6 +25,12 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                 }
                 dbContext.Blogs.Remove(data);
                 await dbContext.SaveChangesAsync(cancellationToken);
+
+                var blogImages = await dbContext.BlogImages.FirstAsync(_=>_.BlogId.Equals(request.Id),cancellationToken:cancellationToken);
+                // Assuming dbContext is your instance of DbContext and blogImages is your collection
+                dbContext.BlogImages.RemoveRange(blogImages);
+                await dbContext.SaveChangesAsync(cancellationToken);
+
                 return GeneralDbResponses.ItemDelete(data.Title);
             }catch (Exception ex)
             {

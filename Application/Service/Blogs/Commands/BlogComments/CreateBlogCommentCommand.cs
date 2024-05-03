@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.BlogComments
 {
-    public record CreateBlogCommentCommand(AddBlogCommentRequestDTO LocationModel) : IRequest<ServiceResponse>;
+    public record CreateBlogCommentCommand(AddBlogCommentRequestDTO BlogCommentModel) : IRequest<ServiceResponse>;
     
 }

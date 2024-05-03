@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.BlogReactions
 {
-    public record UpdateBlogReactionCommand(UpdateBlogReactionRequestDTO ProductModel) : IRequest<ServiceResponse>;
+    public record UpdateBlogReactionCommand(UpdateBlogReactionRequestDTO BlogReactionModel) : IRequest<ServiceResponse>;
     
 }

@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.BlogReactions
 {
-    public record DeleteBlogReactionCommand(Guid Id):IRequest<ServiceResponse>;
+    public record DeleteBlogReactionCommand(Guid UserId, Guid BlogId) : IRequest<ServiceResponse>;
    
 }

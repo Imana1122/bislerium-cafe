@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.BlogComments
 {
-    public record UpdateBlogCommentCommand(UpdateBlogCommentRequestDTO LocationModel) :IRequest<ServiceResponse>;
+    public record UpdateBlogCommentCommand(UpdateBlogCommentRequestDTO BlogCommentModel) :IRequest<ServiceResponse>;
     
 }

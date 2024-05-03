@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.BlogComments
 {
-    public record DeleteBlogCommentCommand(Guid Id) : IRequest<ServiceResponse>;
+    public record DeleteBlogCommentCommand(Guid UserId, Guid BlogId) : IRequest<ServiceResponse>;
     
 }

@@ -20,15 +20,19 @@ namespace Infrastructure.Repository.Products.Handlers.Blogs
             try
             {
                 using var dbContext = contextFactory.CreateDbContext();
-                var Blog = await dbContext.Blogs.FirstOrDefaultAsync(_ => _.Title.ToLower().Equals(request.BlogModel.Title.ToLower()),cancellationToken:cancellationToken);
-                if (Blog == null)
-                {
-                    return GeneralDbResponses.ItemAlreadyExist(request.BlogModel.Title);
-                }
+               
 
                 var data = request.BlogModel.Adapt(new Blog());
                 dbContext.Blogs.Add(data);
                 await dbContext.SaveChangesAsync(cancellationToken);
+
+                foreach (var blog in request.BlogImages)
+                { 
+                    var imageData = blog.Adapt(new BlogImage());
+                    dbContext.BlogImages.Add(imageData);
+                    await dbContext.SaveChangesAsync(cancellationToken);
+
+                }
                 return GeneralDbResponses.ItemCreated(request.BlogModel.Title);
             }
             catch(Exception ex)
