@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xp8EkRgjeXRIqRtSYKFKhjY+ZAjm7jient5qcSx3Hfqe0UUxAd1rTPHsvwVM2QSXtAoITADwpK+V6CMhea2Jmg==",
+  "dgSpecHash": "JrvXsMhwBh/HQOg9jjTgxppic933lBEpwL8RlkPJoQvSUWLCHke9So8MKz9neXWmmll2IiFjMO1TDc8dUmdBRg==",
   "success": true,
-  "projectFilePath": "D:\\source\\Practice\\WebUI\\WebUI.csproj",
+  "projectFilePath": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imana\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

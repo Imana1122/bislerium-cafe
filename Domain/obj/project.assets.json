@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Practice\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\source\\Practice\\Domain\\Domain.csproj",
+      "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Practice\\Domain\\obj\\",
+      "outputPath": "D:\\source\\Bislerium\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zZpXd39bLJVKJ2Vu47NaSgm0JdEYqBNHiV5JwZb5W/mqUp6XCTYjz0kMlJeMC5dn2NriWCs9uadct6okmkNM6w==",
+  "dgSpecHash": "GJeNxGu8a8lS6F4KJT9nxbSc0XU7Nb+kQi7ILlM10F3mSY5kxQmdDpp3pxNNwqM08eO2Dc5WfaeLQ/QEPodZHw==",
   "success": true,
-  "projectFilePath": "D:\\source\\Practice\\Application\\Application.csproj",
+  "projectFilePath": "D:\\source\\Bislerium\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imana\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -1,6 +1,6 @@
 ﻿using Application.Extensions.Identity;
 using Application.Interface.Identity;
-using Infrastructure.DataAccess;
+using Infrastructure.DataAccess.Blogs;
 using Infrastructure.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

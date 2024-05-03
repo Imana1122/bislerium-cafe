@@ -3,7 +3,6 @@ using Application.DTO.Response;
 using Application.DTO.Response.Identity;
 using Application.Extensions.Identity;
 using Application.Interface.Identity;
-using Infrastructure.DataAccess;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -17,6 +16,7 @@ using Application.DTO.Request.ActivityTracker;
 using Application.DTO.Response.ActivityTracker;
 using Mapster;
 using Domain.Entities.ActivityTracker;
+using Infrastructure.DataAccess.Blogs;
 
 
 namespace Infrastructure.Repository

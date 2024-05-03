@@ -6680,11 +6680,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Practice\\WebUI\\WebUI.csproj",
+      "projectUniqueName": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
       "projectName": "WebUI",
-      "projectPath": "D:\\source\\Practice\\WebUI\\WebUI.csproj",
+      "projectPath": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
       "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Practice\\WebUI\\obj\\",
+      "outputPath": "D:\\source\\Bislerium\\WebUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6706,14 +6706,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\source\\Practice\\Application\\Application.csproj": {
-              "projectPath": "D:\\source\\Practice\\Application\\Application.csproj"
+            "D:\\source\\Bislerium\\Application\\Application.csproj": {
+              "projectPath": "D:\\source\\Bislerium\\Application\\Application.csproj"
             },
-            "D:\\source\\Practice\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\source\\Practice\\Domain\\Domain.csproj"
+            "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj"
             },
-            "D:\\source\\Practice\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\source\\Practice\\Infrastructure\\Infrastructure.csproj"
+            "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

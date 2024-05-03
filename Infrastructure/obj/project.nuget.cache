@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9uUAln32pd/Jk87+JOvVYuIPpcXurD/ke6AKfn3lnIZQjxavxSXF50GtAbpnf3hOpgUQ/zE4QyhYBUFGcPZ+jg==",
+  "dgSpecHash": "DH908buSi/YNMWDO4j9+TR+BiqQWwafX/RPSMW80uHL9WGDcv4QQZ/nCu7Ur2+kHGBK8493w137tXw0UmPffRg==",
   "success": true,
-  "projectFilePath": "D:\\source\\Practice\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imana\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

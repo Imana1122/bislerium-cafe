@@ -3,11 +3,18 @@ using Application.DependencyInjection;
 using WebUI.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using WebUI.Components.Layout.Identity;
+using WebUI.Hubs;
+using WebUI.States;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddApplicationService();
 builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthStateProvider>();
+builder.Services.AddScoped<ICustomAuthorizationService, CustomAuthorizationService>();
+builder.Services.AddScoped<NetcodeHubConnectionService>();
+builder.Services.AddScoped<ChangePasswordState>();
+
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();

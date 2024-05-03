@@ -21,8 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\Products\Handlers\Locations\" />
-    <Folder Include="Repository\Products\Handlers\Products\" />
+    <Folder Include="Repository\Blogs\Handlers\BlogReactions\" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,47 @@
 @using WebUI
 @using WebUI.Components
 @using Microsoft.AspNetCore.Components.Authorization
-@inject NavigationManager NavManager
-
+@using Mapster;
+@using NetcodeHub.Packages.Components.BreadCrumb;
+@using NetcodeHub.Packages.Components.Modal;
+@using NetcodeHub.Packages.Components.Toast;
+@using Syncfusion.Blazor.Navigations;
+@using Application.DTO.Response;
+@using NetcodeHub.Packages.Components.DataGrid;
+@using NetcodeHub.Packages.Components.FileUpload;
+@using Syncfusion.Blazor.Grids;
+@using System.Security.Claims;
+@using Application.Extensions;
+@using Application.DTO.Request.ActivityTracker;
+@using Application.Service.Blogs.Commands.Blogs;
+@using Application.Service.Blogs.Queries.BlogComments;
+@using Application.Service.Blogs.Queries.BlogReactions;
+@using Application.Service.Blogs.Queries.Blogs;
+@using Microsoft.AspNetCore.SignalR.Client;
+@using Application.Service.Blogs.Commands.BlogReactions;
+@using Application.Service.Blogs.Commands.BlogComments;
+@using Syncfusion.Blazor.Notifications;
+@using NetcodeHub.Packages.UI.Templates.Breeze;
+@using NetcodeHub.Packages.Components.Validations.OnInput;
+@using Application.Service.Identity;
+@using Application.DTO.Request.Identity;
+@using WebUI.Components.Layout.Sidebar;
+@using WebUI.Components.Layout.Navigationbar;
+@using WebUI.Components.Pages.General;
 @using Microsoft.AspNetCore.Authorization
+@using WebUI.Hubs
+@using WebUI.States
+@using WebUI.Components.Layout.Identity
+@using Application.DTO.Response.Blogs
+@using Application.DTO.Request.Blogs
 
+
+
+@inject AuthenticationStateProvider AuthState
+@inject ChangePasswordState passwordState
+@inject NetcodeHubConnectionService netcodeHubConnectionService
+@inject IAccountService accountService
+@inject IServiceProvider serviceProvider
+@inject IJSRuntime js
+@inject ICustomAuthorizationService customAuthorizationService
+@inject NavigationManager NavManager

@@ -1,0 +1,1133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\source\\Bislerium\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\pages\\identity\\loginpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\loginpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\pages\\content\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\content\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\layout\\sidebar\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\sidebar\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\layout\\sidebar\\content.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\sidebar\\content.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\layout\\footer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\footer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\pages\\general\\genericspinnerbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\general\\genericspinnerbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\states\\changepasswordstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\states\\changepasswordstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\webui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\webui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\pages\\identity\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\layout\\identity\\customauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\layout\\identity\\customauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\pages\\identity\\accessdenied.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\pages\\identity\\accessdenied.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\hubs\\communicationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\hubs\\communicationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|d:\\source\\bislerium\\webui\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{237B436D-F2E6-489A-9244-EC4B4212B7F3}|WebUI\\WebUI.csproj|solutionrelative:webui\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\dataaccess\\blogs\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\blogs\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\blogs\\getblogsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\blogs\\getblogsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\addblogreactionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\addblogreactionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogs\\updateblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogs\\updateblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\blogs\\handlers\\blogs\\updatebloghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\handlers\\blogs\\updatebloghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogs\\deleteblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogs\\deleteblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\blogs\\handlers\\blogs\\deletebloghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\handlers\\blogs\\deletebloghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogs\\createblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogs\\createblogcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\blogs\\handlers\\blogs\\createbloghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\handlers\\blogs\\createbloghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\blogs\\handlers\\blogs\\getallblogshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\handlers\\blogs\\getallblogshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\queries\\blogreactions\\getblogreactionsbyblogidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\queries\\blogreactions\\getblogreactionsbyblogidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\queries\\blogcomments\\getallblogcommentsbyblogidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\queries\\blogcomments\\getallblogcommentsbyblogidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogreactions\\updateblogreactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogreactions\\updateblogreactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogcomments\\updateblogcommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogcomments\\updateblogcommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\blogs\\getblogreactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\blogs\\getblogreactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\blogs\\getblogcommentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\blogs\\getblogcommentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\migrations\\20240502135914_second.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240502135914_second.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\migrations\\20240502041758_initial.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240502041758_initial.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogreactions\\createblogreactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogreactions\\createblogreactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogcomments\\createblogcommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogcomments\\createblogcommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\blogs\\handlers\\blogcomments\\updateblogcommenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\handlers\\blogcomments\\updateblogcommenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\repository\\blogs\\handlers\\blogcomments\\createblogcommenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\blogs\\handlers\\blogcomments\\createblogcommenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\updateblogrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\updateblogrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\updateblogreactionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\updateblogreactionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\updateblogcommentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\updateblogcommentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\addblogrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\addblogrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\addblogimagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\addblogimagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\blogs\\addblogcommentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\blogs\\addblogcommentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\activitytracker\\baseactivitytracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\activitytracker\\baseactivitytracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\blogs\\getblogupvotecountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\blogs\\getblogupvotecountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\blogs\\getblogdownvotecountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\blogs\\getblogdownvotecountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\blogs\\blogbasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\blogs\\blogbasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogcomments\\deleteblogcommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogcomments\\deleteblogcommentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\blogs\\commands\\blogreactions\\deleteblogreactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\blogs\\commands\\blogreactions\\deleteblogreactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\dataaccess\\blogs\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\blogs\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\dataaccess\\blogs\\idbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\blogs\\idbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\bislerium\\domain\\entities\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\bislerium\\domain\\entities\\blogcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\blogcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\activitytracker\\activitytrackerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\activitytracker\\activitytrackerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|d:\\source\\bislerium\\infrastructure\\dataaccess\\activitytracker\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACB714F-A0EB-4ED1-9935-40CEEB36FC1D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\activitytracker\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\activitytracker\\activitytrackerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\activitytracker\\activitytrackerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\bislerium\\domain\\entities\\blogimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\blogimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|d:\\source\\bislerium\\domain\\entities\\blogreaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E6BD6A-D2C0-4A8C-875C-3050C8A74A20}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\blogreaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\service\\identity\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\service\\identity\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\response\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\response\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\dto\\request\\identity\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\dto\\request\\identity\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\extensions\\reactionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\extensions\\reactionstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|d:\\source\\bislerium\\application\\extensions\\defaultclaims.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D272C512-C58B-4E0B-8B1B-DEB5EA0BA2EA}|Application\\Application.csproj|solutionrelative:application\\extensions\\defaultclaims.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:39:33.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Footer.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Footer.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\Footer.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Footer.razor",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\Footer.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:39:42.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Content.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Sidebar\\Content.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\Sidebar\\Content.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Sidebar\\Content.razor",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\Sidebar\\Content.razor",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAABQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:36:21.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Brand.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Sidebar\\Brand.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\Sidebar\\Brand.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Sidebar\\Brand.razor",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\Sidebar\\Brand.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:36:20.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Program.cs",
+              "RelativeDocumentMoniker": "WebUI\\Program.cs",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Program.cs",
+              "RelativeToolTip": "WebUI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:39:58.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Content\\Home.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Content\\Home.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Content\\Home.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Content\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:24:19.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginPage.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\LoginPage.razor",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:45:20.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:39:40.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GenericSpinnerButton.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\General\\GenericSpinnerButton.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\General\\GenericSpinnerButton.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\General\\GenericSpinnerButton.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\General\\GenericSpinnerButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:39:28.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\_Imports.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\_Imports.razor",
+              "RelativeToolTip": "WebUI\\Components\\_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:24:06.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChangePasswordState.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\States\\ChangePasswordState.cs",
+              "RelativeDocumentMoniker": "WebUI\\States\\ChangePasswordState.cs",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\States\\ChangePasswordState.cs",
+              "RelativeToolTip": "WebUI\\States\\ChangePasswordState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:39:01.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WebUI",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
+              "RelativeDocumentMoniker": "WebUI\\WebUI.csproj",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
+              "RelativeToolTip": "WebUI\\WebUI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-03T14:34:28.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:24:14.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CustomAuthorizationService.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Identity\\CustomAuthorizationService.cs",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Layout\\Identity\\CustomAuthorizationService.cs",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Layout\\Identity\\CustomAuthorizationService.cs",
+              "RelativeToolTip": "WebUI\\Components\\Layout\\Identity\\CustomAuthorizationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:35:55.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccessDenied.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "RelativeToolTip": "WebUI\\Components\\Pages\\Identity\\AccessDenied.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:34:56.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CommunicationHub.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Hubs\\CommunicationHub.cs",
+              "RelativeDocumentMoniker": "WebUI\\Hubs\\CommunicationHub.cs",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Hubs\\CommunicationHub.cs",
+              "RelativeToolTip": "WebUI\\Hubs\\CommunicationHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:34:32.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\source\\Bislerium\\WebUI\\Components\\App.razor",
+              "RelativeDocumentMoniker": "WebUI\\Components\\App.razor",
+              "ToolTip": "D:\\source\\Bislerium\\WebUI\\Components\\App.razor",
+              "RelativeToolTip": "WebUI\\Components\\App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T14:33:34.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\Blogs\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\Blogs\\AppDbContext.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\Blogs\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\Blogs\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:47:11.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetBlogsResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogsResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Blogs\\GetBlogsResponseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogsResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Blogs\\GetBlogsResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:52:48.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AddBlogReactionRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogReactionRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\AddBlogReactionRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogReactionRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\AddBlogReactionRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:51:34.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UpdateBlogCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\Blogs\\UpdateBlogCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\Blogs\\UpdateBlogCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\Blogs\\UpdateBlogCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\Blogs\\UpdateBlogCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:05:27.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DeleteBlogCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\Blogs\\DeleteBlogCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\Blogs\\DeleteBlogCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\Blogs\\DeleteBlogCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\Blogs\\DeleteBlogCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:05:19.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateBlogCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\Blogs\\CreateBlogCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\Blogs\\CreateBlogCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\Blogs\\CreateBlogCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\Blogs\\CreateBlogCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:05:08.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateBlogHandler.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\UpdateBlogHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\UpdateBlogHandler.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\UpdateBlogHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\UpdateBlogHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAACGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:46:57.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DeleteBlogHandler.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\DeleteBlogHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\DeleteBlogHandler.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\DeleteBlogHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\DeleteBlogHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAACHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:46:36.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CreateBlogHandler.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\CreateBlogHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\CreateBlogHandler.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\CreateBlogHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\CreateBlogHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAACHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:46:23.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetAllBlogsHandler.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\GetAllBlogsHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\GetAllBlogsHandler.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\GetAllBlogsHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\Handlers\\Blogs\\GetAllBlogsHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:46:47.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GetBlogReactionsByBlogIdQuery.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Queries\\BlogReactions\\GetBlogReactionsByBlogIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Queries\\BlogReactions\\GetBlogReactionsByBlogIdQuery.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Queries\\BlogReactions\\GetBlogReactionsByBlogIdQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Queries\\BlogReactions\\GetBlogReactionsByBlogIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:04:02.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetAllBlogCommentsByBlogIdQuery.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Queries\\BlogComments\\GetAllBlogCommentsByBlogIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Queries\\BlogComments\\GetAllBlogCommentsByBlogIdQuery.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Queries\\BlogComments\\GetAllBlogCommentsByBlogIdQuery.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Queries\\BlogComments\\GetAllBlogCommentsByBlogIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:03:33.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateBlogReactionCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogReactions\\UpdateBlogReactionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\BlogReactions\\UpdateBlogReactionCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogReactions\\UpdateBlogReactionCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\BlogReactions\\UpdateBlogReactionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:04:55.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UpdateBlogCommentCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogComments\\UpdateBlogCommentCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\BlogComments\\UpdateBlogCommentCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogComments\\UpdateBlogCommentCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\BlogComments\\UpdateBlogCommentCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:04:22.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GetBlogReactionResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogReactionResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Blogs\\GetBlogReactionResponseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogReactionResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Blogs\\GetBlogReactionResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:53:09.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GetBlogCommentResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogCommentResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Blogs\\GetBlogCommentResponseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogCommentResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Blogs\\GetBlogCommentResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:52:57.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Account.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Account.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Account.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Account.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAEwBgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:25:26.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:25:20.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20240502135914_Second.Designer.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Migrations\\20240502135914_Second.Designer.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240502135914_Second.Designer.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Migrations\\20240502135914_Second.Designer.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20240502135914_Second.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:25:15.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "20240502041758_Initial.Designer.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Migrations\\20240502041758_Initial.Designer.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240502041758_Initial.Designer.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Migrations\\20240502041758_Initial.Designer.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20240502041758_Initial.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:25:05.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeToolTip": "Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:25:45.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CreateBlogReactionCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogReactions\\CreateBlogReactionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\BlogReactions\\CreateBlogReactionCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogReactions\\CreateBlogReactionCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\BlogReactions\\CreateBlogReactionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:04:34.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CreateBlogCommentCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogComments\\CreateBlogCommentCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\BlogComments\\CreateBlogCommentCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogComments\\CreateBlogCommentCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\BlogComments\\CreateBlogCommentCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:02:35.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UpdateBlogCommentHandler.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\UpdateBlogCommentHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\UpdateBlogCommentHandler.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\UpdateBlogCommentHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\UpdateBlogCommentHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:23:52.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreateBlogCommentHandler.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\CreateBlogCommentHandler.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\CreateBlogCommentHandler.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\CreateBlogCommentHandler.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\Blogs\\Handlers\\BlogComments\\CreateBlogCommentHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:23:32.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UpdateBlogRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\UpdateBlogRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\UpdateBlogRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\UpdateBlogRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\UpdateBlogRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:51:46.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UpdateBlogReactionRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\UpdateBlogReactionRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\UpdateBlogReactionRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\UpdateBlogReactionRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\UpdateBlogReactionRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:52:20.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UpdateBlogCommentRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\UpdateBlogCommentRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\UpdateBlogCommentRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\UpdateBlogCommentRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\UpdateBlogCommentRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:51:56.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "AddBlogRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\AddBlogRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\AddBlogRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:50:59.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AddBlogImageRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogImageRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\AddBlogImageRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogImageRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\AddBlogImageRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:49:11.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AddBlogCommentRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogCommentRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Blogs\\AddBlogCommentRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Blogs\\AddBlogCommentRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Blogs\\AddBlogCommentRequestDTO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:51:21.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "BaseActivityTracker.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\ActivityTracker\\BaseActivityTracker.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:56:47.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GetBlogUpvoteCountResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogUpvoteCountResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Blogs\\GetBlogUpvoteCountResponseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogUpvoteCountResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Blogs\\GetBlogUpvoteCountResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:57:45.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "GetBlogDownvoteCountResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogDownvoteCountResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Blogs\\GetBlogDownvoteCountResponseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\GetBlogDownvoteCountResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Blogs\\GetBlogDownvoteCountResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:58:04.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "BlogBaseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\BlogBaseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\Blogs\\BlogBaseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\Blogs\\BlogBaseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\Blogs\\BlogBaseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:57:11.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "DeleteBlogCommentCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogComments\\DeleteBlogCommentCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\BlogComments\\DeleteBlogCommentCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogComments\\DeleteBlogCommentCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\BlogComments\\DeleteBlogCommentCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:04:10.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "DeleteBlogReactionCommand.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogReactions\\DeleteBlogReactionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Blogs\\Commands\\BlogReactions\\DeleteBlogReactionCommand.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Blogs\\Commands\\BlogReactions\\DeleteBlogReactionCommand.cs",
+              "RelativeToolTip": "Application\\Service\\Blogs\\Commands\\BlogReactions\\DeleteBlogReactionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:04:44.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "DbContextFactory.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\Blogs\\DbContextFactory.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\Blogs\\DbContextFactory.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\Blogs\\DbContextFactory.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\Blogs\\DbContextFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:11:35.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IDbContextFactory.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\Blogs\\IDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\Blogs\\IDbContextFactory.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\Blogs\\IDbContextFactory.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\Blogs\\IDbContextFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T14:11:39.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Blog.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Domain\\Entities\\Blog.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Blog.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Domain\\Entities\\Blog.cs",
+              "RelativeToolTip": "Domain\\Entities\\Blog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:39:33.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "BlogComment.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Domain\\Entities\\BlogComment.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\BlogComment.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Domain\\Entities\\BlogComment.cs",
+              "RelativeToolTip": "Domain\\Entities\\BlogComment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:39:48.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ActivityTrackerResponseDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\ActivityTracker\\ActivityTrackerResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:56:45.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Tracker.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\ActivityTracker\\Tracker.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\ActivityTracker\\Tracker.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Infrastructure\\DataAccess\\ActivityTracker\\Tracker.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\ActivityTracker\\Tracker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:56:24.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ActivityTrackerRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\ActivityTracker\\ActivityTrackerRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:56:08.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "BlogImage.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Domain\\Entities\\BlogImage.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\BlogImage.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Domain\\Entities\\BlogImage.cs",
+              "RelativeToolTip": "Domain\\Entities\\BlogImage.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:41:54.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BlogReaction.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Domain\\Entities\\BlogReaction.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\BlogReaction.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Domain\\Entities\\BlogReaction.cs",
+              "RelativeToolTip": "Domain\\Entities\\BlogReaction.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:39:58.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Service\\Identity\\AccountService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\Identity\\AccountService.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Service\\Identity\\AccountService.cs",
+              "RelativeToolTip": "Application\\Service\\Identity\\AccountService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:01:06.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Response\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Response\\ServiceResponse.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Response\\ServiceResponse.cs",
+              "RelativeToolTip": "Application\\DTO\\Response\\ServiceResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:01:02.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "CreateUserRequestDTO.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Identity\\CreateUserRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\Request\\Identity\\CreateUserRequestDTO.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\DTO\\Request\\Identity\\CreateUserRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\Request\\Identity\\CreateUserRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:59:43.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ReactionState.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Extensions\\ReactionState.cs",
+              "RelativeDocumentMoniker": "Application\\Extensions\\ReactionState.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Extensions\\ReactionState.cs",
+              "RelativeToolTip": "Application\\Extensions\\ReactionState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:55:43.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "DefaultClaims.cs",
+              "DocumentMoniker": "D:\\source\\Bislerium\\Application\\Extensions\\DefaultClaims.cs",
+              "RelativeDocumentMoniker": "Application\\Extensions\\DefaultClaims.cs",
+              "ToolTip": "D:\\source\\Bislerium\\Application\\Extensions\\DefaultClaims.cs",
+              "RelativeToolTip": "Application\\Extensions\\DefaultClaims.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T11:54:39.351Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

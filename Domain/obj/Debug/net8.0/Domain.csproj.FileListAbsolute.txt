@@ -9,3 +9,15 @@ D:\source\Practice\Domain\obj\Debug\net8.0\Domain.dll
 D:\source\Practice\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\source\Practice\Domain\obj\Debug\net8.0\Domain.pdb
 D:\source\Practice\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\source\Bislerium\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\source\Bislerium\Domain\bin\Debug\net8.0\Domain.dll
+D:\source\Bislerium\Domain\bin\Debug\net8.0\Domain.pdb
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.dll
+D:\source\Bislerium\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.pdb
+D:\source\Bislerium\Domain\obj\Debug\net8.0\ref\Domain.dll

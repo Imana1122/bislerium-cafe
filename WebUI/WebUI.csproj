@@ -33,8 +33,4 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\Pages\General\" />
-  </ItemGroup>
-
 </Project>

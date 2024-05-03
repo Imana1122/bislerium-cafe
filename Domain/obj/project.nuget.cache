@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ekQJ7jNQ8oW6ihLHrvEbr3sTF1eRubEkr6f6WLkImX4vyxcWtgHL2IJj2tHvn+FH/yI9J0z9/oUsoezCR2y+tg==",
+  "dgSpecHash": "3IGu/AEzQZ2GLmXj/ClPgj1bCUQQYhGr6k1m/yWTFVjYiOE+VLwpuYVNLTBi+kJhO/vVgUyUR7iXwjft41yAbQ==",
   "success": true,
-  "projectFilePath": "D:\\source\\Practice\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

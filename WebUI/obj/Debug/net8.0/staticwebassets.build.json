@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j9wAnAq6u3UTdZVPo7jY+Wd7/wtnMYOuxWELoOcW3J8=",
+  "Hash": "mNtpgo1oWYxW6oGDglLlXz8YG4i/SNEENpg/muW+IS0=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "WebUI\\wwwroot",
       "Source": "WebUI",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "Pattern": "**"
     }
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "C:\\Users\\imana\\.nuget\\packages\\syncfusion.blazor.themes\\25.1.42\\staticwebassets\\tailwind-dark.css"
     },
     {
-      "Identity": "D:\\source\\Practice\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css",
+      "Identity": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css",
       "SourceId": "WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "WebUI.styles.css",
       "AssetKind": "All",
@@ -2180,13 +2180,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\source\\Practice\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css"
+      "OriginalItemSpec": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css"
     },
     {
-      "Identity": "D:\\source\\Practice\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
+      "Identity": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
       "SourceId": "WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "WebUI.bundle.scp.css",
       "AssetKind": "All",
@@ -2199,13 +2199,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\source\\Practice\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css"
+      "OriginalItemSpec": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css"
     },
     {
-      "Identity": "D:\\source\\Practice\\WebUI\\wwwroot\\app.css",
+      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\app.css",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\source\\Practice\\WebUI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\source\\Practice\\WebUI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\source\\Practice\\WebUI\\wwwroot\\favicon.png",
+      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\favicon.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Practice\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
