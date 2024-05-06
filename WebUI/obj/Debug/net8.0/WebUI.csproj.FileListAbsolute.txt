@@ -206,7 +206,6 @@ D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.GeneratedMSBuildEditorConfig.ed
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.AssemblyInfoInputs.cache
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.AssemblyInfo.cs
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.csproj.CoreCompileInputs.cache
-D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.MvcApplicationPartsAssemblyInfo.cs
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.MvcApplicationPartsAssemblyInfo.cache
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.sourcelink.json
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.dll
@@ -405,3 +404,12 @@ D:\source\Bislerium\WebUI\obj\Debug\net8.0\scopedcss\projectbundle\WebUI.bundle.
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.csproj.Up2Date
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.genruntimeconfig.cache
 D:\source\Bislerium\WebUI\obj\Debug\net8.0\ref\WebUI.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\Mediator.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\ServiceStack.Text.dll
+D:\source\Bislerium\WebUI\obj\Debug\net8.0\WebUI.MvcApplicationPartsAssemblyInfo.cs
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\Syncfusion.Blazor.Cards.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\BlazorBootstrap.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\MailKit.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\MimeKit.dll
+D:\source\Bislerium\WebUI\bin\Debug\net8.0\NETCore.MailKit.dll

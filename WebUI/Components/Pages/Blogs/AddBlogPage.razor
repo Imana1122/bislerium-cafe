@@ -1,0 +1,228 @@
+﻿@page "/blogs/create"
+@using NetcodeHub.Packages.Components.FileUpload.FileUploadWithProgressbar
+@attribute [Authorize(Policy = "UserPolicy")]
+@rendermode InteractiveServer
+
+
+<div class="d-flex flex-column justify-content-center align-content-center" style="width:60rem">
+    <!-- Content Header (Page header) -->
+    <section class="content-header" style="width:60rem">
+        <div class="container-fluid my-2">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Create Blog</h1>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="/blogs/index" class="btn btn-primary">Back</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <EditForm Model="blogModel" method="post" OnValidSubmit="CreateBlog" FormName="blogForm" Enhance>
+            <!-- Form content -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- Blog details form -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <!-- Blog title -->
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Title</label>
+                                    <InputText id="title" @bind-Value="blogModel.Title" class="form-control" autocomplete="title" />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea id="description" type="text" @bind="blogModel.Description" class="form-control" rows="5" maxlength="500"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Image upload -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h2 class="h4 mb-3">Media</h2>
+
+                                <FileUpload @ref="FileUploadComponent" Notify="RetrieveContent" />
+
+                                <div class="alert alert-danger">
+                                    @Errors
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="pb-5 pt-3">
+                    <button class="btn btn-primary">Create</button>
+                    <a href="/blogs/index" class="btn btn-outline-dark ml-3">Cancel</a>
+                </div>
+            </div>
+            @if (@ErrorMessage != "")
+            {
+                <div class="alert alert-danger">
+                    @ErrorMessage
+                </div>
+            }
+            else
+            {
+                <ValidationSummary class="form-control text-danger text-decoration-none" />
+            }
+        </EditForm>
+       
+    </section>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private AddBlogRequestDTO blogModel { get; set; } = new();
+
+    string ErrorMessage = "";
+
+    List<string> RequiredEx = [".jpg", ".png"];
+    FileUpload? FileUploadComponent;
+    string? Errors;
+    IList<IBrowserFile>? Files { get; set; } = new List<IBrowserFile>();
+
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid userId))
+            {
+                // Set the user ID in the blog model
+                blogModel.UserId = userId;
+            }
+        }
+    }
+    async Task RetrieveContent(IReadOnlyList<IBrowserFile>? incomingFiles)
+    {
+        try
+        {
+            if (incomingFiles is not null)
+            {
+                foreach (var item in incomingFiles)
+                {
+                    // Check file size
+                    if (item.Size > 3 * 1024 * 1024) // Convert 3MB to bytes
+                    {
+                        // Display error message or handle oversized file
+                        // For example:
+                        await toast.ShowError("File size exceeds 3MB limit.");
+
+                        Console.WriteLine("File size exceeds 3MB limit.");
+                        return;
+                    }
+
+                    // Check file type
+                    if (!item.ContentType.StartsWith("image/"))
+                    {
+                        // Display error message or handle invalid file type
+                        // For example:
+                        await toast.ShowError("Only image files are allowed.");
+
+                        Console.WriteLine("Only image files are allowed.");
+                        return;
+                    }
+                    // Generate a unique file name
+                    var fileName = Guid.NewGuid().ToString("N") + Path.GetExtension(item.Name);
+
+                    // Get the web root path
+                    var webRootPath = hostingEnvironment.WebRootPath;
+                    var filePath = Path.Combine(webRootPath, "uploads", fileName);
+                    var storeFilePath = Path.Combine("uploads", fileName);
+
+                    try
+                    {
+                        // Ensure the uploads directory exists
+                        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                        // Copy the file to the server
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await item.OpenReadStream().CopyToAsync(fileStream);
+                        }
+                        await toast.ShowSuccess("Image Uploaded");
+
+                        // Add the file path to the list
+                        if (blogModel.Images == null)
+                        {
+                            blogModel.Images = new List<AddBlogImageRequestDTO>();
+                        }
+
+                        blogModel.Images.Add(new AddBlogImageRequestDTO {  Image = storeFilePath });
+                        Files!.Add(item);
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle file saving errors
+                        Console.WriteLine($"Error saving file: {ex.Message}");
+                        Errors = "Error saving file.";
+                    }
+                }
+            }
+            Errors = FileUploadComponent!.GetErrors();
+        }catch(Exception ex)
+        {
+            await toast.ShowError(ex.Message);
+            Console.WriteLine(ex);
+        }
+    }
+
+    // Method to create blog
+    private async Task CreateBlog()
+    {
+        try
+        {
+            if(blogModel.Images.Count() > 0)
+            {
+                var scope = serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                var command = new CreateBlogCommand(blogModel); // Create an instance of CreateBlogCommand
+                var response = await mediator.Send(command); // Send the command using MediatR
+
+
+                if (response.Flag)
+                {
+                    NavManager.NavigateTo("/blogs/index");
+                }
+                else
+                {
+                    // Handle error
+                    ErrorMessage = response.Message;
+
+                    NavManager.NavigateTo("/blogs/index");
+
+                    Console.WriteLine(response.Message);
+                }
+            }
+            else
+            {
+                ErrorMessage ="Image is required";
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // Handle exception
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

@@ -1,0 +1,549 @@
+﻿@page "/top10/index"
+@attribute [Authorize(Policy="AdministrationPolicy")]
+
+
+<div class="header mb-20">
+    <Dropdown Size="BlazorBootstrap.Size.Small" Split="true">
+        <DropdownActionButton Color="ButtonColor.Primary">@selectedMonth</DropdownActionButton>
+        <DropdownToggleButton Color="ButtonColor.Primary" />
+
+        <DropdownMenu>
+            <DropdownItem @onclick="SetUp" Type="BlazorBootstrap.ButtonType.Link">None</DropdownItem>
+
+            <DropdownItem @onclick="()=>SortByMonth(1)" Type="BlazorBootstrap.ButtonType.Link">January</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(2)" Type="BlazorBootstrap.ButtonType.Link">February</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(3)" Type="BlazorBootstrap.ButtonType.Link">March</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(4)" Type="BlazorBootstrap.ButtonType.Link">April</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(5)" Type="BlazorBootstrap.ButtonType.Link">May</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(6)" Type="BlazorBootstrap.ButtonType.Link">June</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(7)" Type="BlazorBootstrap.ButtonType.Link">July</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(8)" Type="BlazorBootstrap.ButtonType.Link">August</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(9)" Type="BlazorBootstrap.ButtonType.Link">September</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(10)" Type="BlazorBootstrap.ButtonType.Link">October</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(11)" Type="BlazorBootstrap.ButtonType.Link">November</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(12)" Type="BlazorBootstrap.ButtonType.Link">December</DropdownItem>
+
+
+        </DropdownMenu>
+    </Dropdown>
+
+</div>
+<div style="width:100%">
+    
+    <div class="md-row lg-row md-col-12 lg-col-12 justify-content-between align-items-start ">
+        <div class="md-col-8 lg-col-8 col-12 d-flex flex-column justify-items-start gap-10">
+            <Card Style=" overflow:auto; margin-bottom:2rem" >
+                <CardHeader>
+                    <CardTitle>Bloggers</CardTitle>
+                </CardHeader>
+                <CardBody>
+                   
+                    <Grid TItem="GetBloggerResponseDTO" class="table table-hover table-bordered table-striped overflow-auto mdi-table-column-width" DataProvider="BloggerDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5" AllowSorting="true">
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="Name" PropertyName="Name">
+                           
+                                @context.Name
+                        </GridColumn>
+                       
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="Email" PropertyName="Email" >
+                            @context.Email
+                        </GridColumn>
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="AllTimeBlogsCount" PropertyName="TotalBlogsCount" SortKeySelector="item => item.Id" Filterable="false">
+                            @context.BlogsCount
+                        </GridColumn>
+                       
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="PopularityInMonth" PropertyName="Popularity" SortKeySelector="item => item.Id" Filterable="false">
+                            @context.PopularityCount
+                        </GridColumn>
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="UpvotesInMonth" PropertyName="Upvotes" SortKeySelector="item => item.Id" Filterable="false">
+                            @context.UpvoteCount
+                        </GridColumn>
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="DownvotesInMonth" PropertyName="Downvotes" SortKeySelector="item => item.Id" Filterable="false">
+                            @context.DownvoteCount
+                        </GridColumn>
+                        
+                        <GridColumn TItem="GetBloggerResponseDTO" HeaderText="Action" PropertyName="Action" Filterable="false">
+                            
+                            <a href="#" @onclick="() => {UserId=context.Id; deleteConfirmPopup = true; }" class="text-danger w-4 h-4 mr-1">
+                                <svg wire:loading.remove.delay="" style="width:20px" wire:target="" class="filament-link-icon w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path ath fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </GridColumn>
+
+                    </Grid>
+                   
+                    
+                </CardBody>
+            </Card>
+            <Card Style=" overflow:auto; margin-bottom:2rem">
+                <CardHeader>
+                    <CardTitle>Bar chart</CardTitle>
+                </CardHeader>
+                <CardBody>
+                    <LineChart @ref="lineChart" Class="mb-4" />
+                </CardBody>
+            </Card>
+            <Card Style=" overflow:auto; margin-bottom:2rem">
+                <CardHeader>
+                    <CardTitle>Bar chart</CardTitle>
+                </CardHeader>
+                <CardBody>
+                    <LineChart @ref="blogLineChart" Class="mb-4" />
+                </CardBody>
+            </Card>
+            
+        </div>
+        <Card Class="md-col-3 lg-col-3  ">
+            <CardBody>
+                <CardTitle>Top 10 Blogs</CardTitle>
+                @if (top10blogs.Any())
+                {
+                        <div class="d-flex flex-wrap justify-content-center align-items-start">
+
+
+                        @foreach (var blogModel in top10blogs)
+                            {
+                                <!-- Blog details form -->
+                                <Card Style="width:15rem; margin-right:1rem; margin-bottom:1rem">
+                                    <!-- Carousel -->
+                                    <a href="/blogs/@blogModel.Id" style="text-decoration:none">
+                                        <div id="carouselExampleIndicators-@blogModel.Id" class="carousel slide" data-ride="carousel">
+                                            <!-- Indicators -->
+                                            <div class="carousel-indicators">
+                                                @if (blogModel != null && blogModel.Images != null && blogModel.Images.Any())
+                                                {
+                                                    int index = 0;
+                                                    foreach (var image in blogModel.Images)
+                                                    {
+                                                        <button type="button" data-bs-target="#carouselExampleIndicators-@blogModel.Id" data-bs-slide-to="@index" class="@(index == 0 ? "active" : "")" aria-current="true" aria-label="Slide @(index + 1)"></button>
+                                                        index++;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <p>No images available.</p>
+                                                }
+                                            </div>
+                                            <!-- Wrapper for slides -->
+                                            <div class="carousel-inner">
+                                                @if (blogModel != null && blogModel.Images != null && blogModel.Images.Any())
+                                                {
+                                                    int slideIndex = 0;
+                                                    foreach (var image in blogModel.Images)
+                                                    {
+                                                        <div class="carousel-item @(slideIndex == 0 ? "active" : "")">
+                                                            <img class="d-block w-100" src="@image.Image" alt="BLOG">
+                                                        </div>
+                                                        slideIndex++;
+                                                    }
+                                                }
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-@blogModel.Id" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-@blogModel.Id" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </a>
+                                    <CardBody>
+                                        <CardTitle>@blogModel.Title</CardTitle>
+                                        <CardSubTitle>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</CardSubTitle>
+
+                                        <CardText>
+                                            @{
+                                                if (blogModel.Description.Length > 200)
+                                                {
+                                                    <text>@(blogModel.Description.Substring(0, 50))...</text>
+                                                }
+                                                else
+                                                {
+                                                    <text>@blogModel.Description</text>
+                                                }
+                                            }
+                                        </CardText>
+
+
+                                    </CardBody>
+                                    <CardFooter>
+                                        <div class="row justify-content-between align-items-center">
+                                            <!-- Upvote and Downvote section -->
+                                            <div class="col-auto d-flex align-items-center gap-2">
+                                                <!-- Upvote -->
+                                               <i class="bi bi-arrow-up-square text-secondary"></i>
+                                                <p class="m-0">@blogModel.UpvoteCount</p>
+                                                <!-- Downvote -->
+                                                <i class="bi bi-arrow-down-square text-secondary"></i>
+                                                <p class="m-0">@blogModel.DownvoteCount</p>
+                                            </div>
+                                            <!-- Comments count -->
+                                            <div class="col-auto d-flex align-items-center gap-2">
+                                                <i class="bi bi-chat-text text-secondary " style="cursor:pointer"></i>
+                                                <p class="m-0">@blogModel.CommentsCount</p>
+                                            </div>
+                                        </div>
+                                    </CardFooter>
+                                </Card>
+
+                            }
+                        </div>
+
+                    }else{
+                        <h2>NO blogs</h2>
+                    }
+                
+
+            </CardBody>
+        </Card>
+    </div>
+</div>
+
+ @if (deleteConfirmPopup)
+    {
+        <!-- Delete Confirmation Modal -->
+        <div class="modal" tabindex="-1" role="dialog" style="display: block;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmation Required</h5>
+                        <button type="button" class="btn-close" aria-label="Close" @onclick="() => deleteConfirmPopup = false"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete the blogger?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" @onclick="()=>DeleteBlogger(UserId)">Delete</button>
+                        <button type="button" class="btn btn-secondary" @onclick="() => deleteConfirmPopup = false">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+@code {
+    private bool deleteConfirmPopup = false;
+    string ErrorMessage = "";
+    private Guid BlogId { get; set; } 
+    public bool IsBusy { get; set; } = false;
+    private Guid UserId;
+    public List<GetBloggerResponseDTO> Bloggers { get; set; } = [];
+    public List<GetBloggerResponseDTO> top10bloggers { get; set; } = [];
+    public List<GetBlogsResponseDTO> top10blogs { get; set; } =[];
+    public IEnumerable<GetBlogsResponseDTO> AllBlogs { get; set; } = [];
+
+
+    private LineChart lineChart = default!;
+    private LineChart blogLineChart = default!;
+
+    private LineChartOptions lineChartOptions = default!;
+    private LineChartOptions bloggerlineChartOptions = default!;
+
+    private ChartData chartData = default!;
+    private ChartData blogChartData = default!;
+
+    public string selectedMonth = "None";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SetUp();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        { 
+            await SetUp();
+
+            // Perform JavaScript interop calls here
+            await SetUpBarChart();
+            await SetUpBloggerBarChart();
+            await lineChart.InitializeAsync(chartData: chartData, chartOptions: lineChartOptions, plugins: new string[] { "ChartDataLabels" });
+            await blogLineChart.InitializeAsync(chartData: blogChartData, chartOptions: bloggerlineChartOptions, plugins: new string[] { "ChartDataLabels" });
+       }
+        await base.OnAfterRenderAsync(firstRender);
+
+
+    }
+
+
+    public async Task SetUp()
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        // Send the GetAllBlogsQuery
+        var result = await mediator.Send(new GetBloggersQuery());
+
+
+        var blogs = await mediator.Send(new GetAllBlogsWithReactionStatusQuery(UserId));
+        AllBlogs = blogs;
+        top10blogs = blogs.OrderByDescending(blog => blog.PopularityCount)
+                             .Take(10)
+                             .ToList();
+
+
+        foreach (var item in result)
+        {
+            // Count the number of blogs for the current user
+            item.BlogsCount = blogs.Count(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower());
+
+            // Calculate the total popularity count for the current user
+            item.PopularityCount = blogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
+                                        .Sum(blog => blog.PopularityCount);
+            // Calculate the total popularity count for the current user
+            item.UpvoteCount = blogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
+                                        .Sum(blog => blog.UpvoteCount);
+            // Calculate the total popularity count for the current user
+            item.DownvoteCount = blogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
+                                        .Sum(blog => blog.DownvoteCount);
+            Bloggers.Add(item);
+        }
+        top10bloggers = Bloggers.OrderByDescending(_ => _.PopularityCount).Take(10).ToList();
+    }
+
+    public async Task SortByMonth(int month)
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        // Send the GetAllBlogsQuery
+        var result = await mediator.Send(new GetBlogsWithPopularityByMonthQuery(month));
+
+        List < GetBlogsResponseDTO> specificBlogs= result.ToList();
+
+        top10blogs = specificBlogs.OrderByDescending(blog => blog.PopularityCount)
+                             .Take(10)
+                             .ToList();
+
+
+        foreach (var item in Bloggers)
+        {
+            // Count the number of blogs for the current user
+            item.BlogsCount = specificBlogs.Count(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower());
+
+            // Calculate the total popularity count for the current user
+            item.PopularityCount = specificBlogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
+                                        .Sum(blog => blog.PopularityCount);
+
+            // Calculate the total popularity count for the current user
+            item.UpvoteCount = specificBlogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
+                                        .Sum(blog => blog.UpvoteCount);
+            // Calculate the total popularity count for the current user
+            item.DownvoteCount = specificBlogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
+                                        .Sum(blog => blog.DownvoteCount);
+
+            top10bloggers.Add(item);
+        }
+        top10bloggers = top10bloggers.OrderByDescending(_ => _.PopularityCount).Take(10).ToList();
+
+
+        switch (month)
+        {
+            case 1:
+                selectedMonth = "January";
+                break;
+            case 2:
+                selectedMonth = "February";
+                break;
+            case 3:
+                selectedMonth = "March";
+                break;
+            case 4:
+                selectedMonth = "April";
+                break;
+            case 5:
+                selectedMonth = "May";
+                break;
+            case 6:
+                selectedMonth = "June";
+                break;
+            case 7:
+                selectedMonth = "July";
+                break;
+            case 8:
+                selectedMonth = "August";
+                break;
+            case 9:
+                selectedMonth = "September";
+                break;
+            case 10:
+                selectedMonth = "October";
+                break;
+            case 11:
+                selectedMonth = "November";
+                break;
+            case 12:
+                selectedMonth = "December";
+                break;
+            default:
+                selectedMonth = "Invalid month";
+                break;
+        }
+
+    }
+
+
+
+    private async Task<GridDataProviderResult<GetBloggerResponseDTO>> BloggerDataProvider(GridDataProviderRequest<GetBloggerResponseDTO> request)
+    {
+        return await Task.FromResult(request.ApplyTo(top10bloggers));
+    }
+
+    private async Task DeleteBlogger(Guid UserId)
+    {
+        if (IsBusy) return;
+
+        ErrorMessage = "";
+        IsBusy = true;
+
+
+        var response = await accountService.DeleteAccountAsync(UserId.ToString());
+
+        if (!response.Flag)
+        {
+            IsBusy = false;
+            ErrorMessage = response.Message;
+            await toast.ShowError(response.Message);
+
+        }
+        else
+        {
+            await toast.ShowSuccess(response.Message);
+            NavManager.NavigateTo("/bloggers/index",true);
+
+        }
+
+        IsBusy = false;
+    }
+
+
+
+    protected async Task SetUpBarChart()
+    {
+        try
+        {
+            var colors = ColorBuilder.CategoricalTwelveColors;
+            var labels = top10bloggers.Select(blogger => blogger.Name).ToList();
+            var datasets = new List<IChartDataset>();
+            var dataset1 = new LineChartDataset
+                {
+                    Label = "Popularity",
+                    Data = top10bloggers.Select(blogger => (double)blogger.PopularityCount).ToList(),
+                    BackgroundColor = new List<string> { colors[0] },
+                    BorderColor = new List<string> { colors[0] },
+                    BorderWidth = new List<double> { 2 },
+                    HoverBorderWidth = new List<double> { 4 },
+                    PointBackgroundColor = new List<string> { colors[0] },
+                    PointRadius = new List<int> { 3 }, // show points
+                    PointHoverRadius = new List<int> { 4 },
+
+                    // datalabels
+                    Datalabels = new() { Align = "end", Anchor = "end" }
+                };
+            datasets.Add(dataset1);
+            chartData = new ChartData
+                {
+                    Labels = labels,
+                    Datasets = datasets
+                };
+
+            lineChartOptions = new();
+            lineChartOptions.Responsive = true;
+            lineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
+
+            lineChartOptions.Scales.X.Title.Text = "Popularity";
+            lineChartOptions.Scales.X.Title.Display = true;
+
+            lineChartOptions.Scales.Y.Title.Text = "Bloggers";
+            lineChartOptions.Scales.Y.Title.Display = true;
+
+            lineChartOptions.Plugins.Title.Text = "Top 10 Bloggers";
+            lineChartOptions.Plugins.Title.Display = true;
+
+            // datalabels
+            lineChartOptions.Plugins.Datalabels.Color = "white";
+
+
+           
+            
+
+            await toast.ShowSuccess("setupcomplete");
+
+        }
+        catch (Exception ex)
+        {
+            await toast.ShowError(ex.Message);
+            // Handle the exception, log it, or display an error message
+            Console.WriteLine("An error occurred while setting up the bar chart: " + ex.Message);
+        }
+    }
+
+    protected async Task SetUpBloggerBarChart()
+    {
+        try
+        {
+            var colors = ColorBuilder.CategoricalTwelveColors;
+
+
+            var bloggerLabels = top10blogs.Select(blogger => blogger.Title.Length > 10 ? blogger.Title.Substring(0, 10) + ".." : blogger.Title).ToList();
+            var bloggerDatasets = new List<IChartDataset>();
+            var dataset2 = new LineChartDataset
+                {
+                    Label = "Top 10 Blogs",
+                    Data = top10blogs.Select(blogger => (double)blogger.PopularityCount).ToList(),
+                    BackgroundColor = new List<string> { colors[1] },
+                    BorderColor = new List<string> { colors[1] },
+                    BorderWidth = new List<double> { 2 },
+                    HoverBorderWidth = new List<double> { 4 },
+                    PointBackgroundColor = new List<string> { colors[1] },
+                    PointRadius = new List<int> { 3 }, // show points
+                    PointHoverRadius = new List<int> { 4 },
+
+                    // datalabels
+                    Datalabels = new() { Align = "end", Anchor = "end" }
+                };
+            bloggerDatasets.Add(dataset2);
+
+            blogChartData = new ChartData
+                {
+                    Labels = bloggerLabels,
+                    Datasets = bloggerDatasets
+                };
+
+            bloggerlineChartOptions = new();
+            bloggerlineChartOptions.Responsive = true;
+            bloggerlineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
+
+            bloggerlineChartOptions.Scales.X.Title.Text = "Popularity";
+            bloggerlineChartOptions.Scales.X.Title.Display = true;
+
+            bloggerlineChartOptions.Scales.Y.Title.Text = "Blogs";
+            bloggerlineChartOptions.Scales.Y.Title.Display = true;
+
+            bloggerlineChartOptions.Plugins.Title.Text = "Top 10 Blogs";
+            bloggerlineChartOptions.Plugins.Title.Display = true;
+
+            // datalabels
+            bloggerlineChartOptions.Plugins.Datalabels.Color = "white";
+
+
+
+
+
+            await toast.ShowSuccess("setupcomplete");
+
+        }
+        catch (Exception ex)
+        {
+            await toast.ShowError(ex.Message);
+            // Handle the exception, log it, or display an error message
+            Console.WriteLine("An error occurred while setting up the bar chart: " + ex.Message);
+        }
+    }
+
+
+
+
+
+}

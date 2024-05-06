@@ -66,6 +66,14 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "NetcodeHub.Packages.Extensions.Attributes.RequiredGuid": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -310,11 +318,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Blazor.Bootstrap": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
             "Mapster": {
               "target": "Package",
               "version": "[7.4.0, )"
             },
+            "Mediator": {
+              "target": "Package",
+              "version": "[1.0.2123, )"
+            },
             "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Common": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
@@ -338,7 +358,7 @@
             },
             "NetcodeHub.Packages.Components.FileUpload": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.0.0, )"
             },
             "NetcodeHub.Packages.Components.Modal": {
               "target": "Package",
@@ -355,6 +375,10 @@
             "NetcodeHub.Packages.UI.Templates.Breeze": {
               "target": "Package",
               "version": "[1.0.8, )"
+            },
+            "Syncfusion.Blazor.Cards": {
+              "target": "Package",
+              "version": "[25.1.42, )"
             },
             "Syncfusion.Blazor.Charts": {
               "target": "Package",

@@ -1,0 +1,331 @@
+﻿@page "/blogs/edit/{Id:guid}"
+@using Application.Service.Blogs.Commands.BlogImages
+@using Application.Service.Blogs.Queries.BlogImages
+@using NetcodeHub.Packages.Components.FileUpload.FileUploadWithProgressbar
+@attribute [Authorize(Policy = "UserPolicy")]
+@rendermode InteractiveServer
+
+<div style="width:60rem">
+    <!-- Content Header (Page header) -->
+    <section class="content-header" style="width:60rem">
+        <div class="container-fluid my-2">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Edit Blog</h1>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="/blogs/index" class="btn btn-primary">Back</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <EditForm Model="blogModel" method="post" OnValidSubmit="UpdateBlog" FormName="blogUpdate" Enhance style="width:60rem">
+            <!-- Form content -->
+            <div class="container-fluid" style="width:60rem">
+                <div class="row">
+                    <div class="col-md-8" >
+                        <!-- Blog details form -->
+                        <div class="card mb-3" style="width:60rem">
+                            <div class="card-body">
+                                <!-- Blog title -->
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Title</label>
+                                    <InputText id="title" @bind-Value="blogModel.Title" class="form-control" autocomplete="title" />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea id="description" @bind="blogModel.Description" class="form-control" rows="3"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="pb-5 pt-3">
+                    <button class="btn btn-primary">Update</button>
+                    <a href="/blogs/index" class="btn btn-outline-dark ml-3">Cancel</a>
+                </div>
+
+                <!-- Image upload -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="h4 mb-3">Media</h2>
+
+                        <FileUpload @ref="FileUploadComponent" Notify="RetrieveContent" />
+
+                        <div class="alert alert-danger">
+                            @Errors
+                        </div>
+                        @if (blogImages.Any() && blogImages.Count() > 1)
+                        {
+                            <div class="d-flex gap-3 flex-wrap">
+                                @foreach (var image in blogImages)
+                                {
+                                    <div class="card mb-3" style="max-width: 100px;">
+                                        <img src="@image.Image" class="card-img-top" alt="Blog Image">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-danger" @onclick="() => DeleteImage(image.Id)">
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        @if (blogImages.Any() && blogImages.Count() <= 1)
+                        {
+                            <div class="d-flex gap-3 flex-wrap">
+                                @foreach (var image in blogImages)
+                                {
+                                    <div class="card mb-3" style="max-width: 100px;">
+                                        <img src="@image.Image" class="card-img-top" alt="Blog Image">
+                                        
+                                    </div>
+                                }
+                            </div>
+                        }
+                        
+
+                    </div>
+                </div>
+            </div>
+            @if (@ErrorMessage != "")
+            {
+                <div class="alert alert-danger">
+                    @ErrorMessage
+                </div>
+            }
+            else
+            {
+                <ValidationSummary class="form-control text-danger text-decoration-none" />
+            }
+        </EditForm>
+        
+
+    </section>
+</div>
+
+@code {
+    [Parameter] // Parameter to capture the addin Id from the route /EditAddin/{Id:guid}
+    public Guid Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private UpdateBlogRequestDTO blogModel { get; set; } = new();
+    private IEnumerable<BlogImage> blogImages = [];
+    string ErrorMessage = "";
+
+    List<string> RequiredEx = [".jpg", ".png"];
+    FileUpload? FileUploadComponent;
+    string? Errors;
+    IList<IBrowserFile>? Files { get; set; } = new List<IBrowserFile>();
+
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid userId))
+            {
+                // Set the user ID in the blog model
+                blogModel.UserId = userId;
+            }
+        }
+
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        var command = new GetBlogByIdCommand(Id, blogModel.UserId); // Update an instance of UpdateBlogCommand
+        var response = await mediator.Send(command); // Send the command using MediatR
+
+        blogModel = response.Adapt(new UpdateBlogRequestDTO());
+
+        await GetBlogImages();
+
+    }
+    async Task GetBlogImages()
+    {
+        try
+        {
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            var command = new GetBlogImagesByBlogIdQuery(Id); // Update an instance of UpdateBlogCommand
+            var response = await mediator.Send(command); // Send the command using MediatR
+
+            blogImages = response;
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+    }
+
+    async Task RetrieveContent(IReadOnlyList<IBrowserFile>? incomingFiles)
+    {
+        if (incomingFiles is not null)
+        {
+            foreach (var item in incomingFiles)
+            {
+                // Check file size
+                if (item.Size > 3 * 1024 * 1024) // Convert 3MB to bytes
+                {
+                    // Display error message or handle oversized file
+                    // For example:
+                    Console.WriteLine("File size exceeds 3MB limit.");
+                    return;
+                }
+
+                // Check file type
+                if (!item.ContentType.StartsWith("image/"))
+                {
+                    // Display error message or handle invalid file type
+                    // For example:
+                    Console.WriteLine("Only image files are allowed.");
+                    return;
+                }
+                // Generate a unique file name
+                var fileName = Guid.NewGuid().ToString("N") + Path.GetExtension(item.Name);
+
+                // Get the web root path
+                var webRootPath = hostingEnvironment.WebRootPath;
+                var filePath = Path.Combine(webRootPath,"uploads", fileName);
+
+                var storeFilePath = Path.Combine("uploads", fileName);
+                try
+                {
+                    // Ensure the uploads directory exists
+                    Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+
+                    // Copy the file to the server
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await item.OpenReadStream().CopyToAsync(fileStream);
+                    }
+
+                    // Add the file path to the list
+                    Files!.Add(item);
+
+                    AddBlogImageByBlogIdRequestDTO imageModel = new AddBlogImageByBlogIdRequestDTO
+                        {
+
+                            BlogId = Id,
+                            Image = storeFilePath
+                        };
+                    await SaveImage(imageModel);
+                }
+                catch (IOException ex)
+                {
+                    // Handle file saving errors
+                    Console.WriteLine($"Error saving file: {ex.Message}");
+                    Errors = "Error saving file.";
+                }
+            }
+        }
+        Errors = FileUploadComponent!.GetErrors();
+    }
+
+    private async Task SaveImage(AddBlogImageByBlogIdRequestDTO imageModel)
+    {
+        try
+        {
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            imageModel.BlogId = Id;
+            var command = new CreateBlogImageCommand(imageModel); // Update an instance of UpdateBlogCommand
+            var response = await mediator.Send(command); // Send the command using MediatR
+
+
+            if (response.Flag)
+            {
+                await toast.ShowSuccess(response.Message);
+
+                NavManager.NavigateTo("/blogs/edit/" + Id);
+            }
+            else
+            {
+                // Handle error
+                await toast.ShowError(response.Message);
+
+
+                Console.WriteLine(response.Message);
+            }
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+    }
+
+    // Method to Update blog
+    private async Task UpdateBlog()
+    {
+        try
+        {
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            var command = new UpdateBlogCommand(blogModel); // Update an instance of UpdateBlogCommand
+            var response = await mediator.Send(command); // Send the command using MediatR
+
+
+            if (response.Flag)
+            {
+                NavManager.NavigateTo("/blogs/index");
+            }
+            else
+            {
+                // Handle error
+                ErrorMessage = response.Message;
+
+                NavManager.NavigateTo("/blogs/index");
+
+                Console.WriteLine(response.Message);
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle exception
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private async Task DeleteImage(Guid Id)
+    {
+        if(blogImages.Count() <= 1)
+        {
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            var command = new DeleteBlogImageCommand(Id); // Update an instance of UpdateBlogCommand
+            var response = await mediator.Send(command); // Send the command using MediatR
+
+
+            if (response.Flag)
+            {
+                await toast.ShowSuccess(response.Message);
+                NavManager.NavigateTo("/blogs/edit/" + Id);
+            }
+            else
+            {
+                await toast.ShowError(response.Message);
+
+
+                Console.WriteLine(response.Message);
+            }
+        }
+        else
+        {
+            await toast.ShowError("Last Image cannot be deleted!");
+        }
+
+    }
+}

@@ -14,5 +14,6 @@ namespace Application.DTO.Request.Blogs
 
         [Required]
         public string Image { get; set; }
+       
     }
 }

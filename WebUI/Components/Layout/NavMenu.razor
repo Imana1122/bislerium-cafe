@@ -1,38 +1,67 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">WebUI</a>
+﻿<div class="height-screen " style="height:100%">
+    <div class="flex-grow-1">
+       
+
+        <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+        <div class="nav" onclick="document.querySelector('.navbar-toggler').click()">
+            <nav class="flex-column">
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="app/home" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                    </NavLink>
+                </div>
+                <AuthorizeView Policy="UserPolicy">
+
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="blogs/create">
+                            <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Create Blog
+                        </NavLink>
+                    </div>
+
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="blogs/index">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> My Blogs
+                        </NavLink>
+                    </div>
+
+                </AuthorizeView>
+                <AuthorizeView Policy="AdministrationPolicy">
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="bloggers/index">
+                            <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Bloggers
+                        </NavLink>
+                    </div>
+                </AuthorizeView>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="profile">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Profile
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="change-password">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Change Password
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="settings">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Settings
+                    </NavLink>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
+    <div class="nav">
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="app/home" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
+        <!-- Logout Button -->
+        <div class="nav-item px-3 mt-auto">
+            <!-- mt-auto for margin-top: auto to push it to the bottom -->
             <form action="Account/Logout" method="post" class="mb-2">
-                <AntiforgeryToken/>
+                <AntiforgeryToken />
                 <button type="submit" class="nav-link fw-bold text-danger">
-                    <i class="bi bi-box-arrow-right text-danger"></i>Logout
+                    <i class="bi bi-box-arrow-right text-danger"></i> Logout
                 </button>
             </form>
         </div>
-    </nav>
+    </div>
 </div>
-

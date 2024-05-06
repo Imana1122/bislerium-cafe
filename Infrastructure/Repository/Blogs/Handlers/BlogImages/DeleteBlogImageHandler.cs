@@ -1,7 +1,7 @@
 ﻿using Application.DTO.Response;
 using Application.Service.Blogs.Commands.BlogComments;
 using Application.Service.Blogs.Commands.BlogImages;
-using Infrastructure.DataAccess.Blogs;
+using Infrastructure.DataAccess;
 using Infrastructure.Repository.Products;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Blogs.Handlers.BlogImages
 {
-    public class DeleteBlogImageHandler(DataAccess.Blogs.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<DeleteBlogImageCommand, ServiceResponse>
+    public class DeleteBlogImageHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<DeleteBlogImageCommand, ServiceResponse>
     {
         public async Task<ServiceResponse> Handle(DeleteBlogImageCommand request, CancellationToken cancellationToken)
         {

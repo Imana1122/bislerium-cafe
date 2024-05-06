@@ -10,5 +10,6 @@ namespace Application.Extensions.Identity
     public class ApplicationUser: IdentityUser
     {
         public string Name { get; set; }
+        public string Policy { get; set; }
     }
 }

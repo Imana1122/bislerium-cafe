@@ -1,7 +1,7 @@
 ﻿using Application.DTO.Response;
 using Application.Service.Blogs.Commands.Blogs;
 using Domain.Entities;
-using Infrastructure.DataAccess.Blogs;
+using Infrastructure.DataAccess;
 using Mapster;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -10,10 +10,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Infrastructure.Repository.Products.Handlers.Categories
 {
-    public class UpdateBlogHandler(DataAccess.Blogs.IDbContextFactory<AppDbContext> contextFactory) :IRequestHandler<UpdateBlogCommand,ServiceResponse>
+    public class UpdateBlogHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) :IRequestHandler<UpdateBlogCommand,ServiceResponse>
     {
         public async Task<ServiceResponse> Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
         {
@@ -28,6 +29,16 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                 dbContext.Entry(category).State = EntityState.Detached;
                 var adaptData = request.BlogModel.Adapt(new Blog());
                 dbContext.Blogs.Update(adaptData);
+
+                var history = new UserHistory
+                {
+                    UserId = category.UserId,
+                    Content = category.Title + " is updated."
+
+                };
+
+                dbContext.Histories.Add(history);
+
                 await dbContext.SaveChangesAsync(cancellationToken);
                 return GeneralDbResponses.ItemUpdate(request.BlogModel.Title);
             }catch (Exception ex)

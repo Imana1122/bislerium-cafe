@@ -19,6 +19,7 @@ namespace Domain.Entities
 
         public Guid UserId { get; set; }
 
+
         [ForeignKey("BlogId")]
         public Blog Blog { get; set; }  // This navigation property is not necessary for migration, but can be useful for querying related entities in your application
 
@@ -29,5 +30,8 @@ namespace Domain.Entities
 
         [NotMapped] // Not mapped to the database
         public bool IsDownvote => Reaction == "Downvote";
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
     }
 }

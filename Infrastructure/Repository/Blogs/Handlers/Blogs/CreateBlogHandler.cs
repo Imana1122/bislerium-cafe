@@ -1,7 +1,7 @@
 ﻿using Application.DTO.Response;
 using Application.Service.Blogs.Commands.Blogs;
 using Domain.Entities;
-using Infrastructure.DataAccess.Blogs;
+using Infrastructure.DataAccess;
 using Mapster;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Products.Handlers.Blogs
 {
-    public class CreateBlogHandler(DataAccess.Blogs.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<CreateBlogCommand, ServiceResponse>
+    public class CreateBlogHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<CreateBlogCommand, ServiceResponse>
     {
         public async Task<ServiceResponse> Handle(CreateBlogCommand request, CancellationToken cancellationToken)
         {
@@ -26,13 +26,27 @@ namespace Infrastructure.Repository.Products.Handlers.Blogs
                 dbContext.Blogs.Add(data);
                 await dbContext.SaveChangesAsync(cancellationToken);
 
-                foreach (var blog in request.BlogImages)
-                { 
+
+
+                foreach (var blog in request.BlogModel.Images)
+                {
                     var imageData = blog.Adapt(new BlogImage());
+                    imageData.BlogId = data.Id;
                     dbContext.BlogImages.Add(imageData);
                     await dbContext.SaveChangesAsync(cancellationToken);
 
                 }
+
+                var history = new UserHistory
+                {
+                    UserId=request.BlogModel.UserId,
+                    Content=request.BlogModel.Title+" is created."
+
+                };
+                dbContext.Histories.Add(history);
+
+                await dbContext.SaveChangesAsync(cancellationToken);
+
                 return GeneralDbResponses.ItemCreated(request.BlogModel.Title);
             }
             catch(Exception ex)

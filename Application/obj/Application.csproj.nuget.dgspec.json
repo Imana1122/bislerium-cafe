@@ -66,6 +66,14 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "NetcodeHub.Packages.Extensions.Attributes.RequiredGuid": {
               "target": "Package",
               "version": "[1.0.0, )"

@@ -1,20 +1,236 @@
-﻿@inherits LayoutComponentBase
+﻿@using Application.Service.Notifications
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+
+ @inherits LayoutComponentBase
+
+<div class="bb-page">
+    <AuthorizeView Policy="UserPolicy">
+
+    <Sidebar @ref="sidebar"
+             IconName="IconName.BootstrapFill"
+             Title="Blazor Bootstrap"
+             DataProvider="SidebarDataProvider" />
+    </AuthorizeView>
+    <AuthorizeView Policy="AdministrationPolicy">
+        <Sidebar @ref="sidebar"
+                 IconName="IconName.BootstrapFill"
+                 Title="Blazor Bootstrap"
+                 DataProvider="SidebarDataProviderAdmin" />
+    </AuthorizeView>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <div class="bb-top-row px-4 d-flex justify-content-end align-items-center">
+            <!-- Logout Button -->
+            <div class="nav-item px-3 mt-auto d-flex justify-content-center align-items-center">
+
+                <AuthorizeView Policy="UserPolicy">
+                    <a href="notifications">
+                        @if (@notificationCount.notificationsCount > 0)
+                    {
+                        <div class="position-relative">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    @notificationCount.notificationsCount
+                            </span>
+                        </div>
+                    }
+                    else
+                    {
+                        <i class="bi bi-bell"></i>
+                    }
+                    </a>
+
+                   
+                </AuthorizeView>
+                <AuthorizeView>
+                    <Authorized>
+                    <!-- mt-auto for margin-top: auto to push it to the bottom -->
+                    <form action="Account/Logout" method="post">
+                        <AntiforgeryToken />
+                        <button type="submit" class="nav-link fw-bold text-danger">
+                            <i class="bi bi-box-arrow-right text-danger"></i> Logout
+                        </button>
+                    </form>
+                    </Authorized>
+                    <NotAuthorized>
+                        <!-- Content for unauthorized users -->
+                        <a href="Account/Login">
+                        <button type="button" class="nav-link fw-bold text-primary">
+                            <i class="bi bi-box-arrow-right text-primary"></i> Login
+                        </button>
+                        </a>
+                    </NotAuthorized>
+
+                </AuthorizeView>
+
+               
+            </div>
         </div>
 
         <article class="content px-4">
-            @Body
+            <div class="py-2">@Body</div>
         </article>
     </main>
+
 </div>
+
+@code {
+    BlazorBootstrap.Sidebar sidebar;
+    IEnumerable<NavItem> navItems;
+    private HubConnection hubConnection;
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid UserId))
+            {
+                await notificationCount.GetActiveOrdersCount(UserId);
+
+                hubConnection = netcodeHubConnectionService.GetHubConnection();
+                if (hubConnection.State == HubConnectionState.Disconnected)
+                {
+                    await hubConnection.StartAsync();
+                }
+                hubConnection.On<string, string>("Notification", async (userId, message) =>
+                {
+
+                    try
+                    {
+                       
+                        await InvokeAsync(async () =>
+                         {
+                                if (UserId.ToString().ToLower() == userId.ToString().ToLower())
+                                {
+                                     await toast.ShowSuccess(message);
+                                     await notificationCount.GetActiveOrdersCount(UserId);
+
+                                     notificationCount.StateChanged += OnStateChanged;
+                                     StateHasChanged();
+                                }
+                               
+                        });
+
+                        
+                    }
+                    catch(Exception ex)
+                    {
+                        await toast.ShowError(ex.Message);
+                    }
+                });
+
+                // Subscribe to the StateChanged event outside of the hub connection callback
+                notificationCount.StateChanged += OnStateChanged;
+            }
+        }
+    }
+
+    // Define the event handler at the class level
+    private void OnStateChanged()
+    {
+        // Handle state change here
+        // For example, update UI or perform any action
+        js.InvokeVoidAsync("alert", "State changed!");
+    }
+
+    private async Task<SidebarDataProviderResult> SidebarDataProvider(SidebarDataProviderRequest request)
+    {
+        if (navItems is null)
+            navItems = GetUserNavItems();
+
+        return await Task.FromResult(request.ApplyTo(navItems));
+    }
+    private async Task<SidebarDataProviderResult> SidebarDataProviderAdmin(SidebarDataProviderRequest request)
+    {
+        if (navItems is null)
+            navItems = GetNavItems();
+
+        return await Task.FromResult(request.ApplyTo(navItems));
+    }
+
+    private IEnumerable<NavItem> GetNavItems()
+    {
+        var navItems = new List<NavItem>();
+
+        // Add common navigation items
+        navItems.Add(new NavItem { Id = "1", Href = "/app/home", IconName = IconName.HouseDoorFill, Text = "Home", Match = NavLinkMatch.All });
+
+
+
+        var adminPolicyNavItems = new List<NavItem>
+    {
+        new NavItem { Id = "2", Href = "/admin/dashboard", IconName = IconName.ListNested, Text = "Dashboard" },
+        new NavItem { Id = "4", Href = "/top10/index", IconName = IconName.ListNested, Text = "Top10" },
+         new NavItem { Id = "8", Href = "/admins/index", IconName = IconName.ListNested, Text = "Admins" },
+          new NavItem { Id = "9", Href = "/admins/create", IconName = IconName.ListNested, Text = "CreateAdmin" }
+    };
+
+        var settingsNavItems = new List<NavItem>
+    {
+        new NavItem { Id = "5", Href = "/profile", IconName = IconName.ListNested, Text = "Profile" },
+        new NavItem { Id = "6", Href = "/change-password", IconName = IconName.ListNested, Text = "Change Password" },
+        new NavItem { Id = "7", Href = "/settings", IconName = IconName.ListNested, Text = "Settings" }
+    };
+
+
+
+
+
+        navItems.AddRange(adminPolicyNavItems);
+
+
+        navItems.AddRange(settingsNavItems);
+
+        return navItems;
+    }
+
+    private IEnumerable<NavItem> GetUserNavItems()
+    {
+        var navItems = new List<NavItem>();
+
+        // Add common navigation items
+        navItems.Add(new NavItem { Id = "1", Href = "/app/home", IconName = IconName.HouseDoorFill, Text = "Home", Match = NavLinkMatch.All });
+
+        // Add navigation items based on policies
+        var userPolicyNavItems = new List<NavItem>
+    {
+        new NavItem { Id = "2", Href = "/blogs/create", IconName = IconName.PlusSquareFill, Text = "Create Blog" },
+        new NavItem { Id = "3", Href = "/blogs/index", IconName = IconName.ListNested, Text = "My Blogs" },
+         new NavItem { Id = "8", Href = "/history", IconName = IconName.PlusSquareFill, Text = "History" },
+    };
+
+
+        var settingsNavItems = new List<NavItem>
+    {
+        new NavItem { Id = "5", Href = "/profile", IconName = IconName.ListNested, Text = "Profile" },
+        new NavItem { Id = "6", Href = "/change-password", IconName = IconName.ListNested, Text = "Change Password" },
+        new NavItem { Id = "7", Href = "/settings", IconName = IconName.ListNested, Text = "Settings" },
+
+    };
+
+
+        navItems.AddRange(userPolicyNavItems);
+
+
+        navItems.AddRange(settingsNavItems);
+
+        return navItems;
+    }
+
+    
+
+
+
+}
+
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.

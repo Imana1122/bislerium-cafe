@@ -1,7 +1,11 @@
-﻿using Application.Extensions.Identity;
+﻿using Application.Extensions.Email;
+using Application.Extensions.Identity;
 using Application.Interface.Identity;
-using Infrastructure.DataAccess.Blogs;
+using Application.Service.BlogCommentReactions;
+using Infrastructure.DataAccess;
 using Infrastructure.Repository;
+using Infrastructure.Repository.Blogs.Handlers;
+using Infrastructure.Repository.Products.Handlers.Blogs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +22,7 @@ namespace Infrastructure.DependencyInjection
     {
         public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration config)
         {
+
             services.AddDbContext<AppDbContext>(o => o.UseSqlServer(config.GetConnectionString("Default")), ServiceLifetime.Scoped);
             services.AddAuthentication(options =>
             {
@@ -29,7 +34,7 @@ namespace Infrastructure.DependencyInjection
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddSignInManager()
                 .AddDefaultTokenProviders();
-
+            services.Configure<DataProtectionTokenProviderOptions>(options => options.TokenLifespan = TimeSpan.FromMinutes(5));
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdministrationPolicy", policy =>
@@ -41,13 +46,25 @@ namespace Infrastructure.DependencyInjection
                 options.AddPolicy("UserPolicy", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireRole("User");
+                    policy.RequireRole("Blogger");
                 });
             });
             services.AddCascadingAuthenticationState();
             services.AddScoped<IAccount, Account>();
 
+            var emailConfig = config.GetSection("EmailConfiguration")
+                .Get<EmailConfiguration>();
+         
+            services.AddSingleton(emailConfig);
+
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateBlogHandler).Assembly));
+
+            services.AddScoped<DataAccess.IDbContextFactory<AppDbContext>, DbContextFactory<AppDbContext>>();
+
+
             return services;
+
+
         }
     }
 }

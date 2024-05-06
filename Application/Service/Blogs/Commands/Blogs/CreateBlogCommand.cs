@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.Blogs
 {
-    public record CreateBlogCommand(AddBlogRequestDTO BlogModel , IEnumerable<AddBlogImageRequestDTO> BlogImages) :IRequest<ServiceResponse>;
+    public record CreateBlogCommand(AddBlogRequestDTO BlogModel) :IRequest<ServiceResponse>;
     
 }

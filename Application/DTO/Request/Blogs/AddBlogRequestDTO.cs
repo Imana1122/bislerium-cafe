@@ -11,6 +11,8 @@ namespace Application.DTO.Request.Blogs
 {
     public class AddBlogRequestDTO:BlogBaseDTO
     {
+        [Required]
+        public ICollection<AddBlogImageRequestDTO> Images;
 
     }
 }

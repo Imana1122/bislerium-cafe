@@ -1,0 +1,163 @@
+﻿@page "/admin/dashboard"
+@using Application.DTO.Response.Dashboard
+@using Application.Service.Dashboard
+@attribute [Authorize(Policy = "AdministrationPolicy")]
+
+
+<div class="header mb-20">
+    <Dropdown Size="BlazorBootstrap.Size.Small" Split="true">
+        <DropdownActionButton Color="ButtonColor.Primary">@selectedMonth</DropdownActionButton>
+        <DropdownToggleButton Color="ButtonColor.Primary" />
+
+        <DropdownMenu>
+            <DropdownItem @onclick="SetUp" Type="BlazorBootstrap.ButtonType.Link">All Time</DropdownItem>
+
+            <DropdownItem @onclick="()=>SortByMonth(1)" Type="BlazorBootstrap.ButtonType.Link">January</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(2)" Type="BlazorBootstrap.ButtonType.Link">February</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(3)" Type="BlazorBootstrap.ButtonType.Link">March</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(4)" Type="BlazorBootstrap.ButtonType.Link">April</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(5)" Type="BlazorBootstrap.ButtonType.Link">May</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(6)" Type="BlazorBootstrap.ButtonType.Link">June</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(7)" Type="BlazorBootstrap.ButtonType.Link">July</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(8)" Type="BlazorBootstrap.ButtonType.Link">August</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(9)" Type="BlazorBootstrap.ButtonType.Link">September</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(10)" Type="BlazorBootstrap.ButtonType.Link">October</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(11)" Type="BlazorBootstrap.ButtonType.Link">November</DropdownItem>
+            <DropdownItem @onclick="()=>SortByMonth(12)" Type="BlazorBootstrap.ButtonType.Link">December</DropdownItem>
+
+
+        </DropdownMenu>
+    </Dropdown>
+
+</div>
+<div style="width:100%">
+
+    <div class="d-flex justify-content-between align-items-start ">
+        <div class="flex-grow-1 d-flex justify-content-between gap-3 flex-wrap">
+            <Card Color="CardColor.Primary" Class="mb-4" Style="width:18rem;">
+                <CardHeader>Blog Post Count</CardHeader>
+                <CardBody>
+                    <CardTitle>@selectedMonth</CardTitle>
+                    <CardText>@data.BlogsCount</CardText>
+                </CardBody>
+            </Card>
+            <Card Color="CardColor.Info" Class="mb-4" Style="width:18rem;">
+                <CardHeader>Upvotes count</CardHeader>
+                <CardBody>
+                    <CardTitle>@selectedMonth</CardTitle>
+                    <CardText>@data.UpvotesCount</CardText>
+                </CardBody>
+            </Card>
+            <Card Color="CardColor.Danger" Class="mb-4" Style="width:18rem;">
+                <CardHeader>Downvotes Count</CardHeader>
+                <CardBody>
+                    <CardTitle>@selectedMonth</CardTitle>
+                    <CardText>@data.DownvotesCount</CardText>
+                </CardBody>
+            </Card>
+            <Card Color="CardColor.Secondary" Class="mb-4" Style="width:18rem;">
+                <CardHeader>Upvotes Count</CardHeader>
+                <CardBody>
+                    <CardTitle>@selectedMonth</CardTitle>
+                    <CardText>@data.CommentsCount</CardText>
+                </CardBody>
+            </Card>
+
+        </div>
+      
+    </div>
+</div>
+
+
+
+@code {
+    string ErrorMessage = "";
+    public bool IsBusy { get; set; } = false;
+    private Guid UserId;
+
+    public DashboardDataDTO data { get; set; } = new DashboardDataDTO();
+    public string selectedMonth = "None";
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await SetUp();
+    }
+
+    public async Task SetUp()
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+       
+
+        var dashboard = await mediator.Send(new GetDashboardDataQuery(null));
+
+       
+        data = dashboard;
+
+
+        
+    }
+
+    public async Task SortByMonth(int month)
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+       
+
+        // Send the GetAllBlogsQuery
+        var dashboard = await mediator.Send(new GetDashboardDataQuery(month));
+        data = dashboard;
+           
+
+
+        switch (month)
+        {
+            case 1:
+                selectedMonth = "January";
+                break;
+            case 2:
+                selectedMonth = "February";
+                break;
+            case 3:
+                selectedMonth = "March";
+                break;
+            case 4:
+                selectedMonth = "April";
+                break;
+            case 5:
+                selectedMonth = "May";
+                break;
+            case 6:
+                selectedMonth = "June";
+                break;
+            case 7:
+                selectedMonth = "July";
+                break;
+            case 8:
+                selectedMonth = "August";
+                break;
+            case 9:
+                selectedMonth = "September";
+                break;
+            case 10:
+                selectedMonth = "October";
+                break;
+            case 11:
+                selectedMonth = "November";
+                break;
+            case 12:
+                selectedMonth = "December";
+                break;
+            default:
+                selectedMonth = "Invalid month";
+                break;
+        }
+
+    }
+
+
+
+
+}

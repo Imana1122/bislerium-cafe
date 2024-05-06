@@ -3,6 +3,7 @@ using Application.DTO.Request.Identity;
 using Application.DTO.Response;
 using Application.DTO.Response.ActivityTracker;
 using Application.DTO.Response.Identity;
+using Application.Extensions.Identity;
 using Application.Interface.Identity;
 using System;
 using System.Collections.Generic;
@@ -15,14 +16,34 @@ namespace Application.Service.Identity
 {
     public class AccountService(IAccount account) : IAccountService
     {
+        public Task<ServiceResponse> ChangePassword(ChangePasswordRequestDTO model)
+        {
+            return account.ChangePassword(model);
+        }
+
+        public Task<ServiceResponse> ChangeSettings(ChangeSettingsRequestDTO model)
+        {
+            return account.ChangeSettings(model);
+        }
+
         public Task<ServiceResponse> CreateUserAsync(CreateUserRequestDTO model)
         {
             return account.CreateUserAsync(model);
         }
 
-        public Task<IEnumerable<ActivityTrackerResponseDTO>> GetActivitiesAsync()
+        public Task<ServiceResponse> DeleteAccountAsync(string userId)
         {
-            return account.GetActivitiesAsync();
+            return account.DeleteAccountAsync(userId);
+        }
+
+        public Task<ServiceResponse> ForgotPassword(string email, string scheme)
+        {
+            return account.ForgotPassword(email, scheme);
+        }
+
+        public Task<ApplicationUser> GetUserById(string userId)
+        {
+            return account.GetUserById(userId);
         }
 
         public Task<IEnumerable<GetUserWithClaimResponseDTO>> GetUserWithClaimAsync()
@@ -35,9 +56,9 @@ namespace Application.Service.Identity
             return account.LoginAsync(model);
         }
 
-        public Task SaveActivityAsync(ActivityTrackerRequestDTO model)
+        public Task<ServiceResponse> ResetPassword(ResetPasswordRequestDTO resetPassword)
         {
-            return account.SaveActivityAsync(model);
+            return account.ResetPassword(resetPassword);
         }
 
         public Task SetUpAsync()
@@ -50,11 +71,7 @@ namespace Application.Service.Identity
             return account.UpdateUserAsync(model);
         }
 
-        public async Task<IEnumerable<IGrouping<DateTime, ActivityTrackerResponseDTO>>> GroupActivities()
-        {
-            var data = (await GetActivitiesAsync()).GroupBy(e => e.Date).AsEnumerable();
-            return data;
-        }
+        
            
     }
 }

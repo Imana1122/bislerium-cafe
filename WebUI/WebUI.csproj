@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazor.Bootstrap" Version="2.2.1" />
     <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mediator" Version="1.0.2123" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,11 +19,12 @@
     <PackageReference Include="MudBlazor" Version="6.19.1" />
     <PackageReference Include="NetcodeHub.Packages.Components.BreadCrumb" Version="1.0.0" />
     <PackageReference Include="NetcodeHub.Packages.Components.DataGrid" Version="1.0.1" />
-    <PackageReference Include="NetcodeHub.Packages.Components.FileUpload" Version="1.0.3" />
+    <PackageReference Include="NetcodeHub.Packages.Components.FileUpload" Version="1.0.0" />
     <PackageReference Include="NetcodeHub.Packages.Components.Modal" Version="1.0.0" />
     <PackageReference Include="NetcodeHub.Packages.Components.Toast" Version="1.0.4" />
     <PackageReference Include="NetcodeHub.Packages.Components.Validations" Version="1.0.1" />
     <PackageReference Include="NetcodeHub.Packages.UI.Templates.Breeze" Version="1.0.8" />
+    <PackageReference Include="Syncfusion.Blazor.Cards" Version="25.1.42" />
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="25.1.42" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="25.1.42" />
     <PackageReference Include="Syncfusion.Blazor.Navigations" Version="25.1.42" />

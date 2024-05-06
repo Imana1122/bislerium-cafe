@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GJeNxGu8a8lS6F4KJT9nxbSc0XU7Nb+kQi7ILlM10F3mSY5kxQmdDpp3pxNNwqM08eO2Dc5WfaeLQ/QEPodZHw==",
+  "dgSpecHash": "KdimNw+54UMpH0GdgSxA6lQ7a+m9JcWzK8iNpG7L+am9HpW8bXwtDy66r585SbNyE8UIZOgksyjOsYm8p2DenA==",
   "success": true,
   "projectFilePath": "D:\\source\\Bislerium\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\imana\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\imana\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
@@ -17,7 +19,11 @@
     "C:\\Users\\imana\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\imana\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\imana\\.nuget\\packages\\netcodehub.packages.extensions.attributes.requiredguid\\1.0.0\\netcodehub.packages.extensions.attributes.requiredguid.1.0.0.nupkg.sha512"
+    "C:\\Users\\imana\\.nuget\\packages\\mimekit\\4.5.0\\mimekit.4.5.0.nupkg.sha512",
+    "C:\\Users\\imana\\.nuget\\packages\\netcodehub.packages.extensions.attributes.requiredguid\\1.0.0\\netcodehub.packages.extensions.attributes.requiredguid.1.0.0.nupkg.sha512",
+    "C:\\Users\\imana\\.nuget\\packages\\netcore.mailkit\\2.1.0\\netcore.mailkit.2.1.0.nupkg.sha512",
+    "C:\\Users\\imana\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
+    "C:\\Users\\imana\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

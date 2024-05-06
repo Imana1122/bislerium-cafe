@@ -14,11 +14,16 @@ namespace Application.DTO.Response.Blogs
         [JsonIgnore]
         public virtual ICollection<GetBlogImageResponseDTO> Images { get; set; } = null;
 
-        public GetBlogUpvoteCountResponseDTO UpvoteCount {get;set;}
-        public GetBlogDownvoteCountResponseDTO DownvoteCount { get; set; }
-        public GetBlogCommentsCountResponseDTO CommentsCount { get; set; }
+        public int UpvoteCount {get;set;}
+        public int DownvoteCount { get; set; }
+        public int CommentsCount { get; set; }
+        public int PopularityCount { get; set; }
 
 
-        public DateTime DateAdded { get; set; } = DateTime.Now;
+        public bool UpvotedStatus { get; set; }
+
+        public bool DownvotedStatus { get; set; }
+
+        public DateTime CreatedAt { get; set; } 
     }
 }

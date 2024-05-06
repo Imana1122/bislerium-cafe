@@ -9,19 +9,23 @@
       "WebUI/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
+          "Blazor.Bootstrap": "2.2.1",
           "Domain": "1.0.0",
           "Infrastructure": "1.0.0",
           "Mapster": "7.4.0",
+          "Mediator": "1.0.2123",
           "Microsoft.AspNetCore.SignalR.Client": "8.0.4",
+          "Microsoft.AspNetCore.SignalR.Common": "8.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
           "MudBlazor": "6.19.1",
           "NetcodeHub.Packages.Components.BreadCrumb": "1.0.0",
           "NetcodeHub.Packages.Components.DataGrid": "1.0.1",
-          "NetcodeHub.Packages.Components.FileUpload": "1.0.3",
+          "NetcodeHub.Packages.Components.FileUpload": "1.0.0",
           "NetcodeHub.Packages.Components.Modal": "1.0.0",
           "NetcodeHub.Packages.Components.Toast": "1.0.4",
           "NetcodeHub.Packages.Components.Validations": "1.0.1",
           "NetcodeHub.Packages.UI.Templates.Breeze": "1.0.8",
+          "Syncfusion.Blazor.Cards": "25.1.42",
           "Syncfusion.Blazor.Charts": "25.1.42",
           "Syncfusion.Blazor.Grid": "25.1.42",
           "Syncfusion.Blazor.Navigations": "25.1.42",
@@ -65,11 +69,41 @@
           }
         }
       },
+      "Blazor.Bootstrap/2.2.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/BlazorBootstrap.dll": {
+            "assemblyVersion": "2.2.1.0",
+            "fileVersion": "2.2.1.0"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/2.3.0": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.3.0.53016"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "MailKit/3.2.0": {
+        "dependencies": {
+          "MimeKit": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/MailKit.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
           }
         }
       },
@@ -89,6 +123,17 @@
           "lib/net7.0/Mapster.Core.dll": {
             "assemblyVersion": "1.2.1.0",
             "fileVersion": "1.2.1.0"
+          }
+        }
+      },
+      "Mediator/1.0.2123": {
+        "dependencies": {
+          "ServiceStack.Text": "3.2.2"
+        },
+        "runtime": {
+          "lib/Mediator.dll": {
+            "assemblyVersion": "1.0.2123.0",
+            "fileVersion": "1.0.2123.0"
           }
         }
       },
@@ -951,6 +996,18 @@
           }
         }
       },
+      "MimeKit/4.5.0": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.3.0",
+          "System.Security.Cryptography.Pkcs": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/MimeKit.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          }
+        }
+      },
       "Mono.TextTemplating/2.2.1": {
         "dependencies": {
           "System.CodeDom": "4.4.0"
@@ -997,7 +1054,7 @@
           }
         }
       },
-      "NetcodeHub.Packages.Components.FileUpload/1.0.3": {
+      "NetcodeHub.Packages.Components.FileUpload/1.0.0": {
         "dependencies": {
           "Meziantou.Framework": "3.0.39",
           "Meziantou.Framework.ByteSize": "2.1.1",
@@ -1005,8 +1062,8 @@
         },
         "runtime": {
           "lib/net8.0/NetcodeHub.Packages.Components.FileUpload.dll": {
-            "assemblyVersion": "1.0.3.0",
-            "fileVersion": "1.0.3.0"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1073,6 +1130,26 @@
           }
         }
       },
+      "NETCore.MailKit/2.1.0": {
+        "dependencies": {
+          "MailKit": "3.2.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/NETCore.MailKit.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "ServiceStack.Text/3.2.2": {
+        "runtime": {
+          "lib/ServiceStack.Text.dll": {
+            "assemblyVersion": "3.2.2.5660",
+            "fileVersion": "3.2.2.5660"
+          }
+        }
+      },
       "Syncfusion.Blazor.Buttons/25.1.42": {
         "dependencies": {
           "Syncfusion.Blazor.Core": "25.1.42"
@@ -1093,6 +1170,18 @@
         },
         "runtime": {
           "lib/net8.0/Syncfusion.Blazor.Calendars.dll": {
+            "assemblyVersion": "25.1.42.0",
+            "fileVersion": "25.1.42.0"
+          }
+        }
+      },
+      "Syncfusion.Blazor.Cards/25.1.42": {
+        "dependencies": {
+          "Syncfusion.Blazor.Core": "25.1.42",
+          "Syncfusion.Blazor.Data": "25.1.42"
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Blazor.Cards.dll": {
             "assemblyVersion": "25.1.42.0",
             "fileVersion": "25.1.42.0"
           }
@@ -1427,7 +1516,7 @@
           }
         }
       },
-      "System.Formats.Asn1/5.0.0": {},
+      "System.Formats.Asn1/8.0.0": {},
       "System.IdentityModel.Tokens.Jwt/6.35.0": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "6.35.0",
@@ -1495,7 +1584,12 @@
       "System.Security.AccessControl/6.0.0": {},
       "System.Security.Cryptography.Cng/5.0.0": {
         "dependencies": {
-          "System.Formats.Asn1": "5.0.0"
+          "System.Formats.Asn1": "8.0.0"
+        }
+      },
+      "System.Security.Cryptography.Pkcs/8.0.0": {
+        "dependencies": {
+          "System.Formats.Asn1": "8.0.0"
         }
       },
       "System.Security.Cryptography.ProtectedData/6.0.0": {
@@ -1572,6 +1666,8 @@
           "MediatR": "12.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Microsoft.Extensions.Identity.Stores": "8.0.4",
+          "MimeKit": "4.5.0",
+          "NETCore.MailKit": "2.1.0",
           "NetcodeHub.Packages.Extensions.Attributes.RequiredGuid": "1.0.0"
         },
         "runtime": {
@@ -1620,12 +1716,33 @@
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
     },
+    "Blazor.Bootstrap/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w1tmA2gX4229krmOdrBvdpQvUVWoEDC1+fpV0qSY4wCrD+2lnh6+l6cWJY7tKnpGqYh7hnSpkJxjVz7tS7QEDg==",
+      "path": "blazor.bootstrap/2.2.1",
+      "hashPath": "blazor.bootstrap.2.2.1.nupkg.sha512"
+    },
+    "BouncyCastle.Cryptography/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IaVIiYxZLaBulveGDRUx/pBoW/Rc8QeXGF5u2E8xL8RWhVKCgfmtX9NUyGRbnSqnbFQU2zyP3MkXIdH+jUuQBw==",
+      "path": "bouncycastle.cryptography/2.3.0",
+      "hashPath": "bouncycastle.cryptography.2.3.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "MailKit/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5MTpTqmjqT7HPvYbP3HozRZMth5vSaT0ReN0iM3rAM4CgLI/R1qqtLDDNWGnFFIlcNzeJkZQRJJMkv8cgzWBbA==",
+      "path": "mailkit/3.2.0",
+      "hashPath": "mailkit.3.2.0.nupkg.sha512"
     },
     "Mapster/7.4.0": {
       "type": "package",
@@ -1640,6 +1757,13 @@
       "sha512": "sha512-11lokmfliBEMMmjeqxFGNpqGXq6tN96zFqpBmfYeahr4Ybk63oDmeJmOflsATjobYkX248g5Y62oQ2NNnZaeww==",
       "path": "mapster.core/1.2.1",
       "hashPath": "mapster.core.1.2.1.nupkg.sha512"
+    },
+    "Mediator/1.0.2123": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rl1ogCbyFIAuFc3t9L+VnLIa12VK+Le38SHKs+94VGsBpIqZmqBHfBpudt52VmqzNP17k8mlzHGNfZuteSyrQA==",
+      "path": "mediator/1.0.2123",
+      "hashPath": "mediator.1.0.2123.nupkg.sha512"
     },
     "MediatR/12.2.0": {
       "type": "package",
@@ -2110,6 +2234,13 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
+    "MimeKit/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OYn8b8b66J4mgtDzoImepiUtdkJOAVGoTj/ghzJ+az4wVixA5L5Z8GmgFhRvQ1btAIwZh/d9zvZLCALndQdz5w==",
+      "path": "mimekit/4.5.0",
+      "hashPath": "mimekit.4.5.0.nupkg.sha512"
+    },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
       "serviceable": true,
@@ -2138,12 +2269,12 @@
       "path": "netcodehub.packages.components.datagrid/1.0.1",
       "hashPath": "netcodehub.packages.components.datagrid.1.0.1.nupkg.sha512"
     },
-    "NetcodeHub.Packages.Components.FileUpload/1.0.3": {
+    "NetcodeHub.Packages.Components.FileUpload/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-h9CkR6fDHnEBrzY725pEU9Q0OGcjhj1PkBoFNsJ7AJjUnHAazLmOO33ZBtsj5zfw7C48sCMPS/OAsmTeiF5CpA==",
-      "path": "netcodehub.packages.components.fileupload/1.0.3",
-      "hashPath": "netcodehub.packages.components.fileupload.1.0.3.nupkg.sha512"
+      "sha512": "sha512-+GgxDujUbBfEW1JSfQMaU4AgTTH73a1ZlIQ+Kz6s6po2FSewqP3gqphgEXvefNeJoQJuOrPvejDAlGrxt/9uUQ==",
+      "path": "netcodehub.packages.components.fileupload/1.0.0",
+      "hashPath": "netcodehub.packages.components.fileupload.1.0.0.nupkg.sha512"
     },
     "NetcodeHub.Packages.Components.Modal/1.0.0": {
       "type": "package",
@@ -2187,6 +2318,20 @@
       "path": "netcodehub.packages.ui.templates.breeze/1.0.8",
       "hashPath": "netcodehub.packages.ui.templates.breeze.1.0.8.nupkg.sha512"
     },
+    "NETCore.MailKit/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+1C0sg4YJQczp/2RVrVbKLIntg7Mou7Ie5M01UBiAsxmIarjfBRlCgKK4sEbPyGask52VRKV29/Zi+41B6LPXA==",
+      "path": "netcore.mailkit/2.1.0",
+      "hashPath": "netcore.mailkit.2.1.0.nupkg.sha512"
+    },
+    "ServiceStack.Text/3.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PINVnZiz4u6MVuz/7Y9ru2inAA8AiRLvC72rnnvRLo19iFHDMDNzn7oMozvZ+OGVjqSL9LEUx6z1Rti9xJav8w==",
+      "path": "servicestack.text/3.2.2",
+      "hashPath": "servicestack.text.3.2.2.nupkg.sha512"
+    },
     "Syncfusion.Blazor.Buttons/25.1.42": {
       "type": "package",
       "serviceable": true,
@@ -2200,6 +2345,13 @@
       "sha512": "sha512-23UPoKa93rJiptsgAfFJfTJ4GtwSBCQXJ0c04rZ9pToxQBrB2FPw2t6yeeGul7lticHFiNTu8KqUOuya4Z0M+w==",
       "path": "syncfusion.blazor.calendars/25.1.42",
       "hashPath": "syncfusion.blazor.calendars.25.1.42.nupkg.sha512"
+    },
+    "Syncfusion.Blazor.Cards/25.1.42": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JF6vzXNs5Qz8tQTEebgCz5cuEK7POSDJWnLJuGgAWOmDPGR4o/xTY4dzDjLQC1w+4IZjcjYdDmBaMJzmOij22g==",
+      "path": "syncfusion.blazor.cards/25.1.42",
+      "hashPath": "syncfusion.blazor.cards.25.1.42.nupkg.sha512"
     },
     "Syncfusion.Blazor.Charts/25.1.42": {
       "type": "package",
@@ -2397,12 +2549,12 @@
       "path": "system.drawing.common/6.0.0",
       "hashPath": "system.drawing.common.6.0.0.nupkg.sha512"
     },
-    "System.Formats.Asn1/5.0.0": {
+    "System.Formats.Asn1/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MTvUIktmemNB+El0Fgw9egyqT9AYSIk6DTJeoDSpc3GIHxHCMo8COqkWT1mptX5tZ1SlQ6HJZ0OsSvMth1c12w==",
-      "path": "system.formats.asn1/5.0.0",
-      "hashPath": "system.formats.asn1.5.0.0.nupkg.sha512"
+      "sha512": "sha512-AJukBuLoe3QeAF+mfaRKQb2dgyrvt340iMBHYv+VdBzCUM06IxGlvl0o/uPOS7lHnXPN6u8fFRHSHudx5aTi8w==",
+      "path": "system.formats.asn1/8.0.0",
+      "hashPath": "system.formats.asn1.8.0.0.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/6.35.0": {
       "type": "package",
@@ -2487,6 +2639,13 @@
       "sha512": "sha512-jIMXsKn94T9JY7PvPq/tMfqa6GAaHpElRDpmG+SuL+D3+sTw2M8VhnibKnN8Tq+4JqbPJ/f+BwtLeDMEnzAvRg==",
       "path": "system.security.cryptography.cng/5.0.0",
       "hashPath": "system.security.cryptography.cng.5.0.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ULmp3xoOwNYjOYp4JZ2NK/6NdTgiN1GQXzVVN1njQ7LOZ0d0B9vyMnhyqbIi9Qw4JXj1JgCsitkTShboHRx7Eg==",
+      "path": "system.security.cryptography.pkcs/8.0.0",
+      "hashPath": "system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/6.0.0": {
       "type": "package",

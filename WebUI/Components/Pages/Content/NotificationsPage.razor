@@ -1,0 +1,153 @@
+﻿@page "/notifications"
+@attribute [Authorize(Policy = "UserPolicy")]
+@using Domain.Entities
+
+<div class="d-flex flex-column justify-content-center align-content-center" style="width:70rem">
+    <section class="content-header">
+        <div class="container-fluid my-2">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h2>Notifications</h2>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+
+                <div class="card-body table-responsive " style="width:100%; overflow:auto;">
+
+                    <Grid TItem="Notification" class="table table-hover table-bordered table-striped" DataProvider="NotificationsDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5" AllowSorting="true">
+                        <GridColumn TItem="Notification" HeaderText="Content" PropertyName="Content">
+                           @if (context.Read)
+                            {
+                               
+                                    @if (context.Content.Length > 100)
+                                    {
+                                        <text>@(context.Content.Substring(0, 100))...</text>
+                                    }
+                                    else
+                                    {
+                                        <text>@context.Content</text>
+                                    }
+                             
+                            }
+                            else
+                            {
+                                <a href="#" @onclick="@(() => ReadNotification(context.Id))">
+                                    @if (context.Content.Length > 100)
+                                    {
+                                        <text>@(context.Content.Substring(0, 100))...</text>
+                                    }
+                                    else
+                                    {
+                                        <text>@context.Content</text>
+                                    }
+                                </a>
+                            }
+                        </GridColumn>
+
+                        <GridColumn TItem="Notification" HeaderText="Created At" PropertyName="CreatedAt" SortKeySelector="item => item.Id" >
+                            @context.CreatedAt.ToString("MMMM dd, yyyy")
+                        </GridColumn>
+                        
+
+
+                    </Grid>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</div>
+
+@code {
+    public IEnumerable<Notification> Notifications { get; set; } = [];
+
+
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid userId))
+            {
+                // Set the user ID in the blog model
+                var scope = serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                // Send the GetAllNotificationsOfUserQuery
+                var result = await mediator.Send(new GetUserNotificationsQuery(userId));
+
+                Notifications = result;
+            }
+
+        }
+
+
+
+    }
+
+    private async Task ReadNotification(Guid Id)
+    {
+        try
+        {
+
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            var command = new ReadNotificationCommand(Id); // Create an instance of CreateBlogCommand
+            var response = await mediator.Send(command); // Send the command using MediatR
+
+
+            if (response.Flag)
+            {
+                NavManager.NavigateTo("/notifications");
+            }
+            else
+            {
+                // Handle error
+                await toast.ShowError(response.Message);
+                StateHasChanged();
+                NavManager.NavigateTo("/notifications");
+
+                Console.WriteLine(response.Message);
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            await toast.ShowError(ex.Message);
+
+            // Handle exception
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+
+
+    private async Task<GridDataProviderResult<Notification>> NotificationsDataProvider(GridDataProviderRequest<Notification> request)
+    {
+        return await Task.FromResult(request.ApplyTo(Notifications));
+    }
+
+
+
+
+
+
+}

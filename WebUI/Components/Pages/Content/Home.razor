@@ -1,7 +1,731 @@
 ﻿@page "/app/home"
+@using Application.DTO.Request.BlogCommentReactions
+@rendermode InteractiveServer
 
-@attribute [Authorize]
-<h1>Welcome Home</h1>
+<div style="width:100%;">
+<div class="header mb-20">
+        <Dropdown Size="BlazorBootstrap.Size.Small" Split="true">
+            <DropdownActionButton Color="ButtonColor.Primary">@SelectedType</DropdownActionButton>
+            <DropdownToggleButton Color="ButtonColor.Primary" />
+
+            <DropdownMenu>
+                <DropdownItem @onclick="SortByPopularity" Type="BlazorBootstrap.ButtonType.Link">Top</DropdownItem>
+                <DropdownItem @onclick="SortByCreatedAt" Type="BlazorBootstrap.ButtonType.Link">Recent</DropdownItem>
+                <DropdownItem @onclick="ShuffleBlogs" Type="BlazorBootstrap.ButtonType.Link">Random</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+
+</div>
+<div class="d-flex justify-content-center align-content-center">
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <!-- Form content -->
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap justify-content-center gap-5">
+                @foreach (var blogModel in paginatedBlogs)
+                {
+                    <!-- Blog details form -->
+                    <Card Style="width:15rem">
+                        <!-- Carousel -->
+                        <a href="/blogs/@blogModel.Id" style="text-decoration:none">
+                            <div id="carouselExampleIndicators-@blogModel.Id" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <div class="carousel-indicators">
+                                    @if (blogModel != null && blogModel.Images != null && blogModel.Images.Any())
+                                    {
+                                        int index = 0;
+                                        foreach (var image in blogModel.Images)
+                                        {
+                                            <button type="button" data-bs-target="#carouselExampleIndicators-@blogModel.Id" data-bs-slide-to="@index" class="@(index == 0 ? "active" : "")" aria-current="true" aria-label="Slide @(index + 1)"></button>
+                                            index++;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <p>No images available.</p>
+                                    }
+                                </div>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    @if (blogModel != null && blogModel.Images != null && blogModel.Images.Any())
+                                    {
+                                        int slideIndex = 0;
+                                        foreach (var image in blogModel.Images)
+                                        {
+                                            <div class="carousel-item @(slideIndex == 0 ? "active" : "")">
+                                                <img class="d-block w-100" src="@image.Image" alt="BLOG">
+                                            </div>
+                                            slideIndex++;
+                                        }
+                                    }
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-@blogModel.Id" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-@blogModel.Id" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </a>
+                        <CardBody>
+                            <CardTitle>@blogModel.Title</CardTitle>
+                                <CardSubTitle>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</CardSubTitle>
+                            
+                                <CardText>
+                                    @{
+                                        if (blogModel.Description.Length > 200)
+                                        {
+                                            <text>@(blogModel.Description.Substring(0, 50))...</text>
+                                        }
+                                        else
+                                        {
+                                            <text>@blogModel.Description</text>
+                                        }
+                                    }
+                                </CardText>
+
+                               
+                        </CardBody>
+                        <CardFooter>
+                            <div class="row justify-content-between align-items-center">
+                                <!-- Upvote and Downvote section -->
+                                <div class="col-auto d-flex align-items-center gap-2">
+                                    <!-- Upvote -->
+                                    @if (blogModel.UpvotedStatus)
+                                    {
+                                        <i class="bi bi-arrow-up-square-fill text-primary" @onclick="@(() => RemoveReaction(blogModel.Id,blogModel.UserId))" style="cursor:pointer"></i> <!-- Filled upvote icon -->
+                                    }
+                                    else
+                                    {
+                                            <i class="bi bi-arrow-up-square text-secondary" @onclick="@(() => Upvote(blogModel.Id,blogModel.UserId))" style="cursor:pointer"></i> <!-- Empty upvote icon -->
+                                    }
+                                    <p class="m-0">@blogModel.UpvoteCount</p>
+                                    <!-- Downvote -->
+                                    @if (blogModel.DownvotedStatus)
+                                    {
+                                            <i class="bi bi-arrow-down-square-fill text-danger" @onclick="@(()=>RemoveReaction(blogModel.Id,blogModel.UserId))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
+                                    }
+                                    else
+                                    {
+                                            <i class="bi bi-arrow-down-square text-secondary" @onclick="@(()=>Downvote(blogModel.Id,blogModel.UserId))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
+                                    }
+                                    <p class="m-0">@blogModel.DownvoteCount</p>
+                                </div>
+                                <!-- Comments count -->
+                                    <div class="col-auto d-flex align-items-center gap-2" @onclick="@(()=>showComments(blogModel.Id,blogModel.UserId))">
+                                    <i class="bi bi-chat-text text-secondary " style="cursor:pointer"></i>
+                                    <p class="m-0">@blogModel.CommentsCount</p>
+                                </div>
+                            </div>
+                        </CardFooter>
+                    </Card>
+                }
+            </div>
+        </div>
+
+
+
+    </section>
+</div>
+<div class="footer">
+    <!-- Pagination links -->
+    <div class="d-flex justify-content-center align-items-center">
+
+
+            @if (totalPages > 1)
+            {
+                <Pagination ActivePageNumber="@pageNumber"
+                            TotalPages="@totalPages"
+                            DisplayPages="5"
+                            FirstLinkIcon="IconName.ChevronDoubleLeft"
+                            PreviousLinkIcon="IconName.ChevronLeft"
+                            NextLinkIcon="IconName.ChevronRight"
+                            LastLinkIcon="IconName.ChevronDoubleRight"
+                            PageChanged="OnPageChangedAsync" />
+
+
+            }
+    </div>
+</div>
+@if (isLoginPopUp)
+{
+    <!-- Login Modal -->
+    <div class="modal" tabindex="-1" role="dialog" style="display: @(isLoginPopUp ? "block" : "none")">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" aria-label="Close" @onclick="() => isLoginPopUp = false"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You need to be logged in to perform this action.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="Account/Login"><button type="button" class="btn btn-primary">Login</button></a>
+                    <button type="button" class="btn btn-secondary" @onclick="() => isLoginPopUp = false">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@if (isCommentModalOpen)
+{
+    <!-- Login Modal -->
+    <div class="modal" tabindex="-1" role="dialog" style="display: @(isCommentModalOpen ? "block" : "none")">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Comments</h5>
+                    <button type="button" class="btn-close" aria-label="Close" @onclick="() => isCommentModalOpen = false"></button>
+                </div>
+                <div class="modal-body">
+                    <AuthorizeView Policy="UserPolicy">
+                    <!-- Comment input field -->
+                    <input type="text" class="form-control mb-3" placeholder="Write your comment..." @bind="comment.Comment" />
+                    <!-- Button to submit comment -->
+                    <button type="button" class="btn btn-primary" @onclick="@(()=>SaveComment(BlogId))">Add Comment</button>
+                    </AuthorizeView>
+                    <!-- Scrollable section for comments -->
+                    <div class="mt-3 " style="max-height: 300px; overflow-y: auto;">
+                        @if (comments.Any())
+                        {
+
+                                @foreach (var comment in comments)
+                                {
+                                    <div class=" d-flex justify-content-between flex-column bg-light rounded mb-3 p-3 ">
+                                        <div class=" d-flex justify-content-between align-items-center mb-2">
+                                            <div >
+                                                <div class="fw-bold">@comment.User.Name</div>
+                                                <div>@comment.Comment</div>
+                                            </div>
+                                            <div>
+                                            <!-- Display delete icon if the comment belongs to the current user -->
+                                            @if (comment.UserId == UserId)
+                                            {
+                                                <button class="btn btn-sm btn-danger" @onclick="() => DeleteComment(comment.BlogId)">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            }
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="col-auto d-flex align-items-center gap-4">
+                                            <div class="col-auto d-flex align-items-center gap-2">
+                                                <!-- Upvote -->
+                                                @if (comment.UpvotedStatus)
+                                                {
+                                                    <i class="bi bi-arrow-up-square-fill text-primary" @onclick="@(() => RemoveCommentReaction(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Filled upvote icon -->
+                                                }
+                                                else
+                                                {
+                                                    <i class="bi bi-arrow-up-square text-secondary" @onclick="@(() => UpvoteComment(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Empty upvote icon -->
+                                                }
+                                                <p class="m-0">@comment.UpvoteCount</p>
+                                            </div>
+                                            <div class="col-auto d-flex align-items-center gap-2">
+                                            <!-- Downvote -->
+                                            @if (comment.DownvotedStatus)
+                                            {
+                                                <i class="bi bi-arrow-down-square-fill text-danger" @onclick="@(()=>RemoveCommentReaction(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
+                                            }
+                                            else
+                                            {
+                                                <i class="bi bi-arrow-down-square text-secondary" @onclick="@(()=>DownvoteComment(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
+                                            }
+                                            <p class="m-0">@comment.DownvoteCount</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                        }else
+                        {
+                            <p>No comments available.</p>
+                        }
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="() => isCommentModalOpen = false">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+</div>
+
 @code {
+    public Guid UserId { get; set; }
+    private string SelectedType = "Top";
+    private HubConnection hubConnection;
+
+    [SupplyParameterFromForm]
+    private IEnumerable<GetBlogsResponseDTO> blogs { get; set; } = [];
+    private IEnumerable<GetBlogsResponseDTO> paginatedBlogs { get; set; } = [];
+
+    private IEnumerable<GetBlogCommentResponseDTO> comments { get; set; } = [];
+    private bool isLoginPopUp = false;
+    private bool isCommentModalOpen = false;
+    private UpdateBlogCommentRequestDTO comment { get; set; } = new();
+    private Guid BlogId { get; set; }
+    private Guid CommentBlogUserId { get; set; }
+
+    int pageNumber =  1; 
+    int pageSize = 4;
+    int totalPages = 1;
+
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid userId))
+            {
+                // Set the user ID in the blog model
+                UserId = userId;
+                hubConnection = netcodeHubConnectionService.GetHubConnection();
+                if (hubConnection.State == HubConnectionState.Disconnected)
+                {
+                    await hubConnection.StartAsync();
+                }
+                
+            }
+
+        }
+
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+
+
+        var command = new GetAllBlogsWithReactionStatusQuery(UserId); // Pass pagination parameters to the query
+        var response = await mediator.Send(command); // Send the command using MediatR
+        blogs = response; // Assuming Blogs property contains the list of blogs
+        int totalBlogs = response.Count(); // Total count of blogs
+                                           // Calculate total pages
+        totalPages = (int)((totalBlogs + pageSize - 1) / pageSize);
+        SortByPopularity();
+
+    }
+    private void OnPageChangedAsync(int newPage)
+    {
+        if (newPage >= 1 && newPage <= totalPages)
+        {
+            pageNumber = newPage;
+            PaginateBlogs();
+        }
+    }
+
+    protected void PaginateBlogs()
+    {
+        int startIndex = (pageNumber - 1) * pageSize;
+        int endIndex = Math.Min(startIndex + pageSize, blogs.Count());
+        paginatedBlogs = blogs.Skip(startIndex).Take(pageSize);
+    }
+
+
+
+
+    [CascadingParameter]
+    public Task<AuthenticationState> ClientAuthState { get; set; }
+
+
+    public async Task Upvote(Guid BlogId, Guid BlogUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                await UpdateReaction("Upvote", BlogId, BlogUserId);
+
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+
+    }
+    public async Task Downvote(Guid BlogId, Guid BlogUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                await UpdateReaction("Downvote",BlogId,BlogUserId);
+
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+
+    }
+    public async Task UpdateReaction(string reaction,Guid BlogId,Guid BlogUserId)
+    {
+        try
+        {
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            var data = new UpdateBlogReactionRequestDTO
+                {
+                    Reaction = reaction,
+                    UserId = UserId,
+                    BlogId = BlogId
+                };
+            var command = new UpdateBlogReactionCommand(data);
+            var response = await mediator.Send(command);
+            if (response.Flag)
+            {
+                await toast.ShowSuccess("Reacted successfully");
+               
+                await hubConnection.InvokeAsync("Notification", BlogUserId.ToString().ToLower(), "Your blog is reacted.");
+
+
+                NavManager.NavigateTo("/app/home", true);
+            }
+            else
+            {
+                await toast.ShowError(response.Message);
+                // NavManager.NavigateTo("/app/home",true);
+            }
+        }catch(Exception ex){
+            await toast.ShowError(ex.Message);
+        }
+
+
+    }
+
+    public async Task RemoveReaction(Guid BlogId,Guid BlogUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+
+                var scope = serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+
+                var command = new DeleteBlogReactionCommand(UserId,BlogId);
+                var response = await mediator.Send(command);
+                if (response.Flag)
+                {
+                    await toast.ShowSuccess("Reaction removed successfully");
+                    await hubConnection.InvokeAsync("Notification", BlogUserId.ToString().ToLower(), "Your blog is unreacted.");
+
+
+                    NavManager.NavigateTo("/app/home",true);
+                }
+                else
+                {
+                    await toast.ShowError(response.Message);
+                    // NavManager.NavigateTo("/app/home",true);
+                }
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+    }
+
+    public async Task showComments(Guid Id,Guid BlogUserId)
+    {
+        try
+        {
+            await GetComments(Id);
+            BlogId = Id;
+            CommentBlogUserId = BlogUserId;
+
+            isCommentModalOpen = true;
+        }
+        catch (Exception ex)
+        {
+            await toast.ShowError(ex.Message);
+            Console.Write(ex);
+        }
+
+
+
+
+
+    }
+
+
+
+    public async Task GetComments(Guid BlogId)
+    {
+        try
+        {
+            var scope = serviceProvider.CreateScope();
+            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            var command = new GetAllBlogCommentsByBlogIdQuery(BlogId,UserId); // Update an instance of GetAllBlogCommentsByBlogIdQuery
+            var response = await mediator.Send(command); // Send the command using MediatR
+
+            // Convert IEnumerable to a mutable List<T>
+            var commentsList = response.ToList();
+
+            // Filter comments to get the comment where UserId equals the specified UserId
+            var userComment = commentsList.FirstOrDefault(comment => comment.UserId == UserId);
+
+            // If a comment by the specified UserId exists, move it to index 0
+            if (userComment != null)
+            {
+                comment.Comment = userComment.Comment;
+                commentsList.Remove(userComment); // Remove the comment from its current position
+                commentsList.Insert(0, userComment); // Insert the comment at index 0
+            }
+
+            // Assign the modified comments list back to comments if needed
+            comments = commentsList;
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions
+            await toast.ShowError(ex.Message);
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+
+
+
+    }
+
+    public async Task SaveComment(Guid BlogId)
+    {
+        try
+        {
+            if (ClientAuthState != null)
+            {
+
+                if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+                {
+
+                    var scope = serviceProvider.CreateScope();
+                    var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                    comment.BlogId = BlogId;
+                    Console.WriteLine(comment.BlogId);
+                    comment.UserId = UserId;
+                    var command = new UpdateBlogCommentCommand(comment);
+                    var response = await mediator.Send(command);
+                    if (response.Flag)
+                    {
+                        await toast.ShowSuccess("Comment saved successfully");
+                        await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your blog is commented");
+
+
+                        NavManager.NavigateTo("/app/home", true);
+                    }
+                    else
+                    {
+                        await toast.ShowError(response.Message);
+                        NavManager.NavigateTo("/app/home", true);
+                    }
+                }
+                else
+                {
+                    isLoginPopUp = true;
+
+                }
+            }
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+    }
+    public async Task DeleteComment(Guid BlogId)
+    {
+        try
+        {
+            if (ClientAuthState != null)
+            {
+
+                if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+                {
+
+                    var scope = serviceProvider.CreateScope();
+                    var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                    
+                    var command = new DeleteBlogCommentCommand(UserId,BlogId);
+                    var response = await mediator.Send(command);
+                    if (response.Flag)
+                    {
+                        await toast.ShowSuccess("Comment deleted successfully");
+                        await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your blog is uncommented");
+
+                        NavManager.NavigateTo("/app/home", true);
+                    }
+                    else
+                    {
+                        await toast.ShowError(response.Message);
+                        NavManager.NavigateTo("/app/home", true);
+                    }
+                }
+                else
+                {
+                    isLoginPopUp = true;
+
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+    }
+
+
+    // Function to sort blogs by created at
+    private void SortByCreatedAt()
+    {
+        SelectedType = "Recent";
+        blogs = blogs.OrderByDescending(blog => blog.CreatedAt);
+        PaginateBlogs();
+    }
+
+    // Function to sort blogs by popularity
+    private void SortByPopularity()
+    {
+        SelectedType = "Top";
+        blogs = blogs.OrderByDescending(blog=>blog.PopularityCount);
+        PaginateBlogs();
+    }
+
+    // Function to shuffle blogs
+    private void ShuffleBlogs()
+    {
+        SelectedType = "Random";
+        blogs = blogs.OrderBy(_ => Guid.NewGuid());
+        PaginateBlogs();
+    }
+
+    public async Task UpvoteComment(Guid BlogId,Guid CommentUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                await UpdateCommentReaction("Upvote", BlogId, CommentUserId);
+
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+
+    }
+    public async Task DownvoteComment(Guid BlogId, Guid CommentUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                await UpdateCommentReaction("Downvote", BlogId, CommentUserId);
+
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+
+    }
+    public async Task UpdateCommentReaction(string reaction, Guid BlogId, Guid CommentUserId)
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        var data = new UpdateBlogCommentReactionRequestDTO
+            {
+                Reaction = reaction,
+                UserId = UserId,
+                BlogId = BlogId,
+                CommentUserId=CommentUserId
+            };
+
+        var command = new UpdateBlogCommentReactionCommand(data);
+        var response = await mediator.Send(command);
+        if (response.Flag)
+        {
+            await toast.ShowSuccess("Reaction updated successfully");
+            await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your comment is reacted.");
+
+            NavManager.NavigateTo("/app/home", true);
+        }
+        else
+        {
+            await toast.ShowError(response.Message);
+            // NavManager.NavigateTo("/app/home",true);
+        }
+
+
+    }
+
+    public async Task RemoveCommentReaction(Guid BlogId, Guid CommentUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+
+                var scope = serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+
+                var command = new DeleteBlogCommentReactionCommand(UserId, BlogId,CommentUserId);
+                var response = await mediator.Send(command);
+                if (response.Flag)
+                {
+                    await toast.ShowSuccess("Reaction removed successfully");
+                    await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your comment is unreacted.");
+
+                    NavManager.NavigateTo("/app/home", true);
+                }
+                else
+                {
+                    await toast.ShowError(response.Message);
+                    // NavManager.NavigateTo("/app/home",true);
+                }
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+    }
+
+   
+
+
+
 
 }

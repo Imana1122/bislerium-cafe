@@ -23,6 +23,11 @@ namespace Domain.Entities
         // Navigation properties (optional)
         [ForeignKey("BlogId")]
         public Blog Blog { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+
+        public virtual ICollection<BlogCommentReaction> Reactions { get; set; } = null;
+
 
     }
 }

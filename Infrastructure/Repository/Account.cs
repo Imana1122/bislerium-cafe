@@ -3,6 +3,7 @@ using Application.DTO.Response;
 using Application.DTO.Response.Identity;
 using Application.Extensions.Identity;
 using Application.Interface.Identity;
+using Infrastructure.DataAccess;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,13 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Application.DTO.Request.ActivityTracker;
 using Application.DTO.Response.ActivityTracker;
 using Mapster;
-using Domain.Entities.ActivityTracker;
-using Infrastructure.DataAccess.Blogs;
+using System.Diagnostics;
+using Azure.Core;
+using System.Threading;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Application.Extensions;
+using Application.Extensions.Email;
+using Application.Service.Email;
 
 
 namespace Infrastructure.Repository
@@ -26,12 +32,15 @@ namespace Infrastructure.Repository
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly AppDbContext context;
+        private readonly IEmailService _emailService;
+        public object Token { get; private set; }
 
-        public Account(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AppDbContext context)
+        public Account(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AppDbContext context,IEmailService emailService)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.context = context;
+            this._emailService = emailService;
         }
         public async Task<ServiceResponse> CreateUserAsync(CreateUserRequestDTO model)
         {
@@ -45,10 +54,11 @@ namespace Infrastructure.Repository
                 UserName = model.Email,
                 PasswordHash = model.Password,
                 Email = model.Email,
-                Name = model.Name
+                Name = model.Name,
+                Policy=model.Policy
             };
 
-            var result = CheckResult(await userManager.CreateAsync(newUser,model.Password));
+            var result = CheckResult(await userManager.CreateAsync(newUser, model.Password));
             if (!result.Flag)
             {
                 return result;
@@ -103,7 +113,7 @@ namespace Infrastructure.Repository
                 userClaims =
                     [
                     new Claim(ClaimTypes.Email, model.Email),
-                    new Claim(ClaimTypes.Role, "User"),
+                    new Claim(ClaimTypes.Role, "Blogger"),
                     new Claim("Name", model.Name),
                     new Claim("Create","false"),
                     new Claim("Update","false"),
@@ -112,6 +122,21 @@ namespace Infrastructure.Repository
                     new Claim("ManageUser", "false")
 
                    ];
+            }
+            else
+            {
+                userClaims =
+                   [
+                   new Claim(ClaimTypes.Email, model.Email),
+                    new Claim(ClaimTypes.Role, "Blogger"),
+                    new Claim("Name", model.Name),
+                    new Claim("Create","false"),
+                    new Claim("Update","false"),
+                    new Claim("Delete","false"),
+                    new Claim("Read", "false"),
+                    new Claim("ManageUser", "false")
+
+                  ];
             }
 
             var result = CheckResult(await userManager.AddClaimsAsync((await FindUserByEmail(model.Email)), userClaims));
@@ -125,42 +150,54 @@ namespace Infrastructure.Repository
             }
         }
 
-       
+
         public async Task<IEnumerable<GetUserWithClaimResponseDTO>> GetUserWithClaimAsync()
         {
-            var UserList= new List<GetUserWithClaimResponseDTO>();
-            var allUsers = await userManager.Users.ToListAsync();
-            if (allUsers.Count == 0) return UserList;
+            var UserList = new List<GetUserWithClaimResponseDTO>();
+            var allUsers = await userManager.Users.Where(_=>_.Policy=="AdminPolicy" || _.Policy=="ManagerPolicy").ToListAsync();
+            if (allUsers.Count == 0)
+            {
+                return UserList;
+            }
 
             foreach (var user in allUsers)
+
             {
-                var currentUser = await userManager.FindByIdAsync(user.Id);
-                var getCurrentUserClaims = await userManager.GetClaimsAsync(currentUser);
-                if (getCurrentUserClaims.Any())
-                    UserList.Add(new GetUserWithClaimResponseDTO()
-                    {
-                        UserId = user.Id,
-                        Email = getCurrentUserClaims.FirstOrDefault(_ => _.Type == ClaimTypes.Email).Value,
-                        RoleName = getCurrentUserClaims.FirstOrDefault(_ => _.Type == ClaimTypes.Role).Value,
-                        Name = getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Name").Value,
+                var currentUser = await FindUserByEmail(user.Email);
+                if (currentUser != null)
+                {
+                    var getCurrentUserClaims = await userManager.GetClaimsAsync(currentUser);
+                    if (getCurrentUserClaims.Any())
+                        UserList.Add(new GetUserWithClaimResponseDTO()
+                        {
+                            UserId = currentUser.Id,
+                            Email = getCurrentUserClaims.FirstOrDefault(_ => _.Type == ClaimTypes.Email).Value,
+                            RoleName = getCurrentUserClaims.FirstOrDefault(_ => _.Type == ClaimTypes.Role).Value,
+                            Name = getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Name").Value,
 
-                        ManageUser = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "ManageUser").Value),
-                        Create = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Create").Value),
-                        Read = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Read").Value),
-                        Update = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Update").Value),
-                        Delete = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Delete").Value),
+                            ManageUser = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "ManageUser").Value),
+                            Create = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Create").Value),
+                            Read = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Read").Value),
+                            Update = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Update").Value),
+                            Delete = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Delete").Value),
 
-                    });
+                        });
+                }
+
+               
+               
             }
-            return UserList;        
+            return UserList;
         }
 
         public async Task<ServiceResponse> LoginAsync(LoginUserRequestDTO model)
         {
             var user = await FindUserByEmail(model.Email);
+            var getCurrentUserClaims = await userManager.GetClaimsAsync(user);
+
             if (user is null) return new ServiceResponse(false, "User not found");
 
-            var verifyPassword = await signInManager.CheckPasswordSignInAsync(user, model.Password,false);
+            var verifyPassword = await signInManager.CheckPasswordSignInAsync(user, model.Password, false);
             if (!verifyPassword.Succeeded) return new ServiceResponse(false, "Incorrect Credentials Provided");
 
             var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
@@ -185,7 +222,9 @@ namespace Infrastructure.Repository
             Password = "Admin@123",
             Policy = Policy.AdminPolicy
         });
+
         
+
 
         public async Task<ServiceResponse> UpdateUserAsync(ChangeUserClaimRequestDTO model)
         {
@@ -223,26 +262,6 @@ namespace Infrastructure.Repository
         }
 
 
-        public async Task SaveActivityAsync(ActivityTrackerRequestDTO model)
-        {
-            context.ActivityTracker.Add(model.Adapt(new Tracker()));
-            await context.SaveChangesAsync();
-        }
-
-        public async Task<IEnumerable<ActivityTrackerResponseDTO>> GetActivitiesAsync()
-        {
-            var list = new List<ActivityTrackerResponseDTO>();
-            var data = (await context.ActivityTracker.ToListAsync()).Adapt<List<ActivityTrackerResponseDTO>>();
-            foreach ( var activity in data)
-            {
-                activity.UserName = (await FindUserById(activity.UserId)).Name;
-                list.Add(activity);
-                
-            }
-            return data;
-        }
-
-
         private async Task<ApplicationUser> FindUserByEmail(string email) => await userManager.FindByEmailAsync(email);
 
         private async Task<ApplicationUser> FindUserById(string id) => await userManager.FindByIdAsync(id);
@@ -253,6 +272,268 @@ namespace Infrastructure.Repository
 
             var errors = result.Errors.Select(_ => _.Description);
             return new ServiceResponse(false, string.Join(Environment.NewLine, errors));
+        }
+
+        public async Task<ServiceResponse> ChangePassword(ChangePasswordRequestDTO model)
+        {
+            var user = await userManager.FindByIdAsync(model.UserId.ToString());
+
+            if (user == null)
+            {
+                // Handle user not found
+                return new ServiceResponse(false,  "User not found." );
+            }
+
+            var result = await userManager.ChangePasswordAsync(user, model.OldPassword, model.Password);
+
+            if (!result.Succeeded)
+            {
+                // Handle password change failure
+                return new ServiceResponse( false, "Failed to change password." );
+            }
+
+            // Password changed successfully
+            return new ServiceResponse(true,  "Password changed successfully.");
+        }
+
+        public async Task<ServiceResponse> ChangeSettings(ChangeSettingsRequestDTO model)
+        {
+            var user = await userManager.FindByIdAsync(model.UserId.ToString());
+
+            if (user == null)
+            {
+                // Handle user not found
+                return new ServiceResponse(false, "User not found.");
+            }
+
+            // Update user settings here
+            user.Name = model.Name;
+            user.Email = model.Email;
+            user.UserName = model.Email;
+
+            var result = await userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                // Handle user settings update failure
+                return new ServiceResponse(false, "Failed to update user settings.");
+            }
+
+            // User settings updated successfully
+            return new ServiceResponse(true, "User settings updated successfully.");
+        }
+
+     
+
+        public async Task<ServiceResponse> DeleteAccountAsync(string userId)
+        {
+            var user = await FindUserById(userId.ToString());
+            if (user == null)
+            {
+                // Handle user not found
+                return new ServiceResponse(false, "User not found.");
+            }
+            var blogs = await context.Blogs
+            .Include(b => b.Reactions) // Include related reactions
+            .Include(b => b.Comments) // Include related comments
+            .Include(b => b.Images) // Include related images
+            .Where(b => b.UserId.ToString().ToLower().Equals(user.Id.ToLower()))
+            .ToListAsync();
+           
+            foreach (var blog in blogs)
+            {
+                if (blog.Reactions != null)
+                {
+                    foreach (var item in blog.Reactions)
+                    {
+                        context.BlogReactions.Remove(item);
+                    }
+                }
+
+                if (blog.Images != null)
+                {
+                    foreach (var item in blog.Images)
+                    {
+                        context.BlogImages.Remove(item);
+                    }
+                }
+
+                if (blog.Comments != null)
+                {
+                    foreach (var item in blog.Comments)
+                    {
+                        var comment = await context.BlogComments
+                            .Include(comment => comment.Reactions) // Include related reactions
+                            .FirstOrDefaultAsync(_ => _.BlogId.ToString().ToLower().Equals(item.BlogId.ToString().ToLower()) && _.UserId.ToString().ToLower().Equals(item.UserId.ToString().ToLower()));
+
+                        if (comment != null && comment.Reactions != null)
+                        {
+                            foreach (var reaction in comment.Reactions)
+                            {
+                                context.BlogCommentReactions.Remove(reaction);
+                            }
+                        }
+
+                        context.BlogComments.Remove(item);
+                    }
+                }
+
+                context.Blogs.Remove(blog);
+            }
+            await context.SaveChangesAsync();
+
+            var comments = await context.BlogComments
+               .Include(b => b.Reactions) // Include related reactions
+   
+               .Where(b => b.UserId.ToString().ToLower().Equals(user.Id.ToString().ToLower()))
+               .ToListAsync();
+            if (comments != null)
+            {
+                foreach (var comment in comments)
+                {
+                    if (comment.Reactions != null)
+                    {
+                        foreach (var item in comment.Reactions)
+                        {
+                            context.BlogCommentReactions.Remove(item);
+                        }
+                    }
+                    context.BlogComments.Remove(comment);
+
+                }
+            }
+            await context.SaveChangesAsync();
+
+            var reactions = await context.BlogReactions
+               .Where(b => b.UserId.ToString().ToLower().Equals(user.Id.ToString().ToLower()))
+               .ToListAsync();
+
+            if (reactions != null)
+            {
+                foreach (var reaction in reactions)
+                {
+                    
+                    context.BlogReactions.Remove(reaction);
+
+                }
+            }
+            await context.SaveChangesAsync();
+
+            var commentReactions = await context.BlogCommentReactions
+               .Where(b => b.UserId.ToString().ToLower().Equals(user.Id.ToString().ToLower()) || b.CommentUserId.ToString().ToLower().Equals(user.Id.ToString().ToLower()))
+               .ToListAsync();
+
+            if (commentReactions != null)
+            {
+                foreach (var reaction in commentReactions)
+                {
+
+                    context.BlogCommentReactions.Remove(reaction);
+
+                }
+            }
+            await context.SaveChangesAsync();
+
+            var histories = await context.Histories
+              .Where(b => b.UserId.ToString().ToLower().Equals(user.Id.ToString().ToLower()) )
+              .ToListAsync();
+
+            if (histories != null)
+            {
+                foreach (var history in histories)
+                {
+
+                    context.Histories.Remove(history);
+
+                }
+            }
+            await context.SaveChangesAsync();
+
+            var notifications = await context.Notifications
+              .Where(b => b.UserId.ToString().ToLower().Equals(user.Id.ToString().ToLower()) )
+              .ToListAsync();
+
+            if (notifications != null)
+            {
+                foreach (var noti in notifications)
+                {
+
+                    context.Notifications.Remove(noti);
+
+                }
+            }
+            await context.SaveChangesAsync();
+
+
+            var result = await userManager.DeleteAsync(user);
+
+            if (!result.Succeeded)
+            {
+                // Handle account deletion failure
+                return new ServiceResponse(false, "Failed to delete user account.");
+            }
+
+            // Account deleted successfully
+            return new ServiceResponse(true, "User account deleted successfully.");
+        }
+
+        public async Task<ApplicationUser> GetUserById(string userId)
+        {
+            var user = await FindUserById(userId);
+            if (user is null)
+            {
+                throw new Exception("User not found.");
+            }
+            else
+            {
+                return user;
+            }
+
+
+        }
+
+        public async Task<ServiceResponse> ForgotPassword(string email,string scheme)
+        {
+            var user = await FindUserById(email);
+            if(user is null)
+            {
+                return new ServiceResponse(false, "User Not Found");
+            }
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+            var uriBuilder = new UriBuilder();
+            uriBuilder.Scheme = scheme;
+            uriBuilder.Host = "yourhostname.com"; // Set your host name here
+            uriBuilder.Path = "/Authentication/ResetPassword"; // Path to the ResetPassword action
+
+            // Add query parameters for token and email
+            var query = new StringBuilder();
+            query.Append($"?token={token}"); // Assuming token is a variable available in your method
+            query.Append($"&email={user.Email}"); // Assuming user.Email is a variable available in your method
+            uriBuilder.Query = query.ToString();
+
+            var forgotPassswordLink = uriBuilder.Uri.ToString();
+
+            var message = new Message(new string[] { user.Email }, "Confirmation Email Link", forgotPassswordLink);
+            _emailService.SendEmail(message);
+            return new ServiceResponse(true, "Password Reset Link sent to your email successfully.");
+        }
+
+        public async Task<ServiceResponse> ResetPassword(ResetPasswordRequestDTO resetPassword)
+        {
+            var user = await FindUserByEmail(resetPassword.Email);
+            if(user is null)
+            {
+                return new ServiceResponse(false, "User not found");
+
+            }
+           var resetPassResult=await userManager.ResetPasswordAsync(user,resetPassword.Token,resetPassword.Password);
+            if (!resetPassResult.Succeeded)
+            {
+                return new ServiceResponse(false, "Password not reset");
+            }
+            return new ServiceResponse(true, "Password Reset Successfully");
+
+
         }
     }
 

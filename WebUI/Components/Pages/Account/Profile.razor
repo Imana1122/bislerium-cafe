@@ -1,0 +1,96 @@
+﻿@page "/profile"
+@attribute [Authorize]
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">User Profile</h1>
+
+    @if (User != null)
+    {
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Welcome, @User.Name!</h5>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <p>@User.Name</p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <p>@User.Email</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Policy</label>
+                            <p>@User.Policy</p>
+                        </div>
+                        <!-- Add more fields as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="text-center">No user profile found.</p>
+    }
+</div>
+
+@code {
+    string ErrorMessage = "";
+    public bool IsBusy { get; set; } = false;
+    private Guid UserId { get; set; }
+    private ApplicationUser User { get; set; }
+
+    private async Task DeleteAccountAsync()
+    {
+        if (IsBusy) return;
+        ErrorMessage = "";
+        IsBusy = true;
+        var response = await accountService.DeleteAccountAsync(UserId.ToString());
+        if (!response.Flag)
+        {
+            IsBusy = false;
+            ErrorMessage = response.Message;
+            return;
+        }
+        else
+        {
+            await toast.ShowSuccess(response.Message);
+        }
+        IsBusy = false;
+    }
+
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid userId))
+            {
+                // Set the user ID in the blog model
+                UserId = userId;
+            }
+        }
+        await GetUser();
+    }
+
+    private async Task GetUser(){
+        var response = await accountService.GetUserById(UserId.ToString());
+        User = response;
+    }
+
+
+
+
+}

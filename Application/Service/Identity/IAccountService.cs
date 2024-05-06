@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.DTO.Request.ActivityTracker;
 using Application.DTO.Response.ActivityTracker;
+using Application.Extensions.Identity;
 
 namespace Application.Service.Identity
 {
@@ -19,9 +20,14 @@ namespace Application.Service.Identity
         Task SetUpAsync();
         Task<ServiceResponse> UpdateUserAsync(ChangeUserClaimRequestDTO model);
 
+        Task<ServiceResponse> ChangePassword(ChangePasswordRequestDTO model);
 
-        Task SaveActivityAsync(ActivityTrackerRequestDTO model);
+        Task<ServiceResponse> ChangeSettings(ChangeSettingsRequestDTO model);
+        Task<ServiceResponse> DeleteAccountAsync(string userId);
+        Task<ApplicationUser> GetUserById(string userId);
+        Task<ServiceResponse> ForgotPassword(string email, string scheme);
+        Task<ServiceResponse> ResetPassword(ResetPasswordRequestDTO resetPassword);
 
-        Task<IEnumerable<ActivityTrackerResponseDTO>> GetActivitiesAsync();
+
     }
 }

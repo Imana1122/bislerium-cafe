@@ -1,0 +1,98 @@
+﻿@page "/history"
+@attribute [Authorize(Policy = "UserPolicy")]
+@using Domain.Entities
+
+<div class="d-flex flex-column justify-content-center align-content-center" style="width:70rem">
+    <section class="content-header">
+        <div class="container-fluid my-2">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h2>Histories</h2>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+
+                <div class="card-body table-responsive " style="width:100%; overflow:auto;">
+
+                    <Grid TItem="UserHistory" class="table table-hover table-bordered table-striped" DataProvider="HistoriesDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5" AllowSorting="true">
+                        <GridColumn TItem="UserHistory" HeaderText="Content" PropertyName="Content">
+                            
+                                @if (context.Content.Length > 100)
+                                {
+                                    <text>@(context.Content.Substring(0, 100))...</text>
+                                }
+                                else
+                                {
+                                    <text>@context.Content</text>
+                                }
+                            
+                        </GridColumn>
+
+                        <GridColumn TItem="UserHistory" HeaderText="Created At" PropertyName="CreatedAt" SortKeySelector="item => item.Id">
+                            @context.CreatedAt.ToString("MMMM dd, yyyy")
+                        </GridColumn>
+
+
+                    </Grid>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</div>
+
+@code {
+    public IEnumerable<UserHistory> Histories { get; set; } = [];
+
+
+    [Inject]
+    protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the authentication state
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        // Check if the user is authenticated
+        if (user.Identity.IsAuthenticated)
+        {
+            // Set the user ID in the blog model
+            if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid userId))
+            {
+                // Set the user ID in the blog model
+                var scope = serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                // Send the GetAllHistoriesOfUserQuery
+                var result = await mediator.Send(new GetUserHistoryQuery(userId));
+
+                Histories = result;
+            }
+
+        }
+
+
+
+    }
+
+    private async Task<GridDataProviderResult<UserHistory>> HistoriesDataProvider(GridDataProviderRequest<UserHistory> request)
+    {
+        return await Task.FromResult(request.ApplyTo(Histories));
+    }
+
+
+
+
+
+
+}
