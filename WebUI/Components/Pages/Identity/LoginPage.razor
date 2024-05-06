@@ -1,11 +1,16 @@
 ﻿@page "/Account/Login"
 
 <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
-    <div class="row justify-content-center">
+   
 		
             <EditForm Model="LoginModel" method="post" OnValidSubmit="LoginAsync" FormName="login" Enhance>
-                <div class="card border-primary shadow-lg text-dark p-5" style="border-radius: 24px; min-width: 300px;">
-                    <div class="card-header text-dark fs-4 border-primary">Login</div>
+                <div class="card text-dark p-5 border-none" style="border-radius: 24px; min-width: 300px;">
+                   
+                    <div class="card-header text-dark fs-4 border-primary">
+                        <a href="/app/home" class="brand-link">
+                            <img src="assets/images/logo.svg" style="width: 14rem; opacity: .8" />
+                        </a>
+                    </div>
                     <div class="card-body">
                         <DataAnnotationsValidator />
 
@@ -22,6 +27,9 @@
                         <div class="mb-3">
                             <button class="btn btn-success w-100">Login</button>
                         </div>
+                        <div class="text-right">
+                            <a href="ForgotPassword" class="text-decoration-none"><p class="text-sm-center text-dark">Forgot Password?</p></a>
+                        </div>
 
                         <hr class="text-primary" />
 
@@ -29,9 +37,7 @@
                             <a href="Account/Register" class="text-decoration-none">New? Register</a>
                             
                         </div>
-                        <div class="text-center">
-                            <a href="app/home" class="text-decoration-none">View Blogs</a>
-                        </div>
+                        
                     </div>
 
                     <div class="card-footer mt-3">
@@ -46,7 +52,7 @@
                     </div>
                 </div>
             </EditForm>
-    </div>
+        
 </div>
 
 

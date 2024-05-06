@@ -1,6 +1,4 @@
 ﻿@page "/app/home"
-@using Application.DTO.Request.BlogCommentReactions
-@rendermode InteractiveServer
 
 <div style="width:100%;">
 <div class="header mb-20">
@@ -16,7 +14,7 @@
         </Dropdown>
 
 </div>
-<div class="d-flex justify-content-center align-content-center">
+<div class="d-flex justify-content-center align-content-center p-5">
     <!-- Main content -->
     <section class="content">
         <!-- Default box -->
@@ -675,7 +673,7 @@
         if (response.Flag)
         {
             await toast.ShowSuccess("Reaction updated successfully");
-            await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your comment is reacted.");
+            await hubConnection.InvokeAsync("Notification", CommentUserId.ToString().ToLower(), "Your comment is reacted.");
 
             NavManager.NavigateTo("/app/home", true);
         }
@@ -704,7 +702,7 @@
                 if (response.Flag)
                 {
                     await toast.ShowSuccess("Reaction removed successfully");
-                    await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your comment is unreacted.");
+                    await hubConnection.InvokeAsync("Notification", CommentUserId.ToString().ToLower(), "Your comment is unreacted.");
 
                     NavManager.NavigateTo("/app/home", true);
                 }

@@ -3,10 +3,10 @@
 
 <div class="d-flex justify-content-center align-content-center" style="width:100%">
     <!-- Blog details section -->
-    <div class="row justify-content-center" style="width:100%">
-        <div class="col-md-8">
+    <div class="d-flex flex-column gap-3" style="width:100%">
+        <div class="col-md-10 d-md-flex gap-2 d-lg-flex gap-5">
             <!-- Carousel -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide col-md-7 lg-col-7 bg-dark" data-ride="carousel">
                 <!-- Indicators -->
                 <div class="carousel-indicators">
                    
@@ -36,7 +36,7 @@
                         foreach (var image in blogModel.Images)
                         {
                             <div class="carousel-item @(slideIndex == 0 ? "active" : "")">
-                                <img class="d-block w-100" src="@image.Image" alt="BLOG">
+                                <img class="d-block " style="width:100%;" src="@image.Image" alt="BLOG">
                             </div>
                             slideIndex++;
                         }
@@ -55,42 +55,46 @@
             </div>
 
             <!-- Blog details -->
-            <div class="mt-3">
+            <div class="mt-3 md-flex-grow-1 lg-flex-grow-1">
                 <h2>@blogModel.Title</h2>
-                <p>@blogModel.Description</p>
-            </div>
-
-            <!-- Blog stats -->
+                
+                <!-- Blog stats -->
                 <div class="row justify-content-between align-items-center mt-3" style="width:100%">
                     <!-- Upvote and Downvote section -->
                     <div class="col-auto d-flex align-items-center gap-2">
-                    <!-- Upvote -->
-                    @if (blogModel.UpvotedStatus)
-                    {
-                        <i class="bi bi-arrow-up-square-fill text-primary icon" @onclick="@(() => RemoveReaction(blogModel.Id))" style="cursor:pointer"></i> <!-- Filled upvote icon -->
-                    }
-                    else
-                    {
-                        <i class="bi bi-arrow-up-square text-secondary icon" @onclick="@(() => Upvote(blogModel.Id))" style="cursor:pointer"></i> <!-- Empty upvote icon -->
-                    }
-                    <p class="m-0 text">@blogModel.UpvoteCount</p>
-                    <!-- Downvote -->
-                    @if (blogModel.DownvotedStatus)
-                    {
-                        <i class="bi bi-arrow-down-square-fill text-danger icon" @onclick="@(()=>RemoveReaction(blogModel.Id))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
-                    }
-                    else
-                    {
-                        <i class="bi bi-arrow-down-square text-secondary icon" @onclick="@(()=>Downvote(blogModel.Id))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
-                    }
-                    <p class="m-0 text">@blogModel.DownvoteCount</p>
+                        <!-- Upvote -->
+                        @if (blogModel.UpvotedStatus)
+                        {
+                            <i class="bi bi-arrow-up-square-fill text-primary icon" @onclick="@(() => RemoveReaction(blogModel.Id))" style="cursor:pointer"></i> <!-- Filled upvote icon -->
+                        }
+                        else
+                        {
+                            <i class="bi bi-arrow-up-square text-secondary icon" @onclick="@(() => Upvote(blogModel.Id))" style="cursor:pointer"></i> <!-- Empty upvote icon -->
+                        }
+                        <p class="m-0 text">@blogModel.UpvoteCount</p>
+                        <!-- Downvote -->
+                        @if (blogModel.DownvotedStatus)
+                        {
+                            <i class="bi bi-arrow-down-square-fill text-danger icon" @onclick="@(()=>RemoveReaction(blogModel.Id))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
+                        }
+                        else
+                        {
+                            <i class="bi bi-arrow-down-square text-secondary icon" @onclick="@(()=>Downvote(blogModel.Id))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
+                        }
+                        <p class="m-0 text">@blogModel.DownvoteCount</p>
+                    </div>
+                    <!-- Comments count -->
+                    <div class="col-auto d-flex align-items-center gap-2" @onclick="@(()=>showComments(blogModel.Id))">
+                        <i class="bi bi-chat-text text-secondary icon" style="cursor:pointer"></i>
+                        <p class="m-0 text">@blogModel.CommentsCount</p>
+                    </div>
                 </div>
-                <!-- Comments count -->
-                <div class="col-auto d-flex align-items-center gap-2" @onclick="@(()=>showComments(blogModel.Id))">
-                    <i class="bi bi-chat-text text-secondary icon" style="cursor:pointer"></i>
-                    <p class="m-0 text">@blogModel.CommentsCount</p>
-                </div>
-                </div>
+            </div>
+
+            
+        </div>
+        <div class="col-md-10 " style="margin:2px;">
+            <p>@blogModel.Description</p>
         </div>
     </div>
 </div>
@@ -109,7 +113,7 @@
                     <p>You need to be logged in to perform this action.</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="Account/Login"><button type="button" class="btn btn-primary">Login</button></a>
+                    <a href="Account/Login"> <button type="button" class="btn btn-primary">Login</button></a>
                     <button type="button" class="btn btn-secondary" @onclick="() => isLoginPopUp = false">Cancel</button>
                 </div>
             </div>
@@ -139,25 +143,56 @@
                         @if (comments.Any())
                         {
 
-
                             @foreach (var comment in comments)
                             {
-                                <div class="mb-3 p-3 bg-light rounded d-flex justify-content-between">
-                                    <div>
-                                        <div class="fw-bold">@comment.User.Name</div>
-                                        <div>@comment.Comment</div>
-                                    </div>
+                                <div class=" d-flex justify-content-between flex-column bg-light rounded mb-3 p-3 ">
+                                    <div class=" d-flex justify-content-between align-items-center mb-2">
+                                        <div>
+                                            <div class="fw-bold">@comment.User.Name</div>
+                                            <div>@comment.Comment</div>
+                                        </div>
+                                        <div>
+                                            <!-- Display delete icon if the comment belongs to the current user -->
+                                            @if (comment.UserId == UserId)
+                                            {
+                                                <button class="btn btn-sm btn-danger" @onclick="() => DeleteComment()">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            }
+                                        </div>
 
-                                    <!-- Display delete icon if the comment belongs to the current user -->
-                                    @if (comment.UserId == UserId)
-                                    {
-                                        <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteComment()">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    }
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center gap-4">
+                                        <div class="col-auto d-flex align-items-center gap-2">
+                                            <!-- Upvote -->
+                                            @if (comment.UpvotedStatus)
+                                            {
+                                                <i class="bi bi-arrow-up-square-fill text-primary" @onclick="@(() => RemoveCommentReaction(comment.UserId))" style="cursor:pointer"></i> <!-- Filled upvote icon -->
+                                            }
+                                            else
+                                            {
+                                                <i class="bi bi-arrow-up-square text-secondary" @onclick="@(() => UpvoteComment(comment.UserId))" style="cursor:pointer"></i> <!-- Empty upvote icon -->
+                                            }
+                                            <p class="m-0">@comment.UpvoteCount</p>
+                                        </div>
+                                        <div class="col-auto d-flex align-items-center gap-2">
+                                            <!-- Downvote -->
+                                            @if (comment.DownvotedStatus)
+                                            {
+                                                <i class="bi bi-arrow-down-square-fill text-danger" @onclick="@(()=>RemoveCommentReaction(comment.UserId))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
+                                            }
+                                            else
+                                            {
+                                                <i class="bi bi-arrow-down-square text-secondary" @onclick="@(()=>DownvoteComment(comment.UserId))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
+                                            }
+                                            <p class="m-0">@comment.DownvoteCount</p>
+                                        </div>
+                                    </div>
                                 </div>
                             }
-                        }else
+
+                        }
+                        else
                         {
                             <p>No comments available.</p>
                         }
@@ -187,6 +222,7 @@
     [SupplyParameterFromForm]
 
     private UpdateBlogCommentRequestDTO comment { get; set; } = new();
+    private HubConnection hubConnection;
 
 
     [Inject]
@@ -207,6 +243,11 @@
                 // Set the user ID in the blog model
                 blogModel.UserId = userId;
                 UserId = userId;
+                hubConnection = netcodeHubConnectionService.GetHubConnection();
+                if (hubConnection.State == HubConnectionState.Disconnected)
+                {
+                    await hubConnection.StartAsync();
+                }
             }
         }
 
@@ -283,7 +324,9 @@
         var response = await mediator.Send(command);
         if (response.Flag)
         {
-            await toast.ShowSuccess("Upvoted successfully");
+            await toast.ShowSuccess("Reacted successfully");
+            await hubConnection.InvokeAsync("Notification", blogModel.UserId.ToString().ToLower(), "Your blog is reacted.");
+
             NavManager.NavigateTo("/blogs/"+Id, true);
         }
         else
@@ -311,6 +354,8 @@
                 if (response.Flag)
                 {
                     await toast.ShowSuccess("Reaction removed successfully");
+                    await hubConnection.InvokeAsync("Notification", blogModel.UserId.ToString().ToLower(), "Your blog is unreacted.");
+
                     NavManager.NavigateTo("/blogs/" + Id, true);
                 }
                 else
@@ -402,6 +447,8 @@
                     if (response.Flag)
                     {
                         await toast.ShowSuccess("Comment saved successfully");
+                        await hubConnection.InvokeAsync("Notification", blogModel.UserId.ToString().ToLower(), "Your blog is commented.");
+
                         NavManager.NavigateTo("/blogs/" + Id, true);
                     }
                     else
@@ -441,6 +488,8 @@
                     if (response.Flag)
                     {
                         await toast.ShowSuccess("Comment deleted successfully");
+                        await hubConnection.InvokeAsync("Notification", blogModel.UserId.ToString().ToLower(), "Your blog is uncommented.");
+
                     }
                     else
                     {
@@ -459,6 +508,109 @@
         catch (Exception ex)
         {
             Console.WriteLine(ex);
+        }
+
+    }
+
+    public async Task UpvoteComment(Guid CommentUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                await UpdateCommentReaction("Upvote",  CommentUserId);
+
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+
+    }
+    public async Task DownvoteComment(Guid CommentUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+                await UpdateCommentReaction("Downvote", CommentUserId);
+
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
+        }
+
+
+    }
+    public async Task UpdateCommentReaction(string reaction, Guid CommentUserId)
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        var data = new UpdateBlogCommentReactionRequestDTO
+            {
+                Reaction = reaction,
+                UserId = UserId,
+                BlogId = blogModel.Id,
+                CommentUserId = CommentUserId
+            };
+
+        var command = new UpdateBlogCommentReactionCommand(data);
+        var response = await mediator.Send(command);
+        if (response.Flag)
+        {
+            await toast.ShowSuccess("Reaction updated successfully");
+            await hubConnection.InvokeAsync("Notification", CommentUserId.ToString().ToLower(), "Your comment is reacted.");
+
+            NavManager.NavigateTo("/app/home", true);
+        }
+        else
+        {
+            await toast.ShowError(response.Message);
+            // NavManager.NavigateTo("/app/home",true);
+        }
+
+
+    }
+
+    public async Task RemoveCommentReaction(Guid CommentUserId)
+    {
+        if (ClientAuthState != null)
+        {
+
+            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            {
+
+                var scope = serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+
+                var command = new DeleteBlogCommentReactionCommand(UserId, blogModel.UserId, CommentUserId);
+                var response = await mediator.Send(command);
+                if (response.Flag)
+                {
+                    await toast.ShowSuccess("Reaction removed successfully");
+                    await hubConnection.InvokeAsync("Notification", CommentUserId.ToString().ToLower(), "Your comment is unreacted.");
+
+                    NavManager.NavigateTo("/app/home", true);
+                }
+                else
+                {
+                    await toast.ShowError(response.Message);
+                    // NavManager.NavigateTo("/app/home",true);
+                }
+            }
+            else
+            {
+                isLoginPopUp = true;
+
+            }
         }
 
     }

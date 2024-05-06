@@ -262,7 +262,7 @@
             await SetUpBloggerBarChart();
             await lineChart.InitializeAsync(chartData: chartData, chartOptions: lineChartOptions, plugins: new string[] { "ChartDataLabels" });
             await blogLineChart.InitializeAsync(chartData: blogChartData, chartOptions: bloggerlineChartOptions, plugins: new string[] { "ChartDataLabels" });
-       }
+        }
         await base.OnAfterRenderAsync(firstRender);
 
 
@@ -387,8 +387,15 @@
 
     private async Task<GridDataProviderResult<GetBloggerResponseDTO>> BloggerDataProvider(GridDataProviderRequest<GetBloggerResponseDTO> request)
     {
+        if(top10bloggers.Count() <= 0)
+        {
+            await SetUp();
+
+        }
         return await Task.FromResult(request.ApplyTo(top10bloggers));
     }
+
+
 
     private async Task DeleteBlogger(Guid UserId)
     {

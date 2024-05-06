@@ -19,56 +19,66 @@
     </AuthorizeView>
 
     <main>
-        <div class="bb-top-row px-4 d-flex justify-content-end align-items-center">
-            <!-- Logout Button -->
-            <div class="nav-item px-3 mt-auto d-flex justify-content-center align-items-center">
+        <AuthorizeView>
+            <NotAuthorized>
+                 <div class="bb-top-row px-4 d-flex justify-content-between align-items-center">
+                      <a href="/app/home" class="brand-link">
+                        <img src="assets/images/logo.svg" style="width: 5rem; opacity: .8" />
+                     </a>
+                    <!-- Logout Button -->
+                
+                        <a href="Account/Login">
+                            <button type="button" class="nav-link fw-bold text-primary">
+                                <i class="bi bi-box-arrow-right text-primary"></i> Login
+                            </button>
+                        </a>
 
-                <AuthorizeView Policy="UserPolicy">
-                    <a href="notifications">
-                        @if (@notificationCount.notificationsCount > 0)
-                    {
-                        <div class="position-relative">
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+        
+            <div class="bb-top-row px-4 d-flex justify-content-end align-items-center">
+                
+                <div class="nav-item px-3 mt-auto d-flex justify-content-center align-items-center">
+
+                    <AuthorizeView Policy="UserPolicy">
+                        <a href="notifications" class="mr-2">
+                            @if (@notificationCount.notificationsCount > 0)
+                        {
+                            <div class="position-relative">
+                                <i class="bi bi-bell"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        @notificationCount.notificationsCount
+                                </span>
+                            </div>
+                        }
+                        else
+                        {
                             <i class="bi bi-bell"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    @notificationCount.notificationsCount
-                            </span>
-                        </div>
-                    }
-                    else
-                    {
-                        <i class="bi bi-bell"></i>
-                    }
-                    </a>
+                        }
+                        </a>
 
                    
-                </AuthorizeView>
-                <AuthorizeView>
-                    <Authorized>
-                    <!-- mt-auto for margin-top: auto to push it to the bottom -->
-                    <form action="Account/Logout" method="post">
-                        <AntiforgeryToken />
-                        <button type="submit" class="nav-link fw-bold text-danger">
-                            <i class="bi bi-box-arrow-right text-danger"></i> Logout
-                        </button>
-                    </form>
-                    </Authorized>
-                    <NotAuthorized>
-                        <!-- Content for unauthorized users -->
-                        <a href="Account/Login">
-                        <button type="button" class="nav-link fw-bold text-primary">
-                            <i class="bi bi-box-arrow-right text-primary"></i> Login
-                        </button>
-                        </a>
-                    </NotAuthorized>
-
-                </AuthorizeView>
+                    </AuthorizeView>
+                    <AuthorizeView>
+                   
+                        <!-- mt-auto for margin-top: auto to push it to the bottom -->
+                        <form action="Account/Logout" method="post">
+                            <AntiforgeryToken />
+                            <button type="submit" class="nav-link fw-bold text-danger">
+                                <i class="bi bi-box-arrow-right text-danger"></i> Logout
+                            </button>
+                        </form>
+                     </AuthorizeView>
+                      
 
                
+                </div>
             </div>
-        </div>
+       
 
         <article class="content px-4">
-            <div class="py-2">@Body</div>
+            <div class="py-2 overflow-auto">@Body</div>
         </article>
     </main>
 
@@ -113,7 +123,6 @@
                                      await toast.ShowSuccess(message);
                                      await notificationCount.GetActiveOrdersCount(UserId);
 
-                                     notificationCount.StateChanged += OnStateChanged;
                                      StateHasChanged();
                                 }
                                
@@ -127,20 +136,11 @@
                     }
                 });
 
-                // Subscribe to the StateChanged event outside of the hub connection callback
-                notificationCount.StateChanged += OnStateChanged;
             }
         }
     }
 
-    // Define the event handler at the class level
-    private void OnStateChanged()
-    {
-        // Handle state change here
-        // For example, update UI or perform any action
-        js.InvokeVoidAsync("alert", "State changed!");
-    }
-
+  
     private async Task<SidebarDataProviderResult> SidebarDataProvider(SidebarDataProviderRequest request)
     {
         if (navItems is null)

@@ -36,9 +36,9 @@ namespace Application.Service.Identity
             return account.DeleteAccountAsync(userId);
         }
 
-        public Task<ServiceResponse> ForgotPassword(string email, string scheme)
+        public Task<ServiceResponse> ForgotPassword(string email, string scheme, string host, int port)
         {
-            return account.ForgotPassword(email, scheme);
+            return account.ForgotPassword(email, scheme,host,port);
         }
 
         public Task<ApplicationUser> GetUserById(string userId)

@@ -23,6 +23,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using Application.Extensions;
 using Application.Extensions.Email;
 using Application.Service.Email;
+using System.Web;
 
 
 namespace Infrastructure.Repository
@@ -492,30 +493,39 @@ namespace Infrastructure.Repository
 
         }
 
-        public async Task<ServiceResponse> ForgotPassword(string email,string scheme)
+        public async Task<ServiceResponse> ForgotPassword(string email,string scheme,string host,int port)
         {
-            var user = await FindUserById(email);
-            if(user is null)
+            try
             {
-                return new ServiceResponse(false, "User Not Found");
+                var user = await FindUserByEmail(email);
+                if (user is null)
+                {
+                    return new ServiceResponse(false, "User Not Found");
+                }
+                var token = await userManager.GeneratePasswordResetTokenAsync(user);
+                var uriBuilder = new UriBuilder();
+                uriBuilder.Scheme = scheme;
+                uriBuilder.Host = host; // Set your host name here
+                uriBuilder.Port = port;
+
+                uriBuilder.Path = "/Account/ResetPassword"; // Path to the ResetPassword action
+                Console.WriteLine(token);
+
+                // Add query parameters for token and email
+                var query = new StringBuilder();
+                query.Append($"?token={HttpUtility.UrlEncode(token)}"); // Assuming token is a variable available in your method
+                query.Append($"&email={user.Email}"); // Assuming user.Email is a variable available in your method
+                uriBuilder.Query = query.ToString();
+
+                var forgotPassswordLink = uriBuilder.Uri.ToString();
+
+                var message = new Message(new string[] { user.Email }, "Confirmation Email Link", forgotPassswordLink);
+                _emailService.SendEmail(message);
+                return new ServiceResponse(true, "Password Reset Link sent to your email successfully.");
+            }catch (Exception ex)
+            {
+                return new ServiceResponse(false,ex.Message);
             }
-            var token = await userManager.GeneratePasswordResetTokenAsync(user);
-            var uriBuilder = new UriBuilder();
-            uriBuilder.Scheme = scheme;
-            uriBuilder.Host = "yourhostname.com"; // Set your host name here
-            uriBuilder.Path = "/Authentication/ResetPassword"; // Path to the ResetPassword action
-
-            // Add query parameters for token and email
-            var query = new StringBuilder();
-            query.Append($"?token={token}"); // Assuming token is a variable available in your method
-            query.Append($"&email={user.Email}"); // Assuming user.Email is a variable available in your method
-            uriBuilder.Query = query.ToString();
-
-            var forgotPassswordLink = uriBuilder.Uri.ToString();
-
-            var message = new Message(new string[] { user.Email }, "Confirmation Email Link", forgotPassswordLink);
-            _emailService.SendEmail(message);
-            return new ServiceResponse(true, "Password Reset Link sent to your email successfully.");
         }
 
         public async Task<ServiceResponse> ResetPassword(ResetPasswordRequestDTO resetPassword)
@@ -526,15 +536,26 @@ namespace Infrastructure.Repository
                 return new ServiceResponse(false, "User not found");
 
             }
-           var resetPassResult=await userManager.ResetPasswordAsync(user,resetPassword.Token,resetPassword.Password);
+            Console.WriteLine(resetPassword.Email); 
+            Console.WriteLine($"Reset password: {resetPassword.Token}");
+            var resetPassResult=await userManager.ResetPasswordAsync(user,resetPassword.Token,resetPassword.Password);
             if (!resetPassResult.Succeeded)
             {
-                return new ServiceResponse(false, "Password not reset");
+
+                // Iterate over each error and collect their descriptions
+                var errorDescriptions = resetPassResult.Errors.Select(error => error.Description).ToList();
+
+                // Join the error descriptions into a single string
+                var errorMessage = string.Join(", ", errorDescriptions);
+
+                return new ServiceResponse(false, errorMessage);
             }
             return new ServiceResponse(true, "Password Reset Successfully");
 
 
         }
+
+        
     }
 
 }

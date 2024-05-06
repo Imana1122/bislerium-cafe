@@ -1,5 +1,6 @@
 ﻿using Application.Extensions.Email;
 using Application.Extensions.Identity;
+using Application.Interface.Emails;
 using Application.Interface.Identity;
 using Application.Service.BlogCommentReactions;
 using Infrastructure.DataAccess;
@@ -51,6 +52,7 @@ namespace Infrastructure.DependencyInjection
             });
             services.AddCascadingAuthenticationState();
             services.AddScoped<IAccount, Account>();
+            services.AddScoped<IEmail, Email>();
 
             var emailConfig = config.GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();

@@ -25,7 +25,7 @@ namespace Application.Service.Identity
         Task<ServiceResponse> ChangeSettings(ChangeSettingsRequestDTO model);
         Task<ServiceResponse> DeleteAccountAsync(string userId);
         Task<ApplicationUser> GetUserById(string userId);
-        Task<ServiceResponse> ForgotPassword(string email, string scheme);
+        Task<ServiceResponse> ForgotPassword(string email, string scheme, string host, int port);
         Task<ServiceResponse> ResetPassword(ResetPasswordRequestDTO resetPassword);
 
 

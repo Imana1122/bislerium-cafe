@@ -23,7 +23,7 @@
                 
                 <div class="card-body table-responsive " style="width:100%; overflow:auto;">                    
 
-                    <Grid TItem="GetBlogsResponseDTO" class="table table-hover table-bordered table-striped" DataProvider="BlogsDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5"  AllowSorting="true">
+                    <Grid TItem="GetBlogsResponseDTO" class="table table-hover table-bordered table-striped" DataProvider="BlogsDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5" AllowSorting="true" PageSizeSelectorItems=[5,10,20] PageSizeSelectorVisible="true">
                         <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Title" PropertyName="Title" >
                             <a href="/blogs/@context.Id">
                                 @if (context.Title.Length > 20)
@@ -46,16 +46,16 @@
                             <text>@context.Description</text>
                             }
                         </GridColumn>
-                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Upvotes" PropertyName="UpvoteCount" SortKeySelector="item => item.Id" Filterable="false">
+                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Upvotes" PropertyName="UpvoteCount" SortKeySelector="item => item.UpvoteCount" Filterable="false">
                            @context.UpvoteCount
                         </GridColumn>
-                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Downvotes" PropertyName="DownvoteCount" SortKeySelector="item => item.Id" Filterable="false">
+                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Downvotes" PropertyName="DownvoteCount" SortKeySelector="item => item.DownvoteCount" Filterable="false">
                             @context.DownvoteCount
                         </GridColumn>
-                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Popularity" PropertyName="PopularityCount" SortKeySelector="item => item.Id" Filterable="false">
+                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Popularity" PropertyName="PopularityCount" SortKeySelector="item => item.PopularityCount" Filterable="false">
                             @context.PopularityCount
                         </GridColumn>
-                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Created At" PropertyName="CreatedAt" SortKeySelector="item => item.Id" Filterable="false">
+                        <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Created At" PropertyName="CreatedAt" SortKeySelector="item => item.CreatedAt" Filterable="false">
                             @context.CreatedAt.ToString("MMMM dd, yyyy")
                         </GridColumn>
                         <GridColumn TItem="GetBlogsResponseDTO" HeaderText="Action" PropertyName="Action" Filterable="false">
@@ -116,7 +116,7 @@
     public bool IsBusy { get; set; } = false;
     public IEnumerable<GetBlogsResponseDTO> Blogs { get; set; } = [];
     private Guid UserId;
-    
+
 
     [Inject]
     protected AuthenticationStateProvider AuthenticationStateProvider { get; set; }
@@ -144,8 +144,27 @@
         var result = await mediator.Send(new GetAllBlogsOfUserQuery(UserId));
 
         Blogs = result;
-       
+
     }
+
+    private async Task<GridDataProviderResult<GetBlogsResponseDTO>> BlogsDataProvider(GridDataProviderRequest<GetBlogsResponseDTO> request)
+    {
+        if (Blogs.Count() <= 0) // Pull blogs only one time for client-side filtering, sorting, and paging
+            Blogs = await GetBlogs(); // Call a service or an API to pull the blogs
+
+        return request.ApplyTo(Blogs);
+    }
+
+    private async Task<IEnumerable<GetBlogsResponseDTO>> GetBlogs()
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        // Send the GetAllBlogsQuery
+        var result = await mediator.Send(new GetAllBlogsOfUserQuery(UserId));
+        return result;
+    }
+
+
 
 
 
@@ -177,15 +196,5 @@
 
 
     }
-
-    private async Task<GridDataProviderResult<GetBlogsResponseDTO>> BlogsDataProvider(GridDataProviderRequest<GetBlogsResponseDTO> request)
-    {
-        return await Task.FromResult(request.ApplyTo(Blogs));
-    }
-
-   
-
-   
-
 
 }

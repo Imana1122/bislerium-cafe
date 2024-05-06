@@ -19,9 +19,9 @@
         <div class="container-fluid">
             <div class="card">
 
-                <div class="card-body table-responsive " style="width:100%; overflow:auto;">
+                <div class="card-body table-responsive " style="overflow:auto;">
 
-                    <Grid TItem="UserHistory" class="table table-hover table-bordered table-striped" DataProvider="HistoriesDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5" AllowSorting="true">
+                    <Grid TItem="UserHistory" class="table table-hover table-bordered overflow-auto table-striped" DataProvider="HistoriesDataProvider" AllowFiltering="true" Responsive="true" AllowPaging="true" PageSize="5" AllowSorting="true" PageSizeSelectorItems=[5,10,15,20] PageSizeSelectorVisible="true">
                         <GridColumn TItem="UserHistory" HeaderText="Content" PropertyName="Content">
                             
                                 @if (context.Content.Length > 100)
@@ -76,7 +76,7 @@
                 // Send the GetAllHistoriesOfUserQuery
                 var result = await mediator.Send(new GetUserHistoryQuery(userId));
 
-                Histories = result;
+                Histories = result.OrderByDescending(_ => _.CreatedAt);
             }
 
         }
@@ -87,6 +87,29 @@
 
     private async Task<GridDataProviderResult<UserHistory>> HistoriesDataProvider(GridDataProviderRequest<UserHistory> request)
     {
+        if (Histories.Count() <= 0)
+        {
+            // Retrieve the authentication state
+            var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authenticationState.User;
+
+            // Check if the user is authenticated
+            if (user.Identity.IsAuthenticated)
+            {
+                // Set the user ID in the blog model
+                if (Guid.TryParse(user.FindFirstValue(ClaimTypes.NameIdentifier), out Guid UserId))
+                {
+                    // Set the user ID in the blog model
+                    var scope = serviceProvider.CreateScope();
+                    var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                    // Send the GetAllNotificationsOfUserQuery
+                    var result = await mediator.Send(new GetUserHistoryQuery(UserId));
+
+                    Histories = result.OrderByDescending(_ => _.CreatedAt);
+                }
+            }
+
+        }
         return await Task.FromResult(request.ApplyTo(Histories));
     }
 

@@ -28,6 +28,7 @@ namespace Infrastructure.Repository
         {
             var emailMessage = new MimeMessage();
             emailMessage.From.Add(new MailboxAddress("email", _emailConfig.From));
+            emailMessage.To.AddRange(message.To);   
             emailMessage.Subject = message.Subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Text) { Text = message.Content };
             return emailMessage;
@@ -42,7 +43,7 @@ namespace Infrastructure.Repository
                 client.AuthenticationMechanisms.Remove("XOAUTH2");
                 client.Authenticate(_emailConfig.UserName, _emailConfig.Password);
                 client.Send(mailMessage);
-
+                Console.WriteLine("Email Sent");
             }
             catch (Exception ex)
             {

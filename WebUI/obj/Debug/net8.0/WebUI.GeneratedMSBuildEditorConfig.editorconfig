@@ -98,12 +98,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJZGVudGl0eVxBdXRoZW50aWNhdGlvblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/source/Bislerium/WebUI/Components/Pages/Identity/ForgotPasswordPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJZGVudGl0eVxGb3Jnb3RQYXNzd29yZFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/source/Bislerium/WebUI/Components/Pages/Identity/LoginPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJZGVudGl0eVxMb2dpblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/source/Bislerium/WebUI/Components/Pages/Identity/RegisterPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJZGVudGl0eVxSZWdpc3RlclBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/source/Bislerium/WebUI/Components/Pages/Identity/ResetPasswordPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJZGVudGl0eVxSZXNldFBhc3N3b3JkUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/source/Bislerium/WebUI/Components/Pages/Identity/_Imports.razor]
