@@ -10,5 +10,6 @@ namespace Application.Service.Products.Queries.Locations
 {
     public class GetBlogCommentsWithBlogsQuery : IRequest<IEnumerable<GetBlogCommentResponseDTO>>
     {
+        
     }
 }

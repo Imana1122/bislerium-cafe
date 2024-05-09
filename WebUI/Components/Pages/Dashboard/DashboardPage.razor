@@ -8,7 +8,7 @@
         <DropdownToggleButton Color="ButtonColor.Primary" />
 
         <DropdownMenu>
-            <DropdownItem @onclick="SetUp" Type="BlazorBootstrap.ButtonType.Link">None</DropdownItem>
+            <DropdownItem @onclick="SetUp" Type="BlazorBootstrap.ButtonType.Link">All Time</DropdownItem>
 
             <DropdownItem @onclick="()=>SortByMonth(1)" Type="BlazorBootstrap.ButtonType.Link">January</DropdownItem>
             <DropdownItem @onclick="()=>SortByMonth(2)" Type="BlazorBootstrap.ButtonType.Link">February</DropdownItem>
@@ -104,7 +104,7 @@
                         @foreach (var blogModel in top10blogs)
                             {
                                 <!-- Blog details form -->
-                                <Card Style="width:15rem; margin-right:1rem; margin-bottom:1rem">
+                                <Card Style="height:23rem; width:15rem; margin-right:1rem; margin-bottom:1rem">
                                     <!-- Carousel -->
                                     <a href="/blogs/@blogModel.Id" style="text-decoration:none">
                                         <div id="carouselExampleIndicators-@blogModel.Id" class="carousel slide" data-ride="carousel">
@@ -131,9 +131,10 @@
                                                     int slideIndex = 0;
                                                     foreach (var image in blogModel.Images)
                                                     {
-                                                        <div class="carousel-item @(slideIndex == 0 ? "active" : "")">
-                                                            <img class="d-block w-100" src="@image.Image" alt="BLOG">
-                                                        </div>
+                                                    <div class="carousel-item @(slideIndex == 0 ? "active" : "") bg-dark">
+                                                        <img class="d-block mx-auto" style="height:10rem; display:block;" src="@image.Image" alt="BLOG">
+                                                    </div>
+
                                                         slideIndex++;
                                                     }
                                                 }
@@ -149,7 +150,18 @@
                                         </div>
                                     </a>
                                     <CardBody>
-                                        <CardTitle>@blogModel.Title</CardTitle>
+                                        <CardTitle>
+                                        @{
+                                            if (blogModel.Title.Length > 20)
+                                            {
+                                                <text>@(blogModel.Title.Substring(0, 20))...</text>
+                                            }
+                                            else
+                                            {
+                                                <text>@blogModel.Title</text>
+                                            }
+                                        }
+                                        </CardTitle>
                                         <CardSubTitle>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</CardSubTitle>
 
                                         <CardText>
@@ -258,7 +270,7 @@
             await SetUp();
 
             // Perform JavaScript interop calls here
-            await SetUpBarChart();
+            await SetUpBlogBarChart();
             await SetUpBloggerBarChart();
             await lineChart.InitializeAsync(chartData: chartData, chartOptions: lineChartOptions, plugins: new string[] { "ChartDataLabels" });
             await blogLineChart.InitializeAsync(chartData: blogChartData, chartOptions: bloggerlineChartOptions, plugins: new string[] { "ChartDataLabels" });
@@ -271,20 +283,24 @@
 
     public async Task SetUp()
     {
+        selectedMonth = "All Time";
         var scope = serviceProvider.CreateScope();
         var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
         // Send the GetAllBlogsQuery
         var result = await mediator.Send(new GetBloggersQuery());
-
+        Bloggers = result.ToList();
+        Console.WriteLine(Bloggers);
 
         var blogs = await mediator.Send(new GetAllBlogsWithReactionStatusQuery(UserId));
         AllBlogs = blogs;
+
+
         top10blogs = blogs.OrderByDescending(blog => blog.PopularityCount)
                              .Take(10)
                              .ToList();
 
 
-        foreach (var item in result)
+        foreach (var item in Bloggers)
         {
             // Count the number of blogs for the current user
             item.BlogsCount = blogs.Count(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower());
@@ -298,9 +314,9 @@
             // Calculate the total popularity count for the current user
             item.DownvoteCount = blogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
                                         .Sum(blog => blog.DownvoteCount);
-            Bloggers.Add(item);
+
         }
-        top10bloggers = Bloggers.OrderByDescending(_ => _.PopularityCount).Take(10).ToList();
+        top10bloggers = Bloggers.OrderByDescending(_ => _.PopularityCount).Take(5).ToList();
     }
 
     public async Task SortByMonth(int month)
@@ -333,7 +349,6 @@
             item.DownvoteCount = specificBlogs.Where(blog => blog.UserId.ToString().ToLower() == item.Id.ToString().ToLower())
                                         .Sum(blog => blog.DownvoteCount);
 
-            top10bloggers.Add(item);
         }
         top10bloggers = top10bloggers.OrderByDescending(_ => _.PopularityCount).Take(10).ToList();
 
@@ -381,6 +396,11 @@
                 break;
         }
 
+        await SetUpBlogBarChart();
+        await SetUpBloggerBarChart();
+        await lineChart.UpdateAsync(chartData: chartData, chartOptions: lineChartOptions);
+        await blogLineChart.UpdateAsync(chartData: blogChartData, chartOptions: bloggerlineChartOptions);
+
     }
 
 
@@ -426,7 +446,7 @@
 
 
 
-    protected async Task SetUpBarChart()
+    protected async Task SetUpBlogBarChart()
     {
         try
         {
@@ -459,23 +479,19 @@
             lineChartOptions.Responsive = true;
             lineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
 
-            lineChartOptions.Scales.X.Title.Text = "Popularity";
+            lineChartOptions.Scales.X.Title.Text = "Bloggers";
             lineChartOptions.Scales.X.Title.Display = true;
 
-            lineChartOptions.Scales.Y.Title.Text = "Bloggers";
+            lineChartOptions.Scales.Y.Title.Text = "Popularity";
             lineChartOptions.Scales.Y.Title.Display = true;
 
             lineChartOptions.Plugins.Title.Text = "Top 10 Bloggers";
             lineChartOptions.Plugins.Title.Display = true;
 
             // datalabels
-            lineChartOptions.Plugins.Datalabels.Color = "white";
-
-
-           
+            lineChartOptions.Plugins.Datalabels.Color = "white";         
             
 
-            await toast.ShowSuccess("setupcomplete");
 
         }
         catch (Exception ex)
@@ -522,10 +538,10 @@
             bloggerlineChartOptions.Responsive = true;
             bloggerlineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
 
-            bloggerlineChartOptions.Scales.X.Title.Text = "Popularity";
+            bloggerlineChartOptions.Scales.X.Title.Text = "Blogs";
             bloggerlineChartOptions.Scales.X.Title.Display = true;
 
-            bloggerlineChartOptions.Scales.Y.Title.Text = "Blogs";
+            bloggerlineChartOptions.Scales.Y.Title.Text = "Popularity";
             bloggerlineChartOptions.Scales.Y.Title.Display = true;
 
             bloggerlineChartOptions.Plugins.Title.Text = "Top 10 Blogs";
@@ -538,7 +554,6 @@
 
 
 
-            await toast.ShowSuccess("setupcomplete");
 
         }
         catch (Exception ex)

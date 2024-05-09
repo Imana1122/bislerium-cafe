@@ -12,7 +12,6 @@
                 <DropdownItem @onclick="ShuffleBlogs" Type="BlazorBootstrap.ButtonType.Link">Random</DropdownItem>
             </DropdownMenu>
         </Dropdown>
-
 </div>
 <div class="d-flex justify-content-center align-content-center p-5">
     <!-- Main content -->
@@ -24,7 +23,7 @@
                 @foreach (var blogModel in paginatedBlogs)
                 {
                     <!-- Blog details form -->
-                    <Card Style="width:15rem">
+                    <Card Style="height:25rem; width:15rem;">
                         <!-- Carousel -->
                         <a href="/blogs/@blogModel.Id" style="text-decoration:none">
                             <div id="carouselExampleIndicators-@blogModel.Id" class="carousel slide" data-ride="carousel">
@@ -51,9 +50,9 @@
                                         int slideIndex = 0;
                                         foreach (var image in blogModel.Images)
                                         {
-                                            <div class="carousel-item @(slideIndex == 0 ? "active" : "")">
-                                                <img class="d-block w-100" src="@image.Image" alt="BLOG">
-                                            </div>
+                                                <div class="carousel-item @(slideIndex == 0 ? "active" : "") bg-dark">
+                                                    <img class="d-block mx-auto" style="height:10rem; display:block;" src="@image.Image" alt="BLOG">
+                                                </div>
                                             slideIndex++;
                                         }
                                     }
@@ -69,12 +68,28 @@
                             </div>
                         </a>
                         <CardBody>
-                            <CardTitle>@blogModel.Title</CardTitle>
-                                <CardSubTitle>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</CardSubTitle>
+                            <CardTitle>
+                                @{
+                                        if (blogModel.Title.Length > 20)
+                                        {
+                                            <text>@(blogModel.Title.Substring(0, 20))...</text>
+                                        }
+                                        else
+                                        {
+                                            <text>@blogModel.Title</text>
+                                        }
+                                    }
+                            </CardTitle>
+                                <CardSubTitle>
+                                    <div class="d-flex justify-content-between">
+                                        <p>@blogModel.BloggerName</p>
+                                        <p>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</p>
+                                    </div>
+                                </CardSubTitle>
                             
                                 <CardText>
                                     @{
-                                        if (blogModel.Description.Length > 200)
+                                        if (blogModel.Description.Length > 50)
                                         {
                                             <text>@(blogModel.Description.Substring(0, 50))...</text>
                                         }
@@ -178,7 +193,7 @@
 
                 <div class="modal-header">
                     <h5 class="modal-title">Comments</h5>
-                    <button type="button" class="btn-close" aria-label="Close" @onclick="() => isCommentModalOpen = false"></button>
+                        <button type="button" class="btn-close" aria-label="Close" @onclick="Refresh"></button>
                 </div>
                 <div class="modal-body">
                     <AuthorizeView Policy="UserPolicy">
@@ -204,14 +219,15 @@
                                             <!-- Display delete icon if the comment belongs to the current user -->
                                             @if (comment.UserId == UserId)
                                             {
-                                                <button class="btn btn-sm btn-danger" @onclick="() => DeleteComment(comment.BlogId)">
-                                                    <i class="bi bi-trash"></i>
+                                                <button class="btn btn-sm" @onclick="() => DeleteComment(comment.BlogId)">
+                                                    <i class="bi bi-trash text-danger"></i>
                                                 </button>
                                             }
                                             </div>
                                         
                                         </div>
-                                        <div class="col-auto d-flex align-items-center gap-4">
+                                        <div class="row justify-content-between align-items-center mt-3" style="width:100%">
+                                            <!-- Upvote and Downvote section -->
                                             <div class="col-auto d-flex align-items-center gap-2">
                                                 <!-- Upvote -->
                                                 @if (comment.UpvotedStatus)
@@ -222,19 +238,21 @@
                                                 {
                                                     <i class="bi bi-arrow-up-square text-secondary" @onclick="@(() => UpvoteComment(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Empty upvote icon -->
                                                 }
-                                                <p class="m-0">@comment.UpvoteCount</p>
+                                           
+                                                <!-- Downvote -->
+                                                @if (comment.DownvotedStatus)
+                                                {
+                                                    <i class="bi bi-arrow-down-square-fill text-danger" @onclick="@(()=>RemoveCommentReaction(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
+                                                }
+                                                else
+                                                {
+                                                    <i class="bi bi-arrow-down-square text-secondary" @onclick="@(()=>DownvoteComment(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
+                                                }
+                                            <p class="m-0">@comment.DownvoteCount</p>
                                             </div>
                                             <div class="col-auto d-flex align-items-center gap-2">
-                                            <!-- Downvote -->
-                                            @if (comment.DownvotedStatus)
-                                            {
-                                                <i class="bi bi-arrow-down-square-fill text-danger" @onclick="@(()=>RemoveCommentReaction(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Filled downvote icon -->
-                                            }
-                                            else
-                                            {
-                                                <i class="bi bi-arrow-down-square text-secondary" @onclick="@(()=>DownvoteComment(comment.BlogId,comment.UserId))" style="cursor:pointer"></i> <!-- Empty downvote icon -->
-                                            }
-                                            <p class="m-0">@comment.DownvoteCount</p>
+                                                <i class="bi bi-calender text-secondary icon" style="cursor:pointer"></i>
+                                                <p class="m-0 text-sm">@comment.CreatedAt.ToString("MMM dd, yyyy hh:mm tt")</p>
                                             </div>
                                         </div>
                                     </div>
@@ -247,7 +265,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" @onclick="() => isCommentModalOpen = false">Close</button>
+                        <button type="button" class="btn btn-secondary" @onclick="Refresh">Close</button>
                 </div>
             </div>
         </div>
@@ -256,7 +274,7 @@
 </div>
 
 @code {
-    public Guid UserId { get; set; }
+    public Guid UserId { get; set; } = Guid.Empty;
     private string SelectedType = "Top";
     private HubConnection hubConnection;
 
@@ -270,7 +288,7 @@
     private UpdateBlogCommentRequestDTO comment { get; set; } = new();
     private Guid BlogId { get; set; }
     private Guid CommentBlogUserId { get; set; }
-
+    private bool IsUser = false;
     int pageNumber =  1; 
     int pageSize = 4;
     int totalPages = 1;
@@ -292,12 +310,22 @@
             {
                 // Set the user ID in the blog model
                 UserId = userId;
+                var userRoleClaim = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role);
+
+                if (userRoleClaim != null)
+                {
+                    var userRole = userRoleClaim.Value;
+                    if (userRole == "Blogger"){
+                        IsUser = true;
+                    }
+                }
+
                 hubConnection = netcodeHubConnectionService.GetHubConnection();
                 if (hubConnection.State == HubConnectionState.Disconnected)
                 {
                     await hubConnection.StartAsync();
                 }
-                
+
             }
 
         }
@@ -309,8 +337,8 @@
         var command = new GetAllBlogsWithReactionStatusQuery(UserId); // Pass pagination parameters to the query
         var response = await mediator.Send(command); // Send the command using MediatR
         blogs = response; // Assuming Blogs property contains the list of blogs
-        int totalBlogs = response.Count(); // Total count of blogs
-                                           // Calculate total pages
+        int totalBlogs = blogs.Count(); // Total count of blogs
+                                        // Calculate total pages
         totalPages = (int)((totalBlogs + pageSize - 1) / pageSize);
         SortByPopularity();
 
@@ -332,7 +360,10 @@
     }
 
 
-
+    public void Refresh()
+    {
+        NavManager.NavigateTo("/app/home", true);
+    }
 
     [CascadingParameter]
     public Task<AuthenticationState> ClientAuthState { get; set; }
@@ -343,7 +374,7 @@
         if (ClientAuthState != null)
         {
 
-            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            if (IsUser)
             {
                 await UpdateReaction("Upvote", BlogId, BlogUserId);
 
@@ -362,7 +393,7 @@
         if (ClientAuthState != null)
         {
 
-            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            if (IsUser)
             {
                 await UpdateReaction("Downvote",BlogId,BlogUserId);
 
@@ -393,7 +424,7 @@
             if (response.Flag)
             {
                 await toast.ShowSuccess("Reacted successfully");
-               
+
                 await hubConnection.InvokeAsync("Notification", BlogUserId.ToString().ToLower(), "Your blog is reacted.");
 
 
@@ -402,7 +433,6 @@
             else
             {
                 await toast.ShowError(response.Message);
-                // NavManager.NavigateTo("/app/home",true);
             }
         }catch(Exception ex){
             await toast.ShowError(ex.Message);
@@ -416,7 +446,7 @@
         if (ClientAuthState != null)
         {
 
-            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            if (IsUser)
             {
 
                 var scope = serviceProvider.CreateScope();
@@ -430,12 +460,11 @@
                     await hubConnection.InvokeAsync("Notification", BlogUserId.ToString().ToLower(), "Your blog is unreacted.");
 
 
-                    NavManager.NavigateTo("/app/home",true);
+                    NavManager.NavigateTo("/app/home", true);
                 }
                 else
                 {
                     await toast.ShowError(response.Message);
-                    // NavManager.NavigateTo("/app/home",true);
                 }
             }
             else
@@ -462,10 +491,6 @@
             await toast.ShowError(ex.Message);
             Console.Write(ex);
         }
-
-
-
-
 
     }
 
@@ -515,7 +540,7 @@
             if (ClientAuthState != null)
             {
 
-                if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+                if (IsUser)
                 {
 
                     var scope = serviceProvider.CreateScope();
@@ -527,11 +552,11 @@
                     var response = await mediator.Send(command);
                     if (response.Flag)
                     {
+                        await GetComments(BlogId);
                         await toast.ShowSuccess("Comment saved successfully");
                         await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your blog is commented");
 
 
-                        NavManager.NavigateTo("/app/home", true);
                     }
                     else
                     {
@@ -557,21 +582,23 @@
         {
             if (ClientAuthState != null)
             {
-
-                if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+                if (IsUser)
                 {
-
                     var scope = serviceProvider.CreateScope();
                     var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
-                    
+
                     var command = new DeleteBlogCommentCommand(UserId,BlogId);
                     var response = await mediator.Send(command);
                     if (response.Flag)
                     {
+                        await GetComments(BlogId);
+
+                        comment = new UpdateBlogCommentRequestDTO();
+
                         await toast.ShowSuccess("Comment deleted successfully");
                         await hubConnection.InvokeAsync("Notification", CommentBlogUserId.ToString().ToLower(), "Your blog is uncommented");
 
-                        NavManager.NavigateTo("/app/home", true);
+                       
                     }
                     else
                     {
@@ -623,7 +650,7 @@
         if (ClientAuthState != null)
         {
 
-            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            if (IsUser)
             {
                 await UpdateCommentReaction("Upvote", BlogId, CommentUserId);
 
@@ -642,7 +669,7 @@
         if (ClientAuthState != null)
         {
 
-            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            if (IsUser)
             {
                 await UpdateCommentReaction("Downvote", BlogId, CommentUserId);
 
@@ -675,7 +702,8 @@
             await toast.ShowSuccess("Reaction updated successfully");
             await hubConnection.InvokeAsync("Notification", CommentUserId.ToString().ToLower(), "Your comment is reacted.");
 
-            NavManager.NavigateTo("/app/home", true);
+            await GetComments(BlogId);
+
         }
         else
         {
@@ -691,7 +719,7 @@
         if (ClientAuthState != null)
         {
 
-            if ((await ClientAuthState!).User.Identity!.IsAuthenticated == true)
+            if (IsUser)
             {
 
                 var scope = serviceProvider.CreateScope();
@@ -704,7 +732,8 @@
                     await toast.ShowSuccess("Reaction removed successfully");
                     await hubConnection.InvokeAsync("Notification", CommentUserId.ToString().ToLower(), "Your comment is unreacted.");
 
-                    NavManager.NavigateTo("/app/home", true);
+                    await GetComments(BlogId);
+
                 }
                 else
                 {
@@ -720,10 +749,6 @@
         }
 
     }
-
-   
-
-
 
 
 }

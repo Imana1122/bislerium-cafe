@@ -16,12 +16,14 @@ namespace Application.DTO.Response.Blogs
         [Required]
         public ApplicationUser User;
         public int UpvoteCount { get; set; }
+
         public int DownvoteCount { get; set; }
 
 
         public bool UpvotedStatus { get; set; }
 
         public bool DownvotedStatus { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     }
 }

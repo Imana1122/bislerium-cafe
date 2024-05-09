@@ -75,6 +75,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.BlogReactions
 
                     dbContext.Entry(data).State = EntityState.Detached;
                     var adaptData = request.BlogReactionModel.Adapt(new BlogReaction());
+                    adaptData.CreatedAt = DateTime.Now;
                     dbContext.BlogReactions.Update(adaptData);
                     if (adaptData.Reaction == "Downvote")
                     {

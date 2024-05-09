@@ -56,7 +56,6 @@ namespace Infrastructure.Repository
                 PasswordHash = model.Password,
                 Email = model.Email,
                 Name = model.Name,
-                Policy=model.Policy
             };
 
             var result = CheckResult(await userManager.CreateAsync(newUser, model.Password));
@@ -89,8 +88,6 @@ namespace Infrastructure.Repository
                     new Claim("Create","true"),
                     new Claim("Update","true"),
                     new Claim("Delete","true"),
-                    new Claim("Read", "true"),
-                    new Claim("ManageUser", "true")
 
                    ];
             }
@@ -104,8 +101,6 @@ namespace Infrastructure.Repository
                     new Claim("Create","true"),
                     new Claim("Update","true"),
                     new Claim("Delete","false"),
-                    new Claim("Read", "true"),
-                    new Claim("ManageUser", "false")
 
                    ];
             }
@@ -119,26 +114,10 @@ namespace Infrastructure.Repository
                     new Claim("Create","false"),
                     new Claim("Update","false"),
                     new Claim("Delete","false"),
-                    new Claim("Read", "false"),
-                    new Claim("ManageUser", "false")
 
                    ];
             }
-            else
-            {
-                userClaims =
-                   [
-                   new Claim(ClaimTypes.Email, model.Email),
-                    new Claim(ClaimTypes.Role, "Blogger"),
-                    new Claim("Name", model.Name),
-                    new Claim("Create","false"),
-                    new Claim("Update","false"),
-                    new Claim("Delete","false"),
-                    new Claim("Read", "false"),
-                    new Claim("ManageUser", "false")
-
-                  ];
-            }
+           
 
             var result = CheckResult(await userManager.AddClaimsAsync((await FindUserByEmail(model.Email)), userClaims));
             if (result.Flag)
@@ -155,12 +134,14 @@ namespace Infrastructure.Repository
         public async Task<IEnumerable<GetUserWithClaimResponseDTO>> GetUserWithClaimAsync()
         {
             var UserList = new List<GetUserWithClaimResponseDTO>();
-            var allUsers = await userManager.Users.Where(_=>_.Policy=="AdminPolicy" || _.Policy=="ManagerPolicy").ToListAsync();
+            var admins = await userManager.GetUsersForClaimAsync(new Claim(ClaimTypes.Role, "Admin"));
+            var managers = await userManager.GetUsersForClaimAsync(new Claim(ClaimTypes.Role, "Manager"));
+            var allUsers = admins.Concat(managers).ToList(); // Materialize the concatenated result
+
             if (allUsers.Count == 0)
             {
                 return UserList;
             }
-
             foreach (var user in allUsers)
 
             {
@@ -176,9 +157,7 @@ namespace Infrastructure.Repository
                             RoleName = getCurrentUserClaims.FirstOrDefault(_ => _.Type == ClaimTypes.Role).Value,
                             Name = getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Name").Value,
 
-                            ManageUser = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "ManageUser").Value),
                             Create = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Create").Value),
-                            Read = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Read").Value),
                             Update = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Update").Value),
                             Delete = Convert.ToBoolean(getCurrentUserClaims.FirstOrDefault(_ => _.Type == "Delete").Value),
 
@@ -241,8 +220,6 @@ namespace Infrastructure.Repository
                     new Claim("Create",model.Create.ToString()),
                     new Claim("Update",model.Update.ToString()),
                     new Claim("Delete",model.Delete.ToString()),
-                    new Claim("Read", model.Read.ToString()),
-                    new Claim("ManageUser", model.ManageUser.ToString())
                 ];
             var result = await userManager.RemoveClaimsAsync(user, oldUserClaims);
             var response = CheckResult(result);
@@ -323,8 +300,6 @@ namespace Infrastructure.Repository
             // User settings updated successfully
             return new ServiceResponse(true, "User settings updated successfully.");
         }
-
-     
 
         public async Task<ServiceResponse> DeleteAccountAsync(string userId)
         {
@@ -473,6 +448,7 @@ namespace Infrastructure.Repository
                 // Handle account deletion failure
                 return new ServiceResponse(false, "Failed to delete user account.");
             }
+            await userManager.UpdateSecurityStampAsync(user);
 
             // Account deleted successfully
             return new ServiceResponse(true, "User account deleted successfully.");

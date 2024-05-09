@@ -1,19 +1,22 @@
 ﻿using Application.DTO.Response.Blogs;
+using Application.Extensions.Identity;
 using Application.Service.Blogs.Queries.Blogs;
 using Domain.Entities;
 using Infrastructure.DataAccess;
 using Mapster;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Products.Handlers.Categories
 {
-    public class GetAllBlogsWithReactionStatusHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<GetAllBlogsWithReactionStatusQuery, IEnumerable<GetBlogsResponseDTO>>
+    public class GetAllBlogsWithReactionStatusHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory, UserManager<ApplicationUser> userManager) : IRequestHandler<GetAllBlogsWithReactionStatusQuery, IEnumerable<GetBlogsResponseDTO>>
     {
         public async Task<IEnumerable<GetBlogsResponseDTO>> Handle(GetAllBlogsWithReactionStatusQuery request, CancellationToken cancellationToken)
         {
@@ -27,7 +30,7 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
             
 
             // Adapt each blog entity to GetBlogsResponseDTO
-            var responseDTOs = data.Select(blog =>
+            var responseDTOs = data.Select( blog =>
             {
                 var blogResponseDTO = blog.Adapt<GetBlogsResponseDTO>();
 
@@ -39,7 +42,7 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
 
                 // Calculate downvote count
                 blogResponseDTO.DownvoteCount = blog.Reactions?.Count(r => !r.IsUpvote) ?? 0;
-
+                
                 // Set comments count
                 blogResponseDTO.CommentsCount = blog.Comments?.Count ?? 0;
                 // Calculate PopularityCount for a BlogResponseDTO
@@ -75,6 +78,20 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
 
                 return blogResponseDTO;
             });
+            responseDTOs = responseDTOs.ToList();
+            foreach (var item in responseDTOs)
+            {
+                var user = await userManager.FindByIdAsync(item.UserId.ToString());
+                if (user != null)
+                {
+                    Console.WriteLine("hello");
+                    item.BloggerName = user.Name;
+                }
+                else
+                {
+                    item.BloggerName = "anonymous";
+                }
+            }
 
             return responseDTOs;
         }

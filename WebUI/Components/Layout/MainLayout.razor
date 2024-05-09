@@ -1,7 +1,8 @@
-﻿@using Application.Service.Notifications
+﻿ @inherits LayoutComponentBase
+
+@using Application.Service.Notifications
 
 
- @inherits LayoutComponentBase
 
 <div class="bb-page">
     <AuthorizeView Policy="UserPolicy">
@@ -120,7 +121,7 @@
                          {
                                 if (UserId.ToString().ToLower() == userId.ToString().ToLower())
                                 {
-                                     await toast.ShowSuccess(message);
+                                 await js.InvokeVoidAsync("alert", message);
                                      await notificationCount.GetActiveOrdersCount(UserId);
 
                                      StateHasChanged();
@@ -160,17 +161,12 @@
     {
         var navItems = new List<NavItem>();
 
-        // Add common navigation items
-        navItems.Add(new NavItem { Id = "1", Href = "/app/home", IconName = IconName.HouseDoorFill, Text = "Home", Match = NavLinkMatch.All });
-
-
 
         var adminPolicyNavItems = new List<NavItem>
     {
         new NavItem { Id = "2", Href = "/admin/dashboard", IconName = IconName.ListNested, Text = "Dashboard" },
         new NavItem { Id = "4", Href = "/top10/index", IconName = IconName.ListNested, Text = "Top10" },
          new NavItem { Id = "8", Href = "/admins/index", IconName = IconName.ListNested, Text = "Admins" },
-          new NavItem { Id = "9", Href = "/admins/create", IconName = IconName.ListNested, Text = "CreateAdmin" }
     };
 
         var settingsNavItems = new List<NavItem>

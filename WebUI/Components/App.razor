@@ -60,6 +60,11 @@
                     font-size: 1.2rem; /* Increase text size for larger screens */
                 }
             }
+
+        .carousel-control-prev:hover .carousel-control-prev-icon,
+        .carousel-control-next:hover .carousel-control-next-icon {
+            color: blue;
+        }
     </style>
     <HeadOutlet @rendermode="RenderModeForPage" />
 </head>
@@ -78,7 +83,7 @@
             // Example:
             Toastify({
                 text: message,
-                duration: 10000,
+                duration: 3000,
                 close: true,
                 gravity: 'top', // 'top' or 'bottom'
                 position: 'left', // 'left', 'center', or 'right'

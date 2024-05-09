@@ -51,7 +51,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.Blogs
 
                 // Calculate downvote count
                 blogResponseDTO.DownvoteCount = blog.Reactions?.Count(r => !r.IsUpvote) ?? 0;
-
+                blogResponseDTO.BloggerName = user.Name;
                 // Set comments count
                 blogResponseDTO.CommentsCount = blog.Comments?.Count ?? 0;
                 // Calculate PopularityCount for a BlogResponseDTO

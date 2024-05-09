@@ -54,6 +54,35 @@
                                 <div class="alert alert-danger">
                                     @Errors
                                 </div>
+                                @if (blogModel.Images.Any() && blogModel.Images.Count() > 1)
+                                {
+                                    <div class="d-flex gap-3 flex-wrap">
+                                        @foreach (var image in blogModel.Images)
+                                        {
+                                            <div class="card mb-3" style="max-height: 150px;">
+                                                <img src="@image.Image" style="max-height: 100px;"  class="card-img-top" alt="Blog Image">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn btn-danger" @onclick="() => { blogModel.Images.Remove(image); }">
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+
+                                }
+                                @if (blogModel.Images.Any() && blogModel.Images.Count() <= 1)
+                                {
+                                    <div class="d-flex gap-3 flex-wrap">
+                                        @foreach (var image in blogModel.Images)
+                                        {
+                                            <div class="card mb-3" style="max-height: 100px;">
+                                                <img src="@image.Image" style="max-height: 100px;" class="card-img-top" alt="Blog Image">
+
+                                            </div>
+                                        }
+                                    </div>
+                                }
                                 
                             </div>
                         </div>
@@ -112,6 +141,7 @@
                 blogModel.UserId = userId;
             }
         }
+        blogModel.Images = [];
     }
     async Task RetrieveContent(IReadOnlyList<IBrowserFile>? incomingFiles)
     {
@@ -121,6 +151,10 @@
             {
                 foreach (var item in incomingFiles)
                 {
+                    double sizeInMB = (double)item.Size / (1024 * 1024);
+
+                    // Display the toast with the size in MB
+                    await toast.ShowError($"File size exceeds 3MB. Size: {sizeInMB.ToString("0.##")} MB");
                     // Check file size
                     if (item.Size > 3 * 1024 * 1024) // Convert 3MB to bytes
                     {

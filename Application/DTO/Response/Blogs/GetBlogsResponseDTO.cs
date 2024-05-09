@@ -13,7 +13,7 @@ namespace Application.DTO.Response.Blogs
         public Guid Id { get; set; }
         [JsonIgnore]
         public virtual ICollection<GetBlogImageResponseDTO> Images { get; set; } = null;
-
+        public string BloggerName { get; set; }
         public int UpvoteCount {get;set;}
         public int DownvoteCount { get; set; }
         public int CommentsCount { get; set; }
@@ -24,6 +24,6 @@ namespace Application.DTO.Response.Blogs
 
         public bool DownvotedStatus { get; set; }
 
-        public DateTime CreatedAt { get; set; } 
+        public DateTime CreatedAt { get; set; } =DateTime.Now;
     }
 }

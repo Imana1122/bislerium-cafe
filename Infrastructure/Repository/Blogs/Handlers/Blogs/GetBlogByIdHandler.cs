@@ -1,9 +1,11 @@
 ﻿using Application.DTO.Response.Blogs;
+using Application.Extensions.Identity;
 using Application.Service.Blogs.Queries.Blogs;
 using Domain.Entities;
 using Infrastructure.DataAccess;
 using Mapster;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
@@ -14,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Blogs.Handlers.Blogs
 {
-    public class GetBlogByIdHandler(DataAccess.IDbContextFactory<AppDbContext> _contextFactory) : IRequestHandler<GetBlogByIdCommand, GetBlogsResponseDTO>
+    public class GetBlogByIdHandler(DataAccess.IDbContextFactory<AppDbContext> _contextFactory, UserManager<ApplicationUser> userManager) : IRequestHandler<GetBlogByIdCommand, GetBlogsResponseDTO>
     {
         public async Task<GetBlogsResponseDTO> Handle(GetBlogByIdCommand request, CancellationToken cancellationToken)
         {
@@ -48,6 +50,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.Blogs
             blogResponseDTO.CommentsCount = blog.Comments?.Count ?? 0;
             // Calculate PopularityCount for a BlogResponseDTO
             blogResponseDTO.PopularityCount = CalculatePopularityCount(blogResponseDTO);
+
             if (request.UserId != null)
             {
                 BlogReaction reaction = blog.Reactions
@@ -66,6 +69,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.Blogs
                     blogResponseDTO.DownvotedStatus = false;
                 }
             }
+            blogResponseDTO.BloggerName = userManager.FindByIdAsync(blog.UserId.ToString()).Result.Name;
 
 
 

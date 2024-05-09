@@ -76,7 +76,7 @@
     private Guid UserId;
 
     public DashboardDataDTO data { get; set; } = new DashboardDataDTO();
-    public string selectedMonth = "None";
+    public string selectedMonth = "All Time";
 
 
     protected override async Task OnInitializedAsync()
@@ -87,6 +87,7 @@
 
     public async Task SetUp()
     {
+        selectedMonth = "All Time";
         var scope = serviceProvider.CreateScope();
         var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
        

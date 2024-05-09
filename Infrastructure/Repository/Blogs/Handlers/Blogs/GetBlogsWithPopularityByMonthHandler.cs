@@ -1,9 +1,11 @@
 ﻿using Application.DTO.Response.Blogs;
+using Application.Extensions.Identity;
 using Application.Service.Blogs.Queries.Blogs;
 using Domain.Entities;
 using Infrastructure.DataAccess;
 using Mapster;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Blogs.Handlers.Blogs
 {
-    public class GetBlogsWithPopularityByMonthHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<GetBlogsWithPopularityByMonthQuery, IEnumerable<GetBlogsResponseDTO>>
+    public class GetBlogsWithPopularityByMonthHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory, UserManager<ApplicationUser> userManager) : IRequestHandler<GetBlogsWithPopularityByMonthQuery, IEnumerable<GetBlogsResponseDTO>>
     {
         public async Task<IEnumerable<GetBlogsResponseDTO>> Handle(GetBlogsWithPopularityByMonthQuery request, CancellationToken cancellationToken)
         {
@@ -27,7 +29,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.Blogs
 
 
             // Adapt each blog entity to GetBlogsResponseDTO
-            var responseDTOs = data.Select(blog =>
+            var responseDTOs = data.Select( blog =>
             {
                 var blogResponseDTO = blog.Adapt<GetBlogsResponseDTO>();
 
@@ -45,6 +47,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.Blogs
 
                 // Calculate PopularityCount for a BlogResponseDTO
                 blogResponseDTO.PopularityCount = CalculatePopularityCount(blogResponseDTO);
+                
 
                 blogResponseDTO.UpvotedStatus = false;
                 blogResponseDTO.DownvotedStatus = false;
@@ -52,6 +55,21 @@ namespace Infrastructure.Repository.Blogs.Handlers.Blogs
 
                 return blogResponseDTO;
             });
+
+            responseDTOs = responseDTOs.ToList();
+            foreach (var item in responseDTOs)
+            {
+                var user = await userManager.FindByIdAsync(item.UserId.ToString());
+                if (user != null)
+                {
+                    Console.WriteLine("hello");
+                    item.BloggerName = user.Name;
+                }
+                else
+                {
+                    item.BloggerName = "anonymous";
+                }
+            }
 
             return responseDTOs;
         }

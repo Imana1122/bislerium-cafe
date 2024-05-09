@@ -27,9 +27,8 @@ namespace Infrastructure.Repository.Blogs.Handlers.Bloggers
         public async Task<IEnumerable<GetBloggerResponseDTO>> Handle(GetBloggersQuery request, CancellationToken cancellationToken)
         {
             // Retrieve users with role "User"
-            var bloggers = await _userManager.Users.Where(_=>_.Policy=="UserPolicy").ToListAsync();
+            var bloggers = await _userManager.GetUsersForClaimAsync(new Claim(ClaimTypes.Role, "Blogger"));
 
-           
 
 
             var bloggerDTOs = bloggers.Select(blog => blog.Adapt<GetBloggerResponseDTO>());

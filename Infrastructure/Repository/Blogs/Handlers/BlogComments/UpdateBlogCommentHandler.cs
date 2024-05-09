@@ -71,6 +71,7 @@ namespace Infrastructure.Repository.Blogs.Handlers.BlogComments
 
                     dbContext.Entry(data).State = EntityState.Detached;
                     var adaptData = request.BlogCommentModel.Adapt(new BlogComment());
+                    adaptData.CreatedAt = DateTime.Now;
                     dbContext.BlogComments.Update(adaptData);
 
                     var updatehistory = new UserHistory
