@@ -6,8 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.DTO.Request.ActivityTracker;
-using Application.DTO.Response.ActivityTracker;
+
 using Application.Extensions.Identity;
 
 namespace Application.Interface.Identity

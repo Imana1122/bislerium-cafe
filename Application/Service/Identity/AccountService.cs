@@ -1,7 +1,5 @@
-﻿using Application.DTO.Request.ActivityTracker;
-using Application.DTO.Request.Identity;
+﻿using Application.DTO.Request.Identity;
 using Application.DTO.Response;
-using Application.DTO.Response.ActivityTracker;
 using Application.DTO.Response.Identity;
 using Application.Extensions.Identity;
 using Application.Interface.Identity;

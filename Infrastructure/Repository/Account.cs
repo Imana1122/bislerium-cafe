@@ -13,8 +13,6 @@ using System.Threading.Tasks;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Application.DTO.Request.ActivityTracker;
-using Application.DTO.Response.ActivityTracker;
 using Mapster;
 using System.Diagnostics;
 using Azure.Core;
