@@ -16,37 +16,57 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
 {
     public class UpdateBlogHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) :IRequestHandler<UpdateBlogCommand,ServiceResponse>
     {
+        //Handler to update blog 
+        
         public async Task<ServiceResponse> Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
         {
             try
             {
+                // Using statement to ensure proper disposal of DbContext
                 using var dbContext = contextFactory.CreateDbContext();
-                var category = await dbContext.Blogs.FirstOrDefaultAsync(_ => _.Id.Equals(request.BlogModel.Id),cancellationToken:cancellationToken);
-                if (category == null)
+
+                // Retrieve the blog from the database by ID
+                var blog = await dbContext.Blogs.FirstOrDefaultAsync(_ => _.Id.Equals(request.BlogModel.Id), cancellationToken: cancellationToken);
+
+                // If the blog with the specified ID is not found, return item not found response
+                if (blog == null)
                 {
                     return GeneralDbResponses.ItemNotFound(request.BlogModel.Title);
                 }
-                dbContext.Entry(category).State = EntityState.Detached;
-                var adaptData = request.BlogModel.Adapt(new Blog());
-                dbContext.Blogs.Update(adaptData);
+                blog.UpdatedAt=DateTime.Now;
 
-                var history = new UserHistory
+                // Detach the existing blog entity from the context
+                dbContext.Entry(blog).State = EntityState.Detached;
+
+                // Adapt the updated blog model to the domain entity Blog
+                var adaptedBlog = request.BlogModel.Adapt(new Blog());
+
+                // Update the blog entity in the context
+                dbContext.Blogs.Update(adaptedBlog);
+
+                // Create a user history for the blog update
+                var history = new History
                 {
-                    UserId = category.UserId,
-                    Content = category.Title + " is updated."
-
+                    UserId = blog.UserId,
+                    Content = blog.Title + " is updated."
                 };
 
+                // Add the user history to the context
                 dbContext.Histories.Add(history);
 
+                // Save changes to the database
                 await dbContext.SaveChangesAsync(cancellationToken);
-                return GeneralDbResponses.ItemUpdate(request.BlogModel.Title);
-            }catch (Exception ex)
-            {
-                return new ServiceResponse(true, ex.Message);
 
+                // Return item update response
+                return GeneralDbResponses.ItemUpdate(request.BlogModel.Title);
+            }
+            catch (Exception ex)
+            {
+                // Return an error response if an exception occurs
+                return new ServiceResponse(true, ex.Message);
             }
         }
+
 
     }
 }

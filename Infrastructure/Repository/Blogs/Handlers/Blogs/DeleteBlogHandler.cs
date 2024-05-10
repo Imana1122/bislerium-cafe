@@ -4,6 +4,7 @@ using Domain.Entities;
 using Infrastructure.DataAccess;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,22 +13,32 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Products.Handlers.Categories
 {
+    // Handler class responsible for deleting a blog
+
     public class DeleteBlogHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory) : IRequestHandler<DeleteBlogCommand, ServiceResponse>
     {
+        // Method to handle the deletion of a blog
         public async Task<ServiceResponse> Handle(DeleteBlogCommand request, CancellationToken cancellationToken)
         {
             try
             {
+                // Using statement to ensure proper disposal of DbContext
                 using var dbContext = contextFactory.CreateDbContext();
+
+                // Retrieving the blog to be deleted including related entities
                 var data = await dbContext.Blogs
                     .Include(_ => _.Reactions) // Include related reactions
-                    .Include(_ => _.Comments) // Include related reactions
-                    .Include(_ => _.Images) // Include related reactions
+                    .Include(_ => _.Comments) // Include related comments
+                    .Include(_ => _.Images) // Include related images
                     .FirstOrDefaultAsync(_ => _.Id.Equals(request.Id), cancellationToken: cancellationToken);
+
+                // If blog not found, return not found response
                 if (data == null)
                 {
-                    return GeneralDbResponses.ItemNotFound("BLog");
+                    return GeneralDbResponses.ItemNotFound("Blog");
                 }
+
+                // Removing reactions related to the blog
                 if (data.Reactions != null)
                 {
                     foreach (var item in data.Reactions)
@@ -36,6 +47,7 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                     }
                 }
 
+                // Removing images related to the blog
                 if (data.Images != null)
                 {
                     foreach (var item in data.Images)
@@ -44,6 +56,7 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                     }
                 }
 
+                // Removing comments related to the blog
                 if (data.Comments != null)
                 {
                     foreach (var item in data.Comments)
@@ -64,28 +77,31 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                     }
                 }
 
+                // Removing the blog itself
                 dbContext.Blogs.Remove(data);
                 await dbContext.SaveChangesAsync(cancellationToken);
 
-                var history = new UserHistory
+                // Adding deletion history for the blog
+                var history = new History
                 {
                     UserId = data.UserId,
                     Content = data.Title + " is deleted."
-
                 };
                 dbContext.Histories.Add(history);
                 await dbContext.SaveChangesAsync(cancellationToken);
 
-                var blogImages = await dbContext.BlogImages.FirstAsync(_=>_.BlogId.ToString().ToLower().Equals(request.Id.ToString().ToLower()),cancellationToken:cancellationToken);
-                // Assuming dbContext is your instance of DbContext and blogImages is your collection
+                // Deleting blog images from the database
+                var blogImages = await dbContext.BlogImages.FirstAsync(_ => _.BlogId.ToString().ToLower().Equals(request.Id.ToString().ToLower()), cancellationToken: cancellationToken);
                 dbContext.BlogImages.RemoveRange(blogImages);
                 await dbContext.SaveChangesAsync(cancellationToken);
 
+                // Returning success response with deleted blog title
                 return GeneralDbResponses.ItemDelete(data.Title);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
+                // Returning error response if an exception occurs
                 return new ServiceResponse(true, ex.Message);
-
             }
         }
     }

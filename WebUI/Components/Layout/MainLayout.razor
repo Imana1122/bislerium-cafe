@@ -116,20 +116,20 @@
 
                     try
                     {
-                       
+
                         await InvokeAsync(async () =>
                          {
-                                if (UserId.ToString().ToLower() == userId.ToString().ToLower())
-                                {
+                             if (UserId.ToString().ToLower() == userId.ToString().ToLower())
+                             {
                                  await js.InvokeVoidAsync("alert", message);
-                                     await notificationCount.GetActiveOrdersCount(UserId);
+                                 await notificationCount.GetActiveOrdersCount(UserId);
 
-                                     StateHasChanged();
-                                }
-                               
-                        });
+                                 StateHasChanged();
+                             }
 
-                        
+                         });
+
+
                     }
                     catch(Exception ex)
                     {
@@ -137,6 +137,37 @@
                     }
                 });
 
+            }
+        }
+        await DeleteUnusedImages();
+    }
+
+    public async Task DeleteUnusedImages()
+    {
+        var scope = serviceProvider.CreateScope();
+        var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+        var command = new GetAllBlogImagesQuery();
+        var response = await mediator.Send(command); // Send the command using MediatR
+        var usedImages = response;
+        var webRootPath = hostingEnvironment.WebRootPath;
+        var uploadsPath = Path.Combine(webRootPath, "uploads");
+
+        // Get all image files in the uploads folder
+        var allImages = Directory.GetFiles(uploadsPath, "*", SearchOption.TopDirectoryOnly)
+                                  .Select(Path.GetFileName);
+
+        // Identify images not used in blogs
+        var unusedImages = allImages.Except(usedImages);
+
+        // Delete unused images older than 1 day
+        foreach (var image in unusedImages)
+        {
+            var imagePath = Path.Combine(uploadsPath, image);
+            var creationTime = File.GetCreationTime(imagePath);
+
+            if ((DateTime.UtcNow - creationTime).TotalDays > 1)
+            {
+                File.Delete(imagePath);
             }
         }
     }
@@ -164,17 +195,18 @@
 
         var adminPolicyNavItems = new List<NavItem>
     {
-        new NavItem { Id = "2", Href = "/admin/dashboard", IconName = IconName.ListNested, Text = "Dashboard" },
-        new NavItem { Id = "4", Href = "/top10/index", IconName = IconName.ListNested, Text = "Top10" },
-         new NavItem { Id = "8", Href = "/admins/index", IconName = IconName.ListNested, Text = "Admins" },
+        new NavItem { Id = "2", Href = "/admin/dashboard", IconName = IconName.BorderAll, Text = "Dashboard" },
+        new NavItem { Id = "4", Href = "/top10/index", IconName = IconName.CardChecklist, Text = "Top10" },
+         new NavItem { Id = "8", Href = "/admins/index", IconName = IconName.PersonWorkspace, Text = "Admins" },
     };
 
         var settingsNavItems = new List<NavItem>
     {
-        new NavItem { Id = "5", Href = "/profile", IconName = IconName.ListNested, Text = "Profile" },
-        new NavItem { Id = "6", Href = "/change-password", IconName = IconName.ListNested, Text = "Change Password" },
-        new NavItem { Id = "7", Href = "/settings", IconName = IconName.ListNested, Text = "Settings" }
+        new NavItem { Id = "5", Href = "/profile", IconName = IconName.PersonCircle, Text = "Profile" },
+        new NavItem { Id = "6", Href = "/change-password", IconName = IconName.KeyFill, Text = "Change Password" },
+        new NavItem { Id = "7", Href = "/settings", IconName = IconName.GearFill, Text = "Settings" }
     };
+
 
 
 
@@ -199,16 +231,16 @@
         var userPolicyNavItems = new List<NavItem>
     {
         new NavItem { Id = "2", Href = "/blogs/create", IconName = IconName.PlusSquareFill, Text = "Create Blog" },
-        new NavItem { Id = "3", Href = "/blogs/index", IconName = IconName.ListNested, Text = "My Blogs" },
-         new NavItem { Id = "8", Href = "/history", IconName = IconName.PlusSquareFill, Text = "History" },
+        new NavItem { Id = "3", Href = "/blogs/index", IconName = IconName.Newspaper, Text = "My Blogs" },
+         new NavItem { Id = "8", Href = "/history", IconName = IconName.Clock, Text = "History" },
     };
 
 
         var settingsNavItems = new List<NavItem>
     {
-        new NavItem { Id = "5", Href = "/profile", IconName = IconName.ListNested, Text = "Profile" },
-        new NavItem { Id = "6", Href = "/change-password", IconName = IconName.ListNested, Text = "Change Password" },
-        new NavItem { Id = "7", Href = "/settings", IconName = IconName.ListNested, Text = "Settings" },
+        new NavItem { Id = "5", Href = "/profile", IconName = IconName.PersonCircle, Text = "Profile" },
+        new NavItem { Id = "6", Href = "/change-password", IconName = IconName.KeyFill, Text = "Change Password" },
+        new NavItem { Id = "7", Href = "/settings", IconName = IconName.GearFill, Text = "Settings" },
 
     };
 

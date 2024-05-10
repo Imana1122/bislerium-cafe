@@ -17,98 +17,114 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Blogs.Handlers.BlogReactions
 {
+    //Handler to update or create blog reaction
     public class UpdateBlogReactionHandler(DataAccess.IDbContextFactory<AppDbContext> contextFactory, UserManager<ApplicationUser> userManager) : IRequestHandler<UpdateBlogReactionCommand, ServiceResponse>
     {
         public async Task<ServiceResponse> Handle(UpdateBlogReactionCommand request, CancellationToken cancellationToken)
         {
             try
             {
+                // Using statement to ensure proper disposal of DbContext
                 using var dbContext = contextFactory.CreateDbContext();
+
+                // Find the user by ID using the user manager
                 var user = await userManager.FindByIdAsync(request.BlogReactionModel.UserId.ToString());
-                if(user == null)
+
+                // If the user is not found, return item not found response
+                if (user == null)
                 {
                     return GeneralDbResponses.ItemNotFound("User");
                 }
+
+                // Retrieve the blog from the database by ID
                 var blog = await dbContext.Blogs.FirstOrDefaultAsync(_ => _.Id.Equals(request.BlogReactionModel.BlogId), cancellationToken);
+
+                // If the blog with the specified ID is not found, return item not found response
                 if (blog == null)
                 {
                     return GeneralDbResponses.ItemNotFound("Blog");
                 }
 
-                var data = await dbContext.BlogReactions.FirstOrDefaultAsync(comment => comment.UserId.Equals(request.BlogReactionModel.UserId) && comment.BlogId == request.BlogReactionModel.BlogId, cancellationToken);
-                if (data == null)
+                // Check if the user has already reacted to the blog
+                var existingReaction = await dbContext.BlogReactions.FirstOrDefaultAsync(comment => comment.UserId.Equals(request.BlogReactionModel.UserId) && comment.BlogId == request.BlogReactionModel.BlogId, cancellationToken);
+
+                if (existingReaction == null)
                 {
-                    var newdata = request.BlogReactionModel.Adapt(new BlogReaction());
-                    dbContext.BlogReactions.Add(newdata);
-                    if (newdata.Reaction == "Downvote")
+                    // If there is no existing reaction, create a new one
+                    var newReaction = request.BlogReactionModel.Adapt(new BlogReaction());
+                    dbContext.BlogReactions.Add(newReaction);
+
+                    // Add notification based on the reaction type
+                    if (newReaction.Reaction == "Downvote")
                     {
                         var notification = new Notification
                         {
                             Read = false,
                             UserId = blog.UserId,
                             Content = blog.Title + " is downvoted by " + user.Name
-
                         };
                         dbContext.Notifications.Add(notification);
                     }
-                    else if (newdata.Reaction == "Upvote")
+                    else if (newReaction.Reaction == "Upvote")
                     {
                         var notification = new Notification
                         {
                             Read = false,
                             UserId = blog.UserId,
                             Content = blog.Title + " is upvoted by " + user.Name
-
                         };
                         dbContext.Notifications.Add(notification);
-
                     }
 
+                    // Save changes to the database
                     await dbContext.SaveChangesAsync(cancellationToken);
 
-
+                    // Return item created response
                     return GeneralDbResponses.ItemCreated("Reaction");
                 }
                 else
                 {
+                    // If there is an existing reaction, update it
+                    dbContext.Entry(existingReaction).State = EntityState.Detached;
+                    var updatedReaction = request.BlogReactionModel.Adapt(new BlogReaction());
+                    updatedReaction.UpdatedAt = DateTime.Now;
+                    dbContext.BlogReactions.Update(updatedReaction);
 
-
-                    dbContext.Entry(data).State = EntityState.Detached;
-                    var adaptData = request.BlogReactionModel.Adapt(new BlogReaction());
-                    adaptData.CreatedAt = DateTime.Now;
-                    dbContext.BlogReactions.Update(adaptData);
-                    if (adaptData.Reaction == "Downvote")
+                    // Add notification based on the updated reaction type
+                    if (updatedReaction.Reaction == "Downvote")
                     {
                         var notification = new Notification
                         {
                             Read = false,
                             UserId = blog.UserId,
                             Content = blog.Title + " is updated to downvote by " + user.Name
-
                         };
                         dbContext.Notifications.Add(notification);
                     }
-                    else if (adaptData.Reaction == "Upvote")
+                    else if (updatedReaction.Reaction == "Upvote")
                     {
                         var notification = new Notification
                         {
-                            Read=false,
+                            Read = false,
                             UserId = blog.UserId,
-                            Content = blog.Title + " is updated to downvote by " + user.Name
-
+                            Content = blog.Title + " is updated to upvote by " + user.Name
                         };
                         dbContext.Notifications.Add(notification);
-
                     }
+
+                    // Save changes to the database
                     await dbContext.SaveChangesAsync(cancellationToken);
+
+                    // Return item updated response
                     return GeneralDbResponses.ItemUpdate("Comment");
                 }
             }
             catch (Exception ex)
             {
+                // Return an error response if an exception occurs
                 return new ServiceResponse(true, ex.Message);
-
             }
         }
+
     }
 }

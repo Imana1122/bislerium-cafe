@@ -17,6 +17,7 @@ namespace Domain.Entities
         public string Reaction { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
         // Navigation property to BlogComment entity
         [ForeignKey("BlogId,CommentUserId")] // Define the composite foreign key

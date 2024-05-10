@@ -21,3 +21,17 @@ D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.dll
 D:\source\Bislerium\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.pdb
 D:\source\Bislerium\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\source\Bislerium\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Data\Database\Bislerium\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Data\Database\Bislerium\Domain\bin\Debug\net8.0\Domain.dll
+D:\Data\Database\Bislerium\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.dll
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Data\Database\Bislerium\Domain\obj\Debug\net8.0\ref\Domain.dll

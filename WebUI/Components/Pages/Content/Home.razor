@@ -2,16 +2,25 @@
 
 <div style="width:100%;">
 <div class="header mb-20">
-        <Dropdown Size="BlazorBootstrap.Size.Small" Split="true">
-            <DropdownActionButton Color="ButtonColor.Primary">@SelectedType</DropdownActionButton>
-            <DropdownToggleButton Color="ButtonColor.Primary" />
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+                <Dropdown Size="BlazorBootstrap.Size.Small" Split="true">
+                    <DropdownActionButton Color="ButtonColor.Primary">@SelectedType</DropdownActionButton>
+                    <DropdownToggleButton Color="ButtonColor.Primary" />
 
-            <DropdownMenu>
-                <DropdownItem @onclick="SortByPopularity" Type="BlazorBootstrap.ButtonType.Link">Top</DropdownItem>
-                <DropdownItem @onclick="SortByCreatedAt" Type="BlazorBootstrap.ButtonType.Link">Recent</DropdownItem>
-                <DropdownItem @onclick="ShuffleBlogs" Type="BlazorBootstrap.ButtonType.Link">Random</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
+                    <DropdownMenu>
+                        <DropdownItem @onclick="SortByPopularity" Type="BlazorBootstrap.ButtonType.Link">Top</DropdownItem>
+                        <DropdownItem @onclick="SortByCreatedAt" Type="BlazorBootstrap.ButtonType.Link">Recent</DropdownItem>
+                        <DropdownItem @onclick="ShuffleBlogs" Type="BlazorBootstrap.ButtonType.Link">Random</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
+        </div>
+        <div>
+                <input type="text" @bind="searchText" />
+                <button @onclick="Search">Search</button>
+        </div>
+    </div>
+        
 </div>
 <div class="d-flex justify-content-center align-content-center p-5">
     <!-- Main content -->
@@ -83,7 +92,7 @@
                                 <CardSubTitle>
                                     <div class="d-flex justify-content-between">
                                         <p>@blogModel.BloggerName</p>
-                                        <p>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</p>
+                                        <p>@blogModel.UpdatedAt.ToString("MMMM dd, yyyy")</p>
                                     </div>
                                 </CardSubTitle>
                             
@@ -252,7 +261,7 @@
                                             </div>
                                             <div class="col-auto d-flex align-items-center gap-2">
                                                 <i class="bi bi-calender text-secondary icon" style="cursor:pointer"></i>
-                                                <p class="m-0 text-sm">@comment.CreatedAt.ToString("MMM dd, yyyy hh:mm tt")</p>
+                                                <p class="m-0 text-sm">@comment.UpdatedAt.ToString("MMM dd, yyyy hh:mm tt")</p>
                                             </div>
                                         </div>
                                     </div>
@@ -274,12 +283,30 @@
 </div>
 
 @code {
+    private string searchText = "";
+
+    private void Search()
+    {
+        if(searchText=="" || searchText == null)
+        {
+            filteredBlogs = blogs;
+            PaginateBlogs();
+        }
+        else
+        {
+            filteredBlogs = blogs.Where(blog => blog.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            PaginateBlogs();
+        }
+
+    }
     public Guid UserId { get; set; } = Guid.Empty;
     private string SelectedType = "Top";
     private HubConnection hubConnection;
 
     [SupplyParameterFromForm]
     private IEnumerable<GetBlogsResponseDTO> blogs { get; set; } = [];
+    private IEnumerable<GetBlogsResponseDTO> filteredBlogs { get; set; } = [];
     private IEnumerable<GetBlogsResponseDTO> paginatedBlogs { get; set; } = [];
 
     private IEnumerable<GetBlogCommentResponseDTO> comments { get; set; } = [];
@@ -337,9 +364,8 @@
         var command = new GetAllBlogsWithReactionStatusQuery(UserId); // Pass pagination parameters to the query
         var response = await mediator.Send(command); // Send the command using MediatR
         blogs = response; // Assuming Blogs property contains the list of blogs
-        int totalBlogs = blogs.Count(); // Total count of blogs
-                                        // Calculate total pages
-        totalPages = (int)((totalBlogs + pageSize - 1) / pageSize);
+        filteredBlogs = blogs;
+
         SortByPopularity();
 
     }
@@ -354,9 +380,14 @@
 
     protected void PaginateBlogs()
     {
+        int totalBlogs = filteredBlogs.Count(); // Total count of blogs
+                                        // Calculate total pages
+        totalPages = (int)((totalBlogs + pageSize - 1) / pageSize);
+        
         int startIndex = (pageNumber - 1) * pageSize;
         int endIndex = Math.Min(startIndex + pageSize, blogs.Count());
-        paginatedBlogs = blogs.Skip(startIndex).Take(pageSize);
+        paginatedBlogs = filteredBlogs.Skip(startIndex).Take(pageSize);
+
     }
 
 
@@ -625,7 +656,7 @@
     private void SortByCreatedAt()
     {
         SelectedType = "Recent";
-        blogs = blogs.OrderByDescending(blog => blog.CreatedAt);
+        filteredBlogs = filteredBlogs.OrderByDescending(blog => blog.UpdatedAt);
         PaginateBlogs();
     }
 
@@ -633,7 +664,7 @@
     private void SortByPopularity()
     {
         SelectedType = "Top";
-        blogs = blogs.OrderByDescending(blog=>blog.PopularityCount);
+        filteredBlogs = filteredBlogs.OrderByDescending(blog => blog.PopularityCount);
         PaginateBlogs();
     }
 
@@ -641,7 +672,7 @@
     private void ShuffleBlogs()
     {
         SelectedType = "Random";
-        blogs = blogs.OrderBy(_ => Guid.NewGuid());
+        filteredBlogs = filteredBlogs.OrderBy(_ => Guid.NewGuid());
         PaginateBlogs();
     }
 

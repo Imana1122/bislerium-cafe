@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Histories
 {
-    public record GetUserHistoryQuery(Guid UserId): IRequest<IEnumerable<UserHistory>>;
+    public record GetUserHistoryQuery(Guid UserId): IRequest<IEnumerable<History>>;
    
 }

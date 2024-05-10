@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\Bislerium\\Domain\\Domain.csproj": {}
+    "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
+    "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Bislerium\\Domain\\obj\\",
+        "outputPath": "D:\\Data\\Database\\Bislerium\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

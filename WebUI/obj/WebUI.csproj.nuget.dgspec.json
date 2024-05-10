@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\Bislerium\\WebUI\\WebUI.csproj": {}
+    "D:\\Data\\Database\\Bislerium\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "D:\\source\\Bislerium\\Application\\Application.csproj": {
+    "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Bislerium\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\source\\Bislerium\\Application\\Application.csproj",
+        "projectPath": "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Bislerium\\Application\\obj\\",
+        "outputPath": "D:\\Data\\Database\\Bislerium\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj"
+              "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj"
               }
             }
           }
@@ -99,14 +99,14 @@
         }
       }
     },
-    "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
+    "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Bislerium\\Domain\\obj\\",
+        "outputPath": "D:\\Data\\Database\\Bislerium\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -144,6 +144,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -164,14 +170,14 @@
         }
       }
     },
-    "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Data\\Database\\Bislerium\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Data\\Database\\Bislerium\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\Data\\Database\\Bislerium\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Bislerium\\Infrastructure\\obj\\",
+        "outputPath": "D:\\Data\\Database\\Bislerium\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -193,11 +199,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\source\\Bislerium\\Application\\Application.csproj": {
-                "projectPath": "D:\\source\\Bislerium\\Application\\Application.csproj"
+              "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj": {
+                "projectPath": "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj"
               },
-              "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj"
+              "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj"
               }
             }
           }
@@ -262,14 +268,14 @@
         }
       }
     },
-    "D:\\source\\Bislerium\\WebUI\\WebUI.csproj": {
+    "D:\\Data\\Database\\Bislerium\\WebUI\\WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
+        "projectUniqueName": "D:\\Data\\Database\\Bislerium\\WebUI\\WebUI.csproj",
         "projectName": "WebUI",
-        "projectPath": "D:\\source\\Bislerium\\WebUI\\WebUI.csproj",
+        "projectPath": "D:\\Data\\Database\\Bislerium\\WebUI\\WebUI.csproj",
         "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Bislerium\\WebUI\\obj\\",
+        "outputPath": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -291,14 +297,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\source\\Bislerium\\Application\\Application.csproj": {
-                "projectPath": "D:\\source\\Bislerium\\Application\\Application.csproj"
+              "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj": {
+                "projectPath": "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj"
               },
-              "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj"
+              "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj"
               },
-              "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\source\\Bislerium\\Infrastructure\\Infrastructure.csproj"
+              "D:\\Data\\Database\\Bislerium\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\Data\\Database\\Bislerium\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

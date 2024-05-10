@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,13 @@ namespace Domain.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime CreatedAt { get; set; }=DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
         public virtual ICollection<BlogImage> Images { get; set; } = [];
         public virtual ICollection<BlogComment> Comments { get; set; } = [];
         public virtual ICollection<BlogReaction> Reactions { get; set; } = [];
+
+      
 
 
 

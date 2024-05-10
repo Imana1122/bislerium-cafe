@@ -7,7 +7,6 @@ namespace WebUI.Hubs
     {
         public async Task Notification(string userId, string message)
         {
-            Console.WriteLine(userId + " "+message);
             await Clients.All.SendAsync("Notification", userId, message);
         }
 

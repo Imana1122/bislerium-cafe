@@ -339,6 +339,9 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "8.0.4"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -945,11 +948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Bislerium\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\source\\Bislerium\\Application\\Application.csproj",
+      "projectPath": "D:\\Data\\Database\\Bislerium\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Bislerium\\Application\\obj\\",
+      "outputPath": "D:\\Data\\Database\\Bislerium\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -971,8 +974,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\source\\Bislerium\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\source\\Bislerium\\Domain\\Domain.csproj"
+            "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj"
             }
           }
         }

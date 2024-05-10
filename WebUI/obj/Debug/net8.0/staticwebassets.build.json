@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VNLQIp5Oo9LWBrjPLVhY9z1wRrcz8DrhqcJw61pkf6k=",
+  "Hash": "kIny5RXaSh8aCogKeiR38fA28HSGDrccj8kFLneEMzo=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "WebUI\\wwwroot",
       "Source": "WebUI",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "Pattern": "**"
     }
@@ -2354,10 +2354,10 @@
       "OriginalItemSpec": "C:\\Users\\imana\\.nuget\\packages\\syncfusion.blazor.themes\\25.1.42\\staticwebassets\\tailwind-dark.css"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css",
       "SourceId": "WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "WebUI.styles.css",
       "AssetKind": "All",
@@ -2370,13 +2370,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css"
+      "OriginalItemSpec": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebUI.styles.css"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
       "SourceId": "WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "WebUI.bundle.scp.css",
       "AssetKind": "All",
@@ -2389,13 +2389,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\source\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Data\\Database\\Bislerium\\WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\app.css",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\app.css",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -2411,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\assets\\images\\favicon.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\assets\\images\\favicon.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "assets/images/favicon.png",
       "AssetKind": "All",
@@ -2430,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\favicon.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logo.svg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logo.svg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "assets/images/logo.svg",
       "AssetKind": "All",
@@ -2449,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\logo.svg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logo_minidark.svg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logo_minidark.svg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "assets/images/logo_minidark.svg",
       "AssetKind": "All",
@@ -2468,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\logo_minidark.svg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logodark.svg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logodark.svg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "assets/images/logodark.svg",
       "AssetKind": "All",
@@ -2487,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\logodark.svg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logo-mini.svg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\assets\\images\\logo-mini.svg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "assets/images/logo-mini.svg",
       "AssetKind": "All",
@@ -2506,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\logo-mini.svg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\favicon.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\favicon.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -2525,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\js\\custom.js",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\js\\custom.js",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "js/custom.js",
       "AssetKind": "All",
@@ -2544,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\js\\custom.js"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\logo.gif",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\logo.gif",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "logo.gif",
       "AssetKind": "All",
@@ -2563,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\logo.gif"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\0721472d664d4da8b4c26c59ee5f5f85.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\0721472d664d4da8b4c26c59ee5f5f85.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/0721472d664d4da8b4c26c59ee5f5f85.jpg",
       "AssetKind": "All",
@@ -2582,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\0721472d664d4da8b4c26c59ee5f5f85.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\0ab3e4dc1e3c4bc0a1b5524b45eec142.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\0ab3e4dc1e3c4bc0a1b5524b45eec142.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/0ab3e4dc1e3c4bc0a1b5524b45eec142.jpg",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\0ab3e4dc1e3c4bc0a1b5524b45eec142.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\0cd26e3fa9d24d07bd7b972d80bbaa81.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\0cd26e3fa9d24d07bd7b972d80bbaa81.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/0cd26e3fa9d24d07bd7b972d80bbaa81.jpeg",
       "AssetKind": "All",
@@ -2620,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\0cd26e3fa9d24d07bd7b972d80bbaa81.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\1025b19e09e94227b126ddbace115b0e.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\1025b19e09e94227b126ddbace115b0e.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/1025b19e09e94227b126ddbace115b0e.png",
       "AssetKind": "All",
@@ -2639,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\1025b19e09e94227b126ddbace115b0e.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\1107d152a3f94f00ba8a7dda69c85334.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\1107d152a3f94f00ba8a7dda69c85334.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/1107d152a3f94f00ba8a7dda69c85334.jpg",
       "AssetKind": "All",
@@ -2658,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\1107d152a3f94f00ba8a7dda69c85334.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\11b1kq4g.mkp.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\11b1kq4g.mkp.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/11b1kq4g.mkp.jpg",
       "AssetKind": "All",
@@ -2677,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\11b1kq4g.mkp.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\11e96c8b91d844d5b65590758186420d.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\11e96c8b91d844d5b65590758186420d.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/11e96c8b91d844d5b65590758186420d.jpg",
       "AssetKind": "All",
@@ -2696,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\11e96c8b91d844d5b65590758186420d.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\11f46bdae7d54be68aa0cdb73ae34814.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\11f46bdae7d54be68aa0cdb73ae34814.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/11f46bdae7d54be68aa0cdb73ae34814.png",
       "AssetKind": "All",
@@ -2715,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\11f46bdae7d54be68aa0cdb73ae34814.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\17e7b7042b884394ab756b3f287ac29c.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\17e7b7042b884394ab756b3f287ac29c.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/17e7b7042b884394ab756b3f287ac29c.jpg",
       "AssetKind": "All",
@@ -2734,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\17e7b7042b884394ab756b3f287ac29c.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\1809fd29c436451a9c3e25ae1bdaddc3.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\1809fd29c436451a9c3e25ae1bdaddc3.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/1809fd29c436451a9c3e25ae1bdaddc3.jpeg",
       "AssetKind": "All",
@@ -2753,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\1809fd29c436451a9c3e25ae1bdaddc3.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\1c0cbe1991234bf1b0ef04392e64e6f4.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\1c0cbe1991234bf1b0ef04392e64e6f4.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/1c0cbe1991234bf1b0ef04392e64e6f4.png",
       "AssetKind": "All",
@@ -2772,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\1c0cbe1991234bf1b0ef04392e64e6f4.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\21d5c60ccf384f948fb7dbbe33d75610.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\21d5c60ccf384f948fb7dbbe33d75610.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/21d5c60ccf384f948fb7dbbe33d75610.jpeg",
       "AssetKind": "All",
@@ -2791,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\21d5c60ccf384f948fb7dbbe33d75610.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\234ec576f4194481a55cd19704c38dd7.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\234ec576f4194481a55cd19704c38dd7.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/234ec576f4194481a55cd19704c38dd7.jpg",
       "AssetKind": "All",
@@ -2810,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\234ec576f4194481a55cd19704c38dd7.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\2566036190a041a1a9257a0246c7a540.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\2566036190a041a1a9257a0246c7a540.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/2566036190a041a1a9257a0246c7a540.jpg",
       "AssetKind": "All",
@@ -2829,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\2566036190a041a1a9257a0246c7a540.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\263aad7b7de345d2a61ad10573380a2a.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\263aad7b7de345d2a61ad10573380a2a.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/263aad7b7de345d2a61ad10573380a2a.png",
       "AssetKind": "All",
@@ -2848,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\263aad7b7de345d2a61ad10573380a2a.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\26d66cfc4ff24fb89b59147da826f7da.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\26d66cfc4ff24fb89b59147da826f7da.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/26d66cfc4ff24fb89b59147da826f7da.jpg",
       "AssetKind": "All",
@@ -2867,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\26d66cfc4ff24fb89b59147da826f7da.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\2a160786164a4ca58c702b6568e7c524.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\2a160786164a4ca58c702b6568e7c524.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/2a160786164a4ca58c702b6568e7c524.jpg",
       "AssetKind": "All",
@@ -2886,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\2a160786164a4ca58c702b6568e7c524.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\2bd13b4d29f242b4bdb0d3c84403ba3c.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\2bd13b4d29f242b4bdb0d3c84403ba3c.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/2bd13b4d29f242b4bdb0d3c84403ba3c.jpeg",
       "AssetKind": "All",
@@ -2905,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\2bd13b4d29f242b4bdb0d3c84403ba3c.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\3223ee3ef34e47ac974b4bcd2560510b.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\3223ee3ef34e47ac974b4bcd2560510b.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/3223ee3ef34e47ac974b4bcd2560510b.jpeg",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\3223ee3ef34e47ac974b4bcd2560510b.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\3975d084c7004a9eab8925a319b28c25.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\3975d084c7004a9eab8925a319b28c25.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/3975d084c7004a9eab8925a319b28c25.jpg",
       "AssetKind": "All",
@@ -2943,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\3975d084c7004a9eab8925a319b28c25.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\397654d46826433ca3745c11faf584ae.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\397654d46826433ca3745c11faf584ae.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/397654d46826433ca3745c11faf584ae.png",
       "AssetKind": "All",
@@ -2962,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\397654d46826433ca3745c11faf584ae.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\41b1c4e39cb941cba76b1374b1d3f522.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\41b1c4e39cb941cba76b1374b1d3f522.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/41b1c4e39cb941cba76b1374b1d3f522.jpeg",
       "AssetKind": "All",
@@ -2981,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\41b1c4e39cb941cba76b1374b1d3f522.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\4250955cf22b4b409d72e7a5aaf890be.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\4250955cf22b4b409d72e7a5aaf890be.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/4250955cf22b4b409d72e7a5aaf890be.jpeg",
       "AssetKind": "All",
@@ -3000,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4250955cf22b4b409d72e7a5aaf890be.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\4795958d789448f889d5e8d00c83cf2f.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\4795958d789448f889d5e8d00c83cf2f.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/4795958d789448f889d5e8d00c83cf2f.jpg",
       "AssetKind": "All",
@@ -3019,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4795958d789448f889d5e8d00c83cf2f.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\4842994bd0734a86b293394615c364f1.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\4842994bd0734a86b293394615c364f1.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/4842994bd0734a86b293394615c364f1.jpg",
       "AssetKind": "All",
@@ -3038,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4842994bd0734a86b293394615c364f1.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\484ade99fe6c47d7a05f881729a839c1.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\484ade99fe6c47d7a05f881729a839c1.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/484ade99fe6c47d7a05f881729a839c1.jpeg",
       "AssetKind": "All",
@@ -3057,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\484ade99fe6c47d7a05f881729a839c1.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\4b6e55a214da4797b486270d02c6e171.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\4b6e55a214da4797b486270d02c6e171.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/4b6e55a214da4797b486270d02c6e171.png",
       "AssetKind": "All",
@@ -3076,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4b6e55a214da4797b486270d02c6e171.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\4bb9e74bcb3d42d3aa28d48bab947ef5.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\4bb9e74bcb3d42d3aa28d48bab947ef5.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/4bb9e74bcb3d42d3aa28d48bab947ef5.jpg",
       "AssetKind": "All",
@@ -3095,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4bb9e74bcb3d42d3aa28d48bab947ef5.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\4ca03ce4feb64556986757a7224302e4.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\4ca03ce4feb64556986757a7224302e4.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/4ca03ce4feb64556986757a7224302e4.jpg",
       "AssetKind": "All",
@@ -3114,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4ca03ce4feb64556986757a7224302e4.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\51f542c003f449998ef0e30564f56655.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\51f542c003f449998ef0e30564f56655.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/51f542c003f449998ef0e30564f56655.jpg",
       "AssetKind": "All",
@@ -3133,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\51f542c003f449998ef0e30564f56655.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\54d50ebffdad48fd9a8782c13bcf6468.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\54d50ebffdad48fd9a8782c13bcf6468.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/54d50ebffdad48fd9a8782c13bcf6468.png",
       "AssetKind": "All",
@@ -3152,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\54d50ebffdad48fd9a8782c13bcf6468.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\5b8c528554d24e1eae9a3fb99cca149d.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\5b8c528554d24e1eae9a3fb99cca149d.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/5b8c528554d24e1eae9a3fb99cca149d.jpeg",
       "AssetKind": "All",
@@ -3171,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5b8c528554d24e1eae9a3fb99cca149d.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\6a3e6dbf9c24473ba77b73d9439b1a0f.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\6a3e6dbf9c24473ba77b73d9439b1a0f.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/6a3e6dbf9c24473ba77b73d9439b1a0f.png",
       "AssetKind": "All",
@@ -3190,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\6a3e6dbf9c24473ba77b73d9439b1a0f.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\7362bb776a9e4b3890f3d55bdcdd6d96.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\7362bb776a9e4b3890f3d55bdcdd6d96.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/7362bb776a9e4b3890f3d55bdcdd6d96.jpg",
       "AssetKind": "All",
@@ -3209,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\7362bb776a9e4b3890f3d55bdcdd6d96.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\75d96ce346e442588b1f9aa458d23d77.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\75d96ce346e442588b1f9aa458d23d77.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/75d96ce346e442588b1f9aa458d23d77.jpeg",
       "AssetKind": "All",
@@ -3228,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\75d96ce346e442588b1f9aa458d23d77.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\76338603ec2842bbafe90cd624212f6d.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\76338603ec2842bbafe90cd624212f6d.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/76338603ec2842bbafe90cd624212f6d.jpg",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\76338603ec2842bbafe90cd624212f6d.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\7abdb36f2e40492ea7def47e78230be7.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\7abdb36f2e40492ea7def47e78230be7.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/7abdb36f2e40492ea7def47e78230be7.jpg",
       "AssetKind": "All",
@@ -3266,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\7abdb36f2e40492ea7def47e78230be7.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\7cbee67645d3405d8bfff7995c0e3df8.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\7cbee67645d3405d8bfff7995c0e3df8.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/7cbee67645d3405d8bfff7995c0e3df8.jpg",
       "AssetKind": "All",
@@ -3285,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\7cbee67645d3405d8bfff7995c0e3df8.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\7f9cadb4cb56434eb7d2684b3b613de6.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\7f9cadb4cb56434eb7d2684b3b613de6.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/7f9cadb4cb56434eb7d2684b3b613de6.jpg",
       "AssetKind": "All",
@@ -3304,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\7f9cadb4cb56434eb7d2684b3b613de6.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\84ddcc0fff464a028b114b85fecc93c1.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\84ddcc0fff464a028b114b85fecc93c1.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/84ddcc0fff464a028b114b85fecc93c1.jpg",
       "AssetKind": "All",
@@ -3323,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\84ddcc0fff464a028b114b85fecc93c1.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\881f45577a3d4ee988ff954162495408.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\881f45577a3d4ee988ff954162495408.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/881f45577a3d4ee988ff954162495408.jpeg",
       "AssetKind": "All",
@@ -3342,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\881f45577a3d4ee988ff954162495408.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\893c78c87cc84f45b60f3a2913c27dfa.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\893c78c87cc84f45b60f3a2913c27dfa.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/893c78c87cc84f45b60f3a2913c27dfa.jpg",
       "AssetKind": "All",
@@ -3361,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\893c78c87cc84f45b60f3a2913c27dfa.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\8dbb204dac2f492f84551608b598de48.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\8dbb204dac2f492f84551608b598de48.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/8dbb204dac2f492f84551608b598de48.jpeg",
       "AssetKind": "All",
@@ -3380,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\8dbb204dac2f492f84551608b598de48.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\8edccabd2f46419f845da75a74a0e3c1.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\8edccabd2f46419f845da75a74a0e3c1.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/8edccabd2f46419f845da75a74a0e3c1.jpeg",
       "AssetKind": "All",
@@ -3399,10 +3399,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\8edccabd2f46419f845da75a74a0e3c1.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\8fc96f349d1d404a9dcbec562178b70c.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\8fc96f349d1d404a9dcbec562178b70c.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/8fc96f349d1d404a9dcbec562178b70c.jpg",
       "AssetKind": "All",
@@ -3418,10 +3418,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\8fc96f349d1d404a9dcbec562178b70c.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\96dd9b603dc24d43ab2563e477873fbe.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\96dd9b603dc24d43ab2563e477873fbe.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/96dd9b603dc24d43ab2563e477873fbe.jpg",
       "AssetKind": "All",
@@ -3437,10 +3437,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\96dd9b603dc24d43ab2563e477873fbe.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\99596f5bc722418f87a357863b460ac4.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\99596f5bc722418f87a357863b460ac4.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/99596f5bc722418f87a357863b460ac4.jpg",
       "AssetKind": "All",
@@ -3456,10 +3456,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\99596f5bc722418f87a357863b460ac4.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\9c3420d7ad3c4497866072e1287bdd98.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\9c3420d7ad3c4497866072e1287bdd98.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/9c3420d7ad3c4497866072e1287bdd98.jpg",
       "AssetKind": "All",
@@ -3475,10 +3475,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\9c3420d7ad3c4497866072e1287bdd98.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\a2dbbddad16647c4b04c8d5683fd1440.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\a2dbbddad16647c4b04c8d5683fd1440.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/a2dbbddad16647c4b04c8d5683fd1440.jpg",
       "AssetKind": "All",
@@ -3494,10 +3494,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a2dbbddad16647c4b04c8d5683fd1440.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\a369da5f6d7744fb9c5766cbfe1ba319.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\a369da5f6d7744fb9c5766cbfe1ba319.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/a369da5f6d7744fb9c5766cbfe1ba319.jpg",
       "AssetKind": "All",
@@ -3513,10 +3513,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a369da5f6d7744fb9c5766cbfe1ba319.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\a61151e6a2a04393bb246fa103ae1f06.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\a61151e6a2a04393bb246fa103ae1f06.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/a61151e6a2a04393bb246fa103ae1f06.jpg",
       "AssetKind": "All",
@@ -3532,10 +3532,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a61151e6a2a04393bb246fa103ae1f06.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\ad7e919c52f24951aef96260d286839e.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\ad7e919c52f24951aef96260d286839e.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/ad7e919c52f24951aef96260d286839e.jpg",
       "AssetKind": "All",
@@ -3551,10 +3551,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\ad7e919c52f24951aef96260d286839e.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\ae7c0d993f904371b2eedeb94b72a1a1.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\ae7c0d993f904371b2eedeb94b72a1a1.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/ae7c0d993f904371b2eedeb94b72a1a1.jpg",
       "AssetKind": "All",
@@ -3570,10 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\ae7c0d993f904371b2eedeb94b72a1a1.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\bc6212febd664af2806dc3f64a31d74c.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\bc6212febd664af2806dc3f64a31d74c.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/bc6212febd664af2806dc3f64a31d74c.png",
       "AssetKind": "All",
@@ -3589,10 +3589,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\bc6212febd664af2806dc3f64a31d74c.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\bee29b8c0072442c9741f8188115579a.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\bee29b8c0072442c9741f8188115579a.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/bee29b8c0072442c9741f8188115579a.jpg",
       "AssetKind": "All",
@@ -3608,10 +3608,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\bee29b8c0072442c9741f8188115579a.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\cd163be0f1094a0b8f7e73a97d5b10a7.png",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\cd163be0f1094a0b8f7e73a97d5b10a7.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/cd163be0f1094a0b8f7e73a97d5b10a7.png",
       "AssetKind": "All",
@@ -3627,10 +3627,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\cd163be0f1094a0b8f7e73a97d5b10a7.png"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\d10e87c65eb34e7e96c6106c99e7d3d9.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\d10e87c65eb34e7e96c6106c99e7d3d9.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/d10e87c65eb34e7e96c6106c99e7d3d9.jpg",
       "AssetKind": "All",
@@ -3646,10 +3646,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d10e87c65eb34e7e96c6106c99e7d3d9.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\d2097ccfbbfc4b2286a4f57a2639f362.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\d2097ccfbbfc4b2286a4f57a2639f362.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/d2097ccfbbfc4b2286a4f57a2639f362.jpg",
       "AssetKind": "All",
@@ -3665,10 +3665,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d2097ccfbbfc4b2286a4f57a2639f362.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\d505657dceb64fc89925aec3fb39841a.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\d505657dceb64fc89925aec3fb39841a.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/d505657dceb64fc89925aec3fb39841a.jpg",
       "AssetKind": "All",
@@ -3684,10 +3684,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d505657dceb64fc89925aec3fb39841a.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\d89e643b0fbe43ceafced9aa8e19cfe5.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\d89e643b0fbe43ceafced9aa8e19cfe5.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/d89e643b0fbe43ceafced9aa8e19cfe5.jpg",
       "AssetKind": "All",
@@ -3703,10 +3703,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d89e643b0fbe43ceafced9aa8e19cfe5.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\e7abc510743d4188a919047902913c7b.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\e7abc510743d4188a919047902913c7b.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/e7abc510743d4188a919047902913c7b.jpg",
       "AssetKind": "All",
@@ -3722,10 +3722,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\e7abc510743d4188a919047902913c7b.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\eabdaa0484794e17a33d97a212580e03.jpeg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\eabdaa0484794e17a33d97a212580e03.jpeg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/eabdaa0484794e17a33d97a212580e03.jpeg",
       "AssetKind": "All",
@@ -3741,10 +3741,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\eabdaa0484794e17a33d97a212580e03.jpeg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\ee70f4eeb5564996b580fecbfebb67eb.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\ee70f4eeb5564996b580fecbfebb67eb.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/ee70f4eeb5564996b580fecbfebb67eb.jpg",
       "AssetKind": "All",
@@ -3760,10 +3760,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\ee70f4eeb5564996b580fecbfebb67eb.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\f0e0e04e314144578e240d85fe825852.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\f0e0e04e314144578e240d85fe825852.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/f0e0e04e314144578e240d85fe825852.jpg",
       "AssetKind": "All",
@@ -3779,10 +3779,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\f0e0e04e314144578e240d85fe825852.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\fc24fdaa1e364376b4fb59c4ed236d03.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\fc24fdaa1e364376b4fb59c4ed236d03.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/fc24fdaa1e364376b4fb59c4ed236d03.jpg",
       "AssetKind": "All",
@@ -3798,10 +3798,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\fc24fdaa1e364376b4fb59c4ed236d03.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\h0gpa1st.mja.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\h0gpa1st.mja.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/h0gpa1st.mja.jpg",
       "AssetKind": "All",
@@ -3817,10 +3817,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\h0gpa1st.mja.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\ndsohjh4.lw3.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\ndsohjh4.lw3.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/ndsohjh4.lw3.jpg",
       "AssetKind": "All",
@@ -3836,10 +3836,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\ndsohjh4.lw3.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\pyckg1go.5ku.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\pyckg1go.5ku.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/pyckg1go.5ku.jpg",
       "AssetKind": "All",
@@ -3855,10 +3855,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\pyckg1go.5ku.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\te5qd0ld.tuc.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\te5qd0ld.tuc.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/te5qd0ld.tuc.jpg",
       "AssetKind": "All",
@@ -3874,10 +3874,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\te5qd0ld.tuc.jpg"
     },
     {
-      "Identity": "D:\\source\\Bislerium\\WebUI\\wwwroot\\uploads\\vl3iws1n.t0c.jpg",
+      "Identity": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\uploads\\vl3iws1n.t0c.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\source\\Bislerium\\WebUI\\wwwroot\\",
+      "ContentRoot": "D:\\Data\\Database\\Bislerium\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
       "RelativePath": "uploads/vl3iws1n.t0c.jpg",
       "AssetKind": "All",
