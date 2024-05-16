@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Application.Extensions.Identity
 {
     //model for all users
-    public class ApplicationUser: IdentityUser
+    public class ApplicationUser : IdentityUser
     {
         public string Name { get; set; }
     }

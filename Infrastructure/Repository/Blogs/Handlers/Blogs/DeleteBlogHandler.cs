@@ -77,6 +77,12 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                     }
                 }
 
+
+
+                // Deleting blog images from the database
+                var blogImages = await dbContext.BlogImages.FirstAsync(_ => _.BlogId.ToString().ToLower().Equals(request.Id.ToString().ToLower()), cancellationToken: cancellationToken);
+                dbContext.BlogImages.RemoveRange(blogImages);
+
                 // Removing the blog itself
                 dbContext.Blogs.Remove(data);
                 await dbContext.SaveChangesAsync(cancellationToken);
@@ -88,20 +94,16 @@ namespace Infrastructure.Repository.Products.Handlers.Categories
                     Content = data.Title + " is deleted."
                 };
                 dbContext.Histories.Add(history);
-                await dbContext.SaveChangesAsync(cancellationToken);
 
-                // Deleting blog images from the database
-                var blogImages = await dbContext.BlogImages.FirstAsync(_ => _.BlogId.ToString().ToLower().Equals(request.Id.ToString().ToLower()), cancellationToken: cancellationToken);
-                dbContext.BlogImages.RemoveRange(blogImages);
                 await dbContext.SaveChangesAsync(cancellationToken);
 
                 // Returning success response with deleted blog title
-                return GeneralDbResponses.ItemDelete(data.Title);
+                return GeneralDbResponses.ItemDelete("Blog");
             }
             catch (Exception ex)
             {
                 // Returning error response if an exception occurs
-                return new ServiceResponse(true, ex.Message);
+                return new ServiceResponse(false, ex.Message);
             }
         }
     }

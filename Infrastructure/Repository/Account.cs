@@ -328,6 +328,8 @@ namespace Infrastructure.Repository
 
             // Check the result of adding new claims
             var outcome = CheckResult(addNewClaims);
+
+            await userManager.UpdateSecurityStampAsync(user);
             if (outcome.Flag)
             {
                 // If adding new claims succeeded, return a success response

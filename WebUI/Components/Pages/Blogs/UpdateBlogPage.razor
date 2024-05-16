@@ -183,7 +183,7 @@
                 {
                     // Display error message or handle oversized file
                     // For example:
-                    Console.WriteLine("File size exceeds 3MB limit.");
+                    await toast.ShowError("File size exceeds 3MB limit.");
                     return;
                 }
 
@@ -192,6 +192,8 @@
                 {
                     // Display error message or handle invalid file type
                     // For example:
+                    await toast.ShowError("Only image files are allowed.");
+
                     Console.WriteLine("Only image files are allowed.");
                     return;
                 }
@@ -249,6 +251,7 @@
 
             if (response.Flag)
             {
+                await GetBlogImages();
                 await toast.ShowSuccess(response.Message);
 
                 NavManager.NavigateTo("/blogs/edit/" + Id);
@@ -301,7 +304,7 @@
 
     private async Task DeleteImage(Guid Id)
     {
-        if(blogImages.Count() <= 1)
+        if(blogImages.Count() > 1)
         {
             var scope = serviceProvider.CreateScope();
             var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
@@ -311,13 +314,13 @@
 
             if (response.Flag)
             {
+                await GetBlogImages();
                 await toast.ShowSuccess(response.Message);
                 NavManager.NavigateTo("/blogs/edit/" + Id);
             }
             else
             {
                 await toast.ShowError(response.Message);
-
 
                 Console.WriteLine(response.Message);
             }

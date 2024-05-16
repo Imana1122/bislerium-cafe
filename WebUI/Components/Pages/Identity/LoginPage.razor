@@ -81,6 +81,7 @@
     public Task<AuthenticationState> ClientAuthState { get; set; }
     protected override async Task OnInitializedAsync()
     {
+        await accountService.SetUpAsync();
         if (ClientAuthState != null)
         {
        

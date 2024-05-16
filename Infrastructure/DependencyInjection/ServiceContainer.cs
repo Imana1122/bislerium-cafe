@@ -29,13 +29,22 @@ namespace Infrastructure.DependencyInjection
             {
                 options.DefaultScheme = IdentityConstants.ApplicationScheme;
                 options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+
             }).AddIdentityCookies();
 
             services.AddIdentityCore<ApplicationUser>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddSignInManager()
                 .AddDefaultTokenProviders();
+
+            services.Configure<SecurityStampValidatorOptions>(options =>
+            {
+                // enables immediate logout, after updating the user's stat.
+                options.ValidationInterval = TimeSpan.Zero;
+            });
+
             services.Configure<DataProtectionTokenProviderOptions>(options => options.TokenLifespan = TimeSpan.FromMinutes(5));
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdministrationPolicy", policy =>

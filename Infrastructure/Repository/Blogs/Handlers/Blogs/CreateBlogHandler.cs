@@ -31,25 +31,7 @@ namespace Infrastructure.Repository.Products.Handlers.Blogs
 
                 // Adding the new blog entity to the context
                 dbContext.Blogs.Add(data);
-
-                // Saving changes to the database
-                await dbContext.SaveChangesAsync(cancellationToken);
-
-                // Adding blog images to the database
-                foreach (var blog in request.BlogModel.Images)
-                {
-                    // Mapping DTO to domain entity BlogImage
-                    var imageData = blog.Adapt(new BlogImage());
-
-                    // Setting BlogId for the image
-                    imageData.BlogId = data.Id;
-
-                    // Adding the image entity to the context
-                    dbContext.BlogImages.Add(imageData);
-
-                    // Saving changes to the database
-                    await dbContext.SaveChangesAsync(cancellationToken);
-                }
+              
 
                 // Creating user history for the blog creation
                 var history = new History

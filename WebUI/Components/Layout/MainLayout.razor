@@ -28,11 +28,11 @@
                      </a>
                     <!-- Logout Button -->
                 
-                        <a href="Account/Login">
-                            <button type="button" class="nav-link fw-bold text-primary">
+                        
+                            <button type="button" @onclick="NavigateToLogin" class="nav-link fw-bold text-primary">
                                 <i class="bi bi-box-arrow-right text-primary"></i> Login
                             </button>
-                        </a>
+                      
 
                 </div>
             </NotAuthorized>
@@ -121,10 +121,11 @@
                          {
                              if (UserId.ToString().ToLower() == userId.ToString().ToLower())
                              {
-                                 await js.InvokeVoidAsync("alert", message);
                                  await notificationCount.GetActiveOrdersCount(UserId);
 
                                  StateHasChanged();
+                                 await js.InvokeVoidAsync("alert", message);
+
                              }
 
                          });
@@ -140,6 +141,11 @@
             }
         }
         await DeleteUnusedImages();
+    }
+
+    private void NavigateToLogin()
+    {
+        NavManager.NavigateTo("/Account/Login", true);
     }
 
     public async Task DeleteUnusedImages()
