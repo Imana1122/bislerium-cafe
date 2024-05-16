@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.BlogImages
 {
+    //for deleting blog image
     public record DeleteBlogImageCommand(Guid Id) : IRequest<ServiceResponse>;
 
 }

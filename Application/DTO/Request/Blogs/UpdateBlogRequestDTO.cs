@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Blogs
 {
+    //request model for updating blog
     public class UpdateBlogRequestDTO:BlogBaseDTO
     {
         [RegularExpression(@"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]

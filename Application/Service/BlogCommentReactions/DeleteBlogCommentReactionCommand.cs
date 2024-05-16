@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Service.BlogCommentReactions
 {
+    //for deleting blog comment reaction
   
     public record DeleteBlogCommentReactionCommand(Guid UserId, Guid BlogId,Guid CommentUserId) : IRequest<ServiceResponse>;
 

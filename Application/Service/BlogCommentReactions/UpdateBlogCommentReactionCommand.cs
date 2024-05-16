@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace Application.Service.BlogCommentReactions
 {
    
+    //for updating blog comment reaction
     public record UpdateBlogCommentReactionCommand(UpdateBlogCommentReactionRequestDTO model) : IRequest<ServiceResponse>;
 
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Blogs
 {
+    //request model for adding blog
     public class AddBlogRequestDTO:BlogBaseDTO
     {
         [Required]

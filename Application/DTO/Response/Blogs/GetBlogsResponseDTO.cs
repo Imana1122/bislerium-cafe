@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //response model for fetching blogs
     public class GetBlogsResponseDTO : BlogBaseDTO
     {
         public Guid Id { get; set; }

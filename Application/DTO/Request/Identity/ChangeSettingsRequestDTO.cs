@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Identity
 {
+    //request model for changing user basic information
     public class ChangeSettingsRequestDTO
     {
         [RegularExpression(@"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]

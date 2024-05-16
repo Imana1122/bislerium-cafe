@@ -92,7 +92,7 @@
                                 <CardSubTitle>
                                     <div class="d-flex justify-content-between">
                                         <p>@blogModel.BloggerName</p>
-                                        <p>@blogModel.UpdatedAt.ToString("MMMM dd, yyyy")</p>
+                                        <p>@blogModel.CreatedAt.ToString("MMMM dd, yyyy")</p>
                                     </div>
                                 </CardSubTitle>
                             
@@ -186,7 +186,9 @@
                     <p>You need to be logged in to perform this action.</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="Account/Login"><button type="button" class="btn btn-primary">Login</button></a>
+                   <button type="button" class="btn btn-primary" @onclick="NavigateToLogin">Login</button>
+
+
                     <button type="button" class="btn btn-secondary" @onclick="() => isLoginPopUp = false">Cancel</button>
                 </div>
             </div>
@@ -290,7 +292,20 @@
         if(searchText=="" || searchText == null)
         {
             filteredBlogs = blogs;
-            PaginateBlogs();
+            if(SelectedType == "Top")
+            {
+                SortByPopularity();                
+            }
+
+            if(SelectedType == "Recent")
+            {
+                SortByCreatedAt();                
+            }
+
+            if (SelectedType == "Random")
+            {
+                ShuffleBlogs();
+            }
         }
         else
         {
@@ -300,6 +315,12 @@
         }
 
     }
+
+    private void NavigateToLogin()
+    {
+        NavManager.NavigateTo("/Account/Login", true);
+    }
+
     public Guid UserId { get; set; } = Guid.Empty;
     private string SelectedType = "Top";
     private HubConnection hubConnection;
@@ -656,7 +677,7 @@
     private void SortByCreatedAt()
     {
         SelectedType = "Recent";
-        filteredBlogs = filteredBlogs.OrderByDescending(blog => blog.UpdatedAt);
+        filteredBlogs = filteredBlogs.OrderByDescending(blog => blog.CreatedAt);
         PaginateBlogs();
     }
 

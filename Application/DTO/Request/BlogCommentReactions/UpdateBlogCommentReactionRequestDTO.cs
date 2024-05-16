@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.BlogCommentReactions
 {
+    //The request model for sending blog comment update request
     public class UpdateBlogCommentReactionRequestDTO
     {
         [Required]

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //response model for getting all blog images
     public class GetAllBlogImagesQuery:IRequest<IEnumerable<string>>;
     
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //response model for fetching blog upvote count
     public record GetBlogUpvoteCountResponseDTO(int UpvoteCount);
   
 }

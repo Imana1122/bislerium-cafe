@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //response model for fetching blogimages 
     public class GetBlogImageResponseDTO: AddBlogImageRequestDTO
     {
         [RegularExpression(@"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]

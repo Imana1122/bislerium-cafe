@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //response model for fetching blog comments
     public class GetBlogCommentResponseDTO:UpdateBlogCommentRequestDTO
     {
 

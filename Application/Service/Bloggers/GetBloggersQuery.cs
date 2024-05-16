@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Bloggers
 {
+    //for getting all bloggers
     public class GetBloggersQuery : IRequest<IEnumerable<GetBloggerResponseDTO>>
     {
 

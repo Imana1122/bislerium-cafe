@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Blogs
 {
+    //base model for blog for data transfer
     public class BaseBlogDTO
     {
         [Required]

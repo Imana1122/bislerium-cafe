@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Identity
 {
+    //request model for resetting password
     public class ResetPasswordRequestDTO
     {
         [Required]

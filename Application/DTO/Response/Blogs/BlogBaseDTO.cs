@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //base blog respone model
     public class BlogBaseDTO
     {
         [Required]

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Extensions.Email
 {
+    //model for configuring email sending
     public class EmailConfiguration
     {
         public string From { get; set; }

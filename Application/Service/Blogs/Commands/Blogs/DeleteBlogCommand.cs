@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.Blogs
 {
+    //for deleting existing blog
     public record DeleteBlogCommand(Guid Id): IRequest<ServiceResponse>;
     
 }

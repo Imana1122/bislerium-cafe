@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Bloggers
 {
+    //response model for getting bloggers
     public class GetBloggerResponseDTO 
     {
         public Guid Id { get; set; }

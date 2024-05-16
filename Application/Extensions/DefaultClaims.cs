@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Extensions
 {
+    //default claims for all
     public static class DefaultClaims
     {
         public const string Create = "Create";

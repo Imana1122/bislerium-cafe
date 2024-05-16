@@ -8,6 +8,7 @@ using MimeKit;
 
 namespace Application.Extensions.Email
 {
+    //model of sending message
     public class Message
     {
         public List<MailboxAddress> To { get; set; }

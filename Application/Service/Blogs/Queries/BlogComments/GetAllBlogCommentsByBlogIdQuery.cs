@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Queries.BlogComments
 {
+    //for getting all blog comments by blog id
     public record GetAllBlogCommentsByBlogIdQuery(Guid BlogId, Guid? UserId) :IRequest<IEnumerable<GetBlogCommentResponseDTO>>;
    
 }

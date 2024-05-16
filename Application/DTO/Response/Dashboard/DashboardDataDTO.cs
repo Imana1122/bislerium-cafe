@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Dashboard
 {
+    //response model for dashboard data showing cumulative blogs, upvotes, downvotes and comments count
     public class DashboardDataDTO
     {
         [Required]

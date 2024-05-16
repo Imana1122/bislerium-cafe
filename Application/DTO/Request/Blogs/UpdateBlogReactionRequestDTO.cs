@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Blogs
 {
+    //request model for updating blog reaction
     public class UpdateBlogReactionRequestDTO: AddBlogReactionRequestDTO
     {
        

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Identity
 {
+    //model specifying claims for a user
     public class BaseUserClaimDTO
     {
         public string UserId { get; set; }

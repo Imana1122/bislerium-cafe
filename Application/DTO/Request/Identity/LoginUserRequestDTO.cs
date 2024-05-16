@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Identity
 {
+    //request model for logging in user
     public class LoginUserRequestDTO
     {
         [Required(ErrorMessage = "Email is required")]

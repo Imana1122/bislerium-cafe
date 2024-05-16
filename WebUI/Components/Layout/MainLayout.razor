@@ -111,7 +111,7 @@
                 {
                     await hubConnection.StartAsync();
                 }
-                hubConnection.On<string, string>("Notification", async (userId, message) =>
+                hubConnection.On<string, string>(UserId.ToString().ToLower().Trim(), async (userId, message) =>
                 {
 
                     try

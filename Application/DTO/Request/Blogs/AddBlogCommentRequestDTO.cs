@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Blogs
 {
+    //Request Model for adding new blog comment
     public class AddBlogCommentRequestDTO
     {
         [Required]

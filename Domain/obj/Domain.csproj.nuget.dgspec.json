@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {}
+    "D:\\Data\\dotnet\\Bislerium\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj": {
+    "D:\\Data\\dotnet\\Bislerium\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Data\\dotnet\\Bislerium\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Data\\Database\\Bislerium\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Data\\dotnet\\Bislerium\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\imana\\.nuget\\packages\\",
-        "outputPath": "D:\\Data\\Database\\Bislerium\\Domain\\obj\\",
+        "outputPath": "D:\\Data\\dotnet\\Bislerium\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

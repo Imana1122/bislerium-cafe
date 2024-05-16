@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Identity
 {
+    //class for setting role based on policy
     public static class Policy
     {
         public const string AdminPolicy = "AdminPolicy";
@@ -16,7 +17,7 @@ namespace Application.DTO.Request.Identity
         {
             public const string Admin = "Admin";
             public const string Manager = "Manager";
-            public const string User = "User";
+            public const string User = "Blogger";
         }
     }
 }

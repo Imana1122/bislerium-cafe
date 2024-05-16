@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Service.Blogs.Commands.Blogs
 {
+    //for updating existing blog
     public record UpdateBlogCommand(UpdateBlogRequestDTO BlogModel) :IRequest<ServiceResponse>;
    
 }

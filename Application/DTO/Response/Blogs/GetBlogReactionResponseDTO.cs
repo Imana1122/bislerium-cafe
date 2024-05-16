@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Response.Blogs
 {
+    //response model for fetching blog reactions
     public class GetBlogReactionResponseDTO: UpdateBlogReactionRequestDTO
     {
        

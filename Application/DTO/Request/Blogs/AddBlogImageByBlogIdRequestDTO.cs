@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO.Request.Blogs
 {
+    //request model for adding new blog image for a blog
     public class AddBlogImageByBlogIdRequestDTO
     {
         [Required]
